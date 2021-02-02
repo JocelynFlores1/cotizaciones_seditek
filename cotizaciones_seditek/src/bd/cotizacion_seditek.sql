@@ -30,21 +30,26 @@ Create table if not exists Productos(
 	nombre_producto varchar(40) not null,
 	marca varchar(40) not null,
 	modelo varchar(40) not null,
-	descripcion varchar(100) not null,
+	descripcion_usuario varchar(100) not null,
+	descripcion_cliente varchar(100) not null,
 	accesorios varchar(100) not null,
-	precio_unitario decimal(10) not null)ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
-
+	precio_unitario decimal(10) not null,
+	INDEX fk_proveedor_1(id_proveedor) USING BTREE,
+    CONSTRAINT fk_proveedor_1 FOREIGN KEY (id_proveedor) REFERENCES Proveedor (id_proveedor) ON DELETE RESTRICT ON UPDATE RESTRICT
+    )ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 Create table if not exists Proveedor(
 	id_proveedor varchar(20) primary key,
 	nombre_proveedor varchar(40) not null,
 	telefono_proveedor int(10) not null,
-	telefono_provempresa int(10) not null,
-    email_cliente varchar(40) not null,
+	telefono_contacto int(10) not null,
+	email_proveedor varchar(40) not null,
+    email_contacto varchar(40) not null,
 	calle_proveedor varchar(40) not null,
 	colonia_proveedor varchar(40) not null,
 	municipio_proveedor varchar(40) not null,
-    empresa_proveedor varchar(40) not null,
+	empresa_proveedor varchar(40) not null,
+    rfc_proveedor varchar(13) not null,
 	cp_proveedor int(5) not null)ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=COMPACT;
 
 

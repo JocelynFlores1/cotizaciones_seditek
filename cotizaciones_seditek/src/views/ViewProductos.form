@@ -23,13 +23,258 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+          <Component id="jPanelProductos" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+          <Component id="jPanelProductos" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanelProductos">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Component id="jLFondoProductos" alignment="0" max="32767" attributes="0"/>
+              <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLCodigoProducto" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
+                              <Component id="jLNombreProductos" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
+                              <Component id="jLMarcaProductos" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
+                              <Component id="jLModeloProductos" alignment="0" min="-2" pref="90" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLDescripcionUsuarioProdcutos" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="jTDescripcionUsuarioProductos" pref="136" max="32767" attributes="0"/>
+                          <Component id="jTNombreProductos" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTMarcaProductos" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jTCodigoProductos" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Component id="jTModeloProductos" min="-2" pref="135" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLAccesoriosProductos" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                          <Component id="jTPrecioProductos" min="-2" pref="135" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jLProveedorProductos" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                              <Component id="jTProveedorProductos" min="-2" pref="135" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jTAccesoriosProductos" alignment="1" min="-2" pref="135" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="jLPrecioProductos" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLDescripcionClienteProductos" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jTDescripcionClienteProductos" min="-2" pref="135" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="jLStockProductos" min="-2" pref="79" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                          <Component id="jTStockProductos" min="-2" pref="135" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="35" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="jBActualizarProductos" max="32767" attributes="0"/>
+                      <Component id="jBLimpiarProductos" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jBEliminarProductos" alignment="0" max="32767" attributes="0"/>
+                      <Component id="jBAgregarProductos" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="jLFondoProductos" min="-2" pref="78" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLCodigoProducto" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                              <Component id="jTCodigoProductos" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLStockProductos" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                              <Component id="jTStockProductos" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jBAgregarProductos" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLNombreProductos" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                                      <Component id="jTNombreProductos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLAccesoriosProductos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLMarcaProductos" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                                      <Component id="jTMarcaProductos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jLModeloProductos" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                                      <Component id="jTModeloProductos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTProveedorProductos" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jTAccesoriosProductos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jBEliminarProductos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="jLPrecioProductos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                              <Component id="jTPrecioProductos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                                          <Component id="jBActualizarProductos" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace pref="29" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                      </Group>
+                      <Component id="jLProveedorProductos" alignment="1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jLDescripcionUsuarioProdcutos" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTDescripcionUsuarioProductos" alignment="3" min="-2" pref="72" max="-2" attributes="0"/>
+                              <Component id="jLDescripcionClienteProductos" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTDescripcionClienteProductos" alignment="3" min="-2" pref="72" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                          <Component id="jBLimpiarProductos" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="22" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jLFondoProductos">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Fondo"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLCodigoProducto">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Codigo"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLMarcaProductos">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Marca"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLModeloProductos">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Modelo"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLNombreProductos">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nombre"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTNombreProductos">
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTMarcaProductos">
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTModeloProductos">
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTCodigoProductos">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLStockProductos">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Stock"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTStockProductos">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLDescripcionUsuarioProdcutos">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Descripci&#xf3;n Usuario"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTDescripcionUsuarioProductos">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLDescripcionClienteProductos">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Descripci&#xf3;n Usuario"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTDescripcionClienteProductos">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLAccesoriosProductos">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Accesorios"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTAccesoriosProductos">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLPrecioProductos">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Precio Unitario"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTPrecioProductos">
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLProveedorProductos">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Proveedor"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTProveedorProductos">
+        </Component>
+        <Component class="javax.swing.JButton" name="jBEliminarProductos">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Eliminar"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jBAgregarProductos">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Agregar"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jBActualizarProductos">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Actualizar"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jBLimpiarProductos">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Limpiar"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
 </Form>

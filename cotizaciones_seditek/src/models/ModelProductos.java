@@ -143,7 +143,7 @@ public class ModelProductos {
      public void insertarProductos(/*String nombre,String telefono,String email,String direccion*/){
         try{
             
-            sql="INSERT into Productos(codigo_producto,nombre_producto,marca,modelo,"
+            sql="INSERT into Productos(id_producto,codigo_producto,nombre_producto,marca,modelo,"
                     + "descripcion_usuario,descripcion_cliente,accesorios,precio_unitario,stock,id_proveedor) "
                     + "values(?,?,?,?,?,?,?,?,?,?,?);";
             
@@ -163,13 +163,13 @@ public class ModelProductos {
                         
             pst.executeUpdate();
             
-            System.out.println("insertando datos cliente ");
+            System.out.println("insertando datos producto ");
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(null,"Error 108 insertar datos "+ex.getMessage());
         }
      }// insertando datos
     
-    public void eliminar(/*int id_cliente*/){
+    public void eliminarProdcutos(/*int id_cliente*/){
         try{
             sql="DELETE FROM Productos WHERE id_producto= ?;";
             
@@ -178,13 +178,13 @@ public class ModelProductos {
             pst.setString(1,id_producto);
             pst.executeUpdate();
  
-            System.out.println("dato borrado clientes ");
+            System.out.println("dato borrado producto ");
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(null,"Error 109 Borrar datos "+ ex.getMessage());
         }
     }//borrar datos
     
-    public void actualizar(/*String nombre,String telefono,String email,String direccion,int id_cliente*/){
+    public void actualizarProductos(/*String nombre,String telefono,String email,String direccion,int id_cliente*/){
         try{
             sql="UPDATE clientes SET nombre=?,telefono=?, email=?, direccion=? WHERE id_cliente=?;";
             pst = model_database.getConexion().prepareStatement(sql);
@@ -203,7 +203,7 @@ public class ModelProductos {
             
             pst.executeUpdate();
 
-            System.out.println("datos actualizados clientes ");
+            System.out.println("datos actualizado producto ");
         }catch(SQLException ex){
             JOptionPane.showMessageDialog(null,"Error 110 Actualizar datos "+ ex.getMessage());
         }

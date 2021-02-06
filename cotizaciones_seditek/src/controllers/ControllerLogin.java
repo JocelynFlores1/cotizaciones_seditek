@@ -55,17 +55,16 @@ public class ControllerLogin implements ActionListener {
         String pass = new String(viewLogin.jp_password.getPassword());
 
         if (!viewLogin.jtf_usuario.getText().equals("") && !pass.equals("")) {
-            modelLogin.setUser(viewLogin.jtf_usuario.getText());
+            modelLogin.setUsuario(viewLogin.jtf_usuario.getText());
             modelLogin.setPassword(pass);
 
             if (modelLogin.login()) {
-                String usuario = modelLogin.getUser();
-                String tipo = modelLogin.getTipoUsuario();
-                String sucursal = modelLogin.getSucursal();
+                String nombre_usuario = modelLogin.getUsuario();
+                String tipo_usuario = modelLogin.getTipoUsuario();
                 
                 ModelMain modelMain = new ModelMain();
                 ViewMenu viewMenu = new ViewMenu();
-                ControllerMain controllerMain = new ControllerMain(modelMain, viewMenu, tipo, usuario, sucursal);
+                ControllerMain controllerMain = new ControllerMain(modelMain, viewMenu, nombre_usuario, tipo_usuario);
                 
                 viewLogin.dispose();
             } else {

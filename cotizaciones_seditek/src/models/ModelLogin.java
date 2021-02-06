@@ -5,10 +5,117 @@
  */
 package models;
 
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author flore
  */
 public class ModelLogin {
-    
+    private String nombre_usuario;
+    private String tipo_usuario;
+    private String password;
+
+    private java.sql.Connection conexion;
+    private Statement st;
+    private ResultSet rs;
+    private java.sql.PreparedStatement ps;
+
+    public String getUsuario() {
+        return nombre_usuario;
+    }
+
+    public void setUsuario(String nombre_usuario) {
+        this.nombre_usuario = nombre_usuario;
+    }
+
+    public String getTipoUsuario() {
+        return tipo_usuario;
+    }
+
+    public void setTipoUsuario(String tipo_usuario) {
+        this.tipo_usuario = tipo_usuario;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public java.sql.Connection getConexion() {
+        return conexion;
+    }
+
+    public void setConexion(java.sql.Connection conexion) {
+        this.conexion = conexion;
+    }
+
+    public Statement getSt() {
+        return st;
+    }
+
+    public void setSt(Statement st) {
+        this.st = st;
+    }
+
+    public ResultSet getRs() {
+        return rs;
+    }
+
+    public void setRs(ResultSet rs) {
+        this.rs = rs;
+    }
+
+    public java.sql.PreparedStatement getPs() {
+        return ps;
+    }
+
+    public void setPs(java.sql.PreparedStatement ps) {
+        this.ps = ps;
+    }
+
+    public boolean login() { //Se valida si un Usuario existe para negar el registro
+
+        ModelConexion loginConexion = new ModelConexion();
+        loginConexion.getConexion();
+
+        String sql = "SELECT nombre_usuario,tipo_usuario FROM Usuarios WHERE nombre_usuario  = ?";
+        try {
+
+            ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(sql);
+
+            ps.setString(1, getUsuario());
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+                if (getPassword().equals(rs.getString(2))) {
+                    setUsuario(rs.getString(1));
+                    setTipoUsuario(rs.getString(4));
+
+                    PreparedStatement psDos = (PreparedStatement) loginConexion.getConexion();
+                    psDos.setString(1, getUsuario());
+                    ResultSet rsDos = psDos.executeQuery();
+
+                    if (rsDos.next()) {
+                        setUsuario(rsDos.getString(1));
+                    }
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+            return false;
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Error 01: Login user" + ex);
+            return false;
+        }
+    }
 }

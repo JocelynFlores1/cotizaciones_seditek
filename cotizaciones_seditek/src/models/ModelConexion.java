@@ -17,10 +17,10 @@ import java.sql.Statement;
  */
 public class ModelConexion {
 
-    private final String base = "cotizacionesSeditek";
-    private final String user = "";
-    private final String password = "";
-    private final String url = "jdbc:mysql://noutectyspdf.ddns.net:3306/" + base;
+    private final String base = "bizgkbbqrlrldpommd6i";
+    private final String user = "uxyi45tt7lw3jtdh";
+    private final String password = "JxNypTIhS5Zw96aoXAA1";
+    private final String url = "jdbc:mysql:////uxyi45tt7lw3jtdh:JxNypTIhS5Zw96aoXAA1@bizgkbbqrlrldpommd6i-mysql.services.clever-cloud.com:3306/bizgkbbqrlrldpommd6i:3306/"+ base;
     public Connection con;
     public Statement st = null;
     public ResultSet rs;

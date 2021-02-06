@@ -23,13 +23,262 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+          <Component id="jLFondoProveedores" alignment="0" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLIdProveedores" min="-2" pref="90" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jTIdProveedores" min="-2" pref="135" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLNombreProveedores" min="-2" pref="90" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jTNombreProveedores" min="-2" pref="135" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLTelefonoProveedores" min="-2" pref="90" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jTTelefonoProveedores" min="-2" pref="135" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLEmailProveedores" min="-2" pref="90" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jTEmailProveedores" min="-2" pref="135" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLEmailCProveedores" min="-2" pref="90" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jTEmailCProveedores" min="-2" pref="135" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="jLTelefonoCProveedores" min="-2" pref="90" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="jTTelefonoCproveedores" min="-2" pref="135" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace pref="84" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jLRFC" min="-2" pref="90" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jTRFC" min="-2" pref="135" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="jLEmpresaProveedores" min="-2" pref="90" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="jTEmpresaProveedores" min="-2" pref="135" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLMunicipioProveedores" min="-2" pref="90" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jTMunicipioProveedores" min="-2" pref="135" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLCPProveedores" min="-2" pref="90" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jTCPProveedores" min="-2" pref="135" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLColoniaProveedores" min="-2" pref="90" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jTColoniaProveedores" min="-2" pref="135" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace pref="44" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLCalleProveedores" min="-2" pref="90" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jTCalleProvedores" min="-2" pref="135" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="jBAgregarProveedores" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Component id="jBEliminarProveedores" max="32767" attributes="0"/>
+                              <Component id="jBLimpiarProveedores" alignment="0" max="32767" attributes="0"/>
+                              <Component id="jBActualizarProveedores" alignment="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace pref="73" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="jLFondoProveedores" min="-2" pref="78" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLIdProveedores" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="jTIdProveedores" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLCalleProveedores" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="jTCalleProvedores" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBAgregarProveedores" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLNombreProveedores" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="jTNombreProveedores" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLColoniaProveedores" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="jTColoniaProveedores" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBEliminarProveedores" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLTelefonoProveedores" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="jTTelefonoProveedores" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLMunicipioProveedores" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="jTMunicipioProveedores" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBActualizarProveedores" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLEmailProveedores" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="jTEmailProveedores" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLCPProveedores" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="jTCPProveedores" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jBLimpiarProveedores" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLTelefonoCProveedores" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="jTTelefonoCproveedores" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLEmpresaProveedores" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="jTEmpresaProveedores" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLEmailCProveedores" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="jTEmailCProveedores" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLRFC" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
+                  <Component id="jTRFC" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="0" pref="57" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="jLFondoProveedores">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Fondo"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLIdProveedores">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Id Proveedor"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTIdProveedores">
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTNombreProveedores">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLNombreProveedores">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Nombre"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTTelefonoProveedores">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLTelefonoProveedores">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tel&#xe9;fono"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTEmailProveedores">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLEmailProveedores">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Email"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTTelefonoCproveedores">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLTelefonoCProveedores">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Tel&#xe9;fono Contacto"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTEmailCProveedores">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLEmailCProveedores">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Email Contacto"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTCalleProvedores">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLCalleProveedores">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Calle"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTColoniaProveedores">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLColoniaProveedores">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Colonia"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTMunicipioProveedores">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLMunicipioProveedores">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Municipio"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTCPProveedores">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLCPProveedores">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="C.P"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTEmpresaProveedores">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLEmpresaProveedores">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Empresa"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="jTRFC">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLRFC">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="RFC"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBAgregarProveedores">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Agregar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBEliminarProveedores">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Eliminar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBActualizarProveedores">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Actualizar"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="jBLimpiarProveedores">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Limpiar"/>
+      </Properties>
+    </Component>
+  </SubComponents>
 </Form>

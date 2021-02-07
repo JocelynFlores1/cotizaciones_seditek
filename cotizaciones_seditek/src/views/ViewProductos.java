@@ -170,6 +170,7 @@ public class ViewProductos extends javax.swing.JFrame {
                             .addComponent(jTStockProductos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jBAgregarProductos)
                             .addComponent(jLCodigoProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(28, 28, 28)
                         .addGroup(jPanelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanelProductosLayout.createSequentialGroup()
                                 .addGroup(jPanelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -187,7 +188,6 @@ public class ViewProductos extends javax.swing.JFrame {
                                     .addComponent(jLModeloProductos, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jTModeloProductos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanelProductosLayout.createSequentialGroup()
-                                .addGap(28, 28, 28)
                                 .addGroup(jPanelProductosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jTAccesoriosProductos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jBEliminarProductos))
@@ -260,10 +260,10 @@ public class ViewProductos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBActualizarProductos;
-    private javax.swing.JButton jBAgregarProductos;
-    private javax.swing.JButton jBEliminarProductos;
-    private javax.swing.JButton jBLimpiarProductos;
+    public javax.swing.JButton jBActualizarProductos;
+    public javax.swing.JButton jBAgregarProductos;
+    public javax.swing.JButton jBEliminarProductos;
+    public javax.swing.JButton jBLimpiarProductos;
     private javax.swing.JLabel jLAccesoriosProductos;
     private javax.swing.JLabel jLCodigoProductos;
     private javax.swing.JLabel jLDescripcionClienteProductos;
@@ -277,16 +277,16 @@ public class ViewProductos extends javax.swing.JFrame {
     private javax.swing.JLabel jLProveedorProductos;
     private javax.swing.JLabel jLStockProductos;
     private javax.swing.JPanel jPanelProductos;
-    private javax.swing.JTextField jTAccesoriosProductos;
-    private javax.swing.JTextField jTCodigoProductos;
-    private javax.swing.JTextField jTDescripcionClienteProductos;
-    private javax.swing.JTextField jTDescripcionUsuarioProductos;
-    private javax.swing.JTextField jTIdProductos;
-    private javax.swing.JTextField jTMarcaProductos;
-    private javax.swing.JTextField jTModeloProductos;
-    private javax.swing.JTextField jTNombreProductos;
-    private javax.swing.JTextField jTPrecioProductos;
-    private javax.swing.JTextField jTProveedorProductos;
-    private javax.swing.JTextField jTStockProductos;
+    public javax.swing.JTextField jTAccesoriosProductos;
+    public javax.swing.JTextField jTCodigoProductos;
+    public javax.swing.JTextField jTDescripcionClienteProductos;
+    public javax.swing.JTextField jTDescripcionUsuarioProductos;
+    public javax.swing.JTextField jTIdProductos;
+    public javax.swing.JTextField jTMarcaProductos;
+    public javax.swing.JTextField jTModeloProductos;
+    public javax.swing.JTextField jTNombreProductos;
+    public javax.swing.JTextField jTPrecioProductos;
+    public javax.swing.JTextField jTProveedorProductos;
+    public javax.swing.JTextField jTStockProductos;
     // End of variables declaration//GEN-END:variables
 }

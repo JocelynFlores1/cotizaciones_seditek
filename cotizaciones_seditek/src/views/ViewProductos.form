@@ -135,6 +135,7 @@
                               <Component id="jBAgregarProductos" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLCodigoProductos" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                           </Group>
+                          <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -156,7 +157,6 @@
                                   </Group>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="jTAccesoriosProductos" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="jBEliminarProductos" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -217,12 +217,24 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTNombreProductos">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="jTMarcaProductos">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="jTModeloProductos">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JTextField" name="jTCodigoProductos">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="jLStockProductos">
           <Properties>
@@ -230,6 +242,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTStockProductos">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="jLDescripcionUsuarioProdcutos">
           <Properties>
@@ -237,6 +252,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTDescripcionUsuarioProductos">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="jLDescripcionClienteProductos">
           <Properties>
@@ -244,6 +262,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTDescripcionClienteProductos">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="jLAccesoriosProductos">
           <Properties>
@@ -251,6 +272,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTAccesoriosProductos">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="jLPrecioProductos">
           <Properties>
@@ -258,6 +282,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTPrecioProductos">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="jLProveedorProductos">
           <Properties>
@@ -265,26 +292,41 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTProveedorProductos">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="jBEliminarProductos">
           <Properties>
             <Property name="text" type="java.lang.String" value="Eliminar"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="jBAgregarProductos">
           <Properties>
             <Property name="text" type="java.lang.String" value="Agregar"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="jBActualizarProductos">
           <Properties>
             <Property name="text" type="java.lang.String" value="Actualizar"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="jBLimpiarProductos">
           <Properties>
             <Property name="text" type="java.lang.String" value="Limpiar"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="jLIdProductos">
           <Properties>
@@ -292,6 +334,9 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JTextField" name="jTIdProductos">
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
         </Component>
       </SubComponents>
     </Container>

@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 public class ModelProductos {
 
-    private final ModelDataBase model_database;
+    private final ModelConexion model_conexion;
     private PreparedStatement pst;
     private ResultSet resut;
     private String sql;
@@ -26,8 +26,8 @@ public class ModelProductos {
     private String id_proveedor;
     
     
-    public ModelProductos(ModelDataBase model_database){
-        this.model_database = model_database;
+    public ModelProductos(ModelConexion model_conexion){
+        this.model_conexion = model_conexion;
     }
     
     public String getId_producto() {
@@ -147,7 +147,7 @@ public class ModelProductos {
                     + "descripcion_usuario,descripcion_cliente,accesorios,precio_unitario,stock,id_proveedor) "
                     + "values(?,?,?,?,?,?,?,?,?,?,?);";
             
-            pst = model_database.getConexion().prepareStatement(sql);
+            pst = model_conexion.getConexion().prepareStatement(sql);
             
             pst.setString(1,id_producto);
             pst.setString(2,codigo_producto);
@@ -169,11 +169,11 @@ public class ModelProductos {
         }
      }// insertando datos
     
-    public void eliminarProdcutos(/*int id_cliente*/){
+    public void eliminarProductos(/*int id_cliente*/){
         try{
             sql="DELETE FROM Productos WHERE id_producto= ?;";
             
-            pst = model_database.getConexion().prepareStatement(sql);
+            pst = model_conexion.getConexion().prepareStatement(sql);
             
             pst.setString(1,id_producto);
             pst.executeUpdate();
@@ -187,7 +187,7 @@ public class ModelProductos {
     public void actualizarProductos(/*String nombre,String telefono,String email,String direccion,int id_cliente*/){
         try{
             sql="UPDATE clientes SET nombre=?,telefono=?, email=?, direccion=? WHERE id_cliente=?;";
-            pst = model_database.getConexion().prepareStatement(sql);
+            pst = model_conexion.getConexion().prepareStatement(sql);
             
             pst.setString(1,id_producto);
             pst.setString(2,codigo_producto);

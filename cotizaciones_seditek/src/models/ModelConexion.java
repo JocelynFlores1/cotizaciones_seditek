@@ -33,6 +33,7 @@ public class ModelConexion {
 
         } catch (SQLException ex) {
             System.err.println(ex);
+            
         }
         return con;
 

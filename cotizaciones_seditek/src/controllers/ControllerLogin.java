@@ -37,7 +37,7 @@ public class ControllerLogin implements ActionListener {
         viewLogin.setLocationRelativeTo(null);
         viewLogin.setTitle("Inicio de sesión Seditek");
 
-        ImageIcon imagenUno = new ImageIcon(getClass().getResource("/img/fondo.PNG"));
+        ImageIcon imagenUno = new ImageIcon(getClass().getResource("/img/login.jpg"));
         Image fondoUno = imagenUno.getImage().getScaledInstance(viewLogin.jl_Login.getWidth(), viewLogin.jl_Login.getHeight(), Image.SCALE_SMOOTH);
         Icon iconoEscalado = new ImageIcon(fondoUno);
         viewLogin.jl_Login.setIcon(iconoEscalado);

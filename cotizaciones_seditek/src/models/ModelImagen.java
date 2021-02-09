@@ -24,7 +24,7 @@ public class ModelImagen extends javax.swing.JPanel {
         Dimension tam = getSize();
 
 //Se selecciona la imagen que tenemos en el paquete de la //ruta del programa
-        ImageIcon Img = new ImageIcon(getClass().getResource("/img/ACME.png"));
+        ImageIcon Img = new ImageIcon(getClass().getResource("/img/fondo.PNG"));
 
 //se dibuja la imagen que tenemos en el paquete Images //dentro de un panel
         g.drawImage(Img.getImage(),0,0,tam.width,tam.height,null); 

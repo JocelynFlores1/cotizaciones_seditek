@@ -37,6 +37,8 @@ public class ViewLogin extends javax.swing.JFrame {
         jtf_usuario = new javax.swing.JTextField();
         jp_password = new javax.swing.JPasswordField();
         jb_iniciar = new javax.swing.JButton();
+        jl_usuario = new javax.swing.JLabel();
+        jl_password = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -62,6 +64,12 @@ public class ViewLogin extends javax.swing.JFrame {
         jb_iniciar.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
         jb_iniciar.setText("Iniciar sesión");
 
+        jl_usuario.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
+        jl_usuario.setText("Usuario");
+
+        jl_password.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
+        jl_password.setText("Contraseña");
+
         javax.swing.GroupLayout jPanelLoginLayout = new javax.swing.GroupLayout(jPanelLogin);
         jPanelLogin.setLayout(jPanelLoginLayout);
         jPanelLoginLayout.setHorizontalGroup(
@@ -70,10 +78,13 @@ public class ViewLogin extends javax.swing.JFrame {
                 .addContainerGap(88, Short.MAX_VALUE)
                 .addComponent(jl_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(85, 85, 85)
-                .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jb_iniciar, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
-                    .addComponent(jtf_usuario)
-                    .addComponent(jp_password))
+                .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jb_iniciar, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
+                        .addComponent(jtf_usuario)
+                        .addComponent(jp_password))
+                    .addComponent(jl_usuario)
+                    .addComponent(jl_password))
                 .addGap(209, 209, 209))
             .addGroup(jPanelLoginLayout.createSequentialGroup()
                 .addGap(263, 263, 263)
@@ -89,11 +100,15 @@ public class ViewLogin extends javax.swing.JFrame {
             .addGroup(jPanelLoginLayout.createSequentialGroup()
                 .addGap(53, 53, 53)
                 .addComponent(jl_titulo)
-                .addGap(72, 72, 72)
+                .addGap(52, 52, 52)
+                .addComponent(jl_usuario)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jtf_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
+                .addGap(19, 19, 19)
+                .addComponent(jl_password)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jp_password, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                 .addComponent(jb_iniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40))
         );
@@ -162,7 +177,9 @@ public class ViewLogin extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelLogin;
     public javax.swing.JButton jb_iniciar;
     public javax.swing.JLabel jl_Login;
-    private javax.swing.JLabel jl_titulo;
+    public javax.swing.JLabel jl_password;
+    public javax.swing.JLabel jl_titulo;
+    public javax.swing.JLabel jl_usuario;
     public javax.swing.JPasswordField jp_password;
     public javax.swing.JTextField jtf_usuario;
     // End of variables declaration//GEN-END:variables

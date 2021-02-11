@@ -55,7 +55,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jLTelefonoCProveedores" min="-2" pref="90" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jTTelefonoCproveedores" min="-2" pref="135" max="-2" attributes="0"/>
+                      <Component id="jTTelefonoCProveedores" min="-2" pref="135" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="84" max="32767" attributes="0"/>
@@ -72,42 +72,37 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="1" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                                      <Group type="102" alignment="1" attributes="0">
-                                          <Component id="jLMunicipioProveedores" min="-2" pref="90" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jTMunicipioProveedores" min="-2" pref="135" max="-2" attributes="0"/>
-                                      </Group>
-                                      <Group type="102" alignment="0" attributes="0">
-                                          <Component id="jLCPProveedores" min="-2" pref="90" max="-2" attributes="0"/>
-                                          <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jTCPProveedores" min="-2" pref="135" max="-2" attributes="0"/>
-                                      </Group>
+                          <Group type="103" alignment="0" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jLMunicipioProveedores" min="-2" pref="90" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jTMunicipioProveedores" min="-2" pref="135" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jLColoniaProveedores" min="-2" pref="90" max="-2" attributes="0"/>
+                                      <Component id="jLCPProveedores" min="-2" pref="90" max="-2" attributes="0"/>
                                       <EmptySpace max="-2" attributes="0"/>
-                                      <Component id="jTColoniaProveedores" min="-2" pref="135" max="-2" attributes="0"/>
+                                      <Component id="jTCPProveedores" min="-2" pref="135" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="44" max="32767" attributes="0"/>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jLColoniaProveedores" min="-2" pref="90" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="jTColoniaProveedores" min="-2" pref="135" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                           <Group type="102" alignment="0" attributes="0">
                               <Component id="jLCalleProveedores" min="-2" pref="90" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jTCalleProvedores" min="-2" pref="135" max="-2" attributes="0"/>
-                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jTCalleProveedores" min="-2" pref="135" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                           <Component id="jBAgregarProveedores" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jBEliminarProveedores" max="32767" attributes="0"/>
-                              <Component id="jBLimpiarProveedores" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jBActualizarProveedores" alignment="0" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="jBEliminarProveedores" max="32767" attributes="0"/>
+                          <Component id="jBLimpiarProveedores" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jBActualizarProveedores" alignment="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -124,7 +119,7 @@
                   <Component id="jLIdProveedores" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                   <Component id="jTIdProveedores" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLCalleProveedores" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                  <Component id="jTCalleProvedores" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTCalleProveedores" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jBAgregarProveedores" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -154,7 +149,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLTelefonoCProveedores" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
-                  <Component id="jTTelefonoCproveedores" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTTelefonoCProveedores" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLEmpresaProveedores" alignment="3" min="-2" pref="22" max="-2" attributes="0"/>
                   <Component id="jTEmpresaProveedores" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -182,8 +177,14 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTIdProveedores">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JTextField" name="jTNombreProveedores">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLNombreProveedores">
       <Properties>
@@ -191,6 +192,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTTelefonoProveedores">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLTelefonoProveedores">
       <Properties>
@@ -198,13 +202,19 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTEmailProveedores">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLEmailProveedores">
       <Properties>
         <Property name="text" type="java.lang.String" value="Email"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTTelefonoCproveedores">
+    <Component class="javax.swing.JTextField" name="jTTelefonoCProveedores">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLTelefonoCProveedores">
       <Properties>
@@ -212,13 +222,19 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTEmailCProveedores">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLEmailCProveedores">
       <Properties>
         <Property name="text" type="java.lang.String" value="Email Contacto"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTCalleProvedores">
+    <Component class="javax.swing.JTextField" name="jTCalleProveedores">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLCalleProveedores">
       <Properties>
@@ -226,6 +242,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTColoniaProveedores">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLColoniaProveedores">
       <Properties>
@@ -233,6 +252,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTMunicipioProveedores">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLMunicipioProveedores">
       <Properties>
@@ -240,6 +262,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTCPProveedores">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLCPProveedores">
       <Properties>
@@ -247,6 +272,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTEmpresaProveedores">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLEmpresaProveedores">
       <Properties>
@@ -254,6 +282,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTRFC">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JLabel" name="jLRFC">
       <Properties>
@@ -264,21 +295,33 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Agregar"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="jBEliminarProveedores">
       <Properties>
         <Property name="text" type="java.lang.String" value="Eliminar"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="jBActualizarProveedores">
       <Properties>
         <Property name="text" type="java.lang.String" value="Actualizar"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
     <Component class="javax.swing.JButton" name="jBLimpiarProveedores">
       <Properties>
         <Property name="text" type="java.lang.String" value="Limpiar"/>
       </Properties>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

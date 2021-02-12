@@ -16,11 +16,12 @@ import java.sql.Statement;
  * @author flore
  */
 public class ModelConexion {
-
+    
+    private final String host = "bizgkbbqrlrldpommd6i-mysql.services.clever-cloud.com";
     private final String base = "bizgkbbqrlrldpommd6i";
     private final String user = "uxyi45tt7lw3jtdh";
     private final String password = "JxNypTIhS5Zw96aoXAA1";
-    private final String url = "jdbc:mysql:////uxyi45tt7lw3jtdh:JxNypTIhS5Zw96aoXAA1@bizgkbbqrlrldpommd6i-mysql.services.clever-cloud.com:3306/bizgkbbqrlrldpommd6i:3306/"+ base;
+    private final String url = "mysql://uxyi45tt7lw3jtdh:JxNypTIhS5Zw96aoXAA1@bizgkbbqrlrldpommd6i-mysql.services.clever-cloud.com:3306/bizgkbbqrlrldpommd6i"+ base;
     public Connection con;
     public Statement st = null;
     public ResultSet rs;

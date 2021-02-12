@@ -27,7 +27,50 @@ public class ViewMenu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jmInicio = new javax.swing.JMenu();
+        jmVentanas = new javax.swing.JMenu();
+        jmUsuarios = new javax.swing.JMenuItem();
+        jmSesion = new javax.swing.JMenu();
+        jmUsuarioSesion = new javax.swing.JMenuItem();
+        jmCerrarSesion = new javax.swing.JMenuItem();
+        jmBD = new javax.swing.JMenu();
+        jmInicio1 = new javax.swing.JMenu();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jmInicio.setText("Inicio");
+        jMenuBar1.add(jmInicio);
+
+        jmVentanas.setText("Ventanas");
+
+        jmUsuarios.setText("Usuarios");
+        jmUsuarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmUsuariosActionPerformed(evt);
+            }
+        });
+        jmVentanas.add(jmUsuarios);
+
+        jMenuBar1.add(jmVentanas);
+
+        jmSesion.setText("Sesión");
+
+        jmUsuarioSesion.setText("Usuario");
+        jmSesion.add(jmUsuarioSesion);
+
+        jmCerrarSesion.setText("Cerrar sesión");
+        jmSesion.add(jmCerrarSesion);
+
+        jMenuBar1.add(jmSesion);
+
+        jmBD.setText("Base de datos");
+        jMenuBar1.add(jmBD);
+
+        jmInicio1.setText("Inicio");
+        jMenuBar1.add(jmInicio1);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -37,11 +80,15 @@ public class ViewMenu extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 277, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jmUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmUsuariosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jmUsuariosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -79,5 +126,14 @@ public class ViewMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuBar jMenuBar1;
+    public javax.swing.JMenu jmBD;
+    public javax.swing.JMenuItem jmCerrarSesion;
+    public javax.swing.JMenu jmInicio;
+    public javax.swing.JMenu jmInicio1;
+    private javax.swing.JMenu jmSesion;
+    public javax.swing.JMenuItem jmUsuarioSesion;
+    public javax.swing.JMenuItem jmUsuarios;
+    private javax.swing.JMenu jmVentanas;
     // End of variables declaration//GEN-END:variables
 }

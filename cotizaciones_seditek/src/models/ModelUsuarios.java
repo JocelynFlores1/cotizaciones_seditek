@@ -113,7 +113,7 @@ public class ModelUsuarios {
     public void conectarDB(ModelConexion usuarioConexion) {
         try {
             System.out.println("consulta 2 usuarios");
-            String consultaString = "select * from usuarios";
+            String consultaString = "select * from Usuarios";
             ps = (PreparedStatement) usuarioConexion.getConexion().prepareStatement(consultaString);
             rs = ps.executeQuery();
 
@@ -135,7 +135,7 @@ public class ModelUsuarios {
      */
     public void insertarNuevoUsuario(ModelConexion usuarioConexion) {
         System.out.println("nuevo  3 usuarios");
-        String sqlInsertarUsuario = "insert into usuarios (id_usuario, nombre_usuario, tipo_usuario, password) VALUES(?,?,?,?)";
+        String sqlInsertarUsuario = "insert into Usuarios (id_usuario, nombre_usuario, tipo_usuario, password) VALUES(?,?,?,?)";
         try {
             ps = (PreparedStatement) usuarioConexion.getConexion().prepareStatement(sqlInsertarUsuario); //con este comando se podra hacer la modificacion a la tabla en la base de datos
             System.out.println(getId_usuario());
@@ -156,7 +156,7 @@ public class ModelUsuarios {
      */
     public void modificarDatosUsuario(ModelConexion usuarioConexion) {
         System.out.println("modificar 4 usuarios");
-        String sqlModificarUsuario = "update usuarios set "
+        String sqlModificarUsuario = "update Usuarios set "
                 + "nombre_usuario=?, tipo_usuario=?, Password=? where id_usuario = ?";
         try {
 
@@ -176,7 +176,7 @@ public class ModelUsuarios {
 
     public void borrarDatosUsuario(ModelConexion usuarioConexion) {
         System.out.println("eliminar 5 usuarios");
-        String sqlBorrarUsuario = "delete from usuarios where id_usuario = ?";
+        String sqlBorrarUsuario = "delete from Usuarios where id_usuario = ?";
         try {
 
             ps = (PreparedStatement) usuarioConexion.getConexion().prepareStatement(sqlBorrarUsuario);
@@ -196,7 +196,7 @@ public class ModelUsuarios {
     public void consultajTableUsuarios(ModelConexion usuarioConexion) {
         try {
             System.out.println("tabla 6 usuarios");
-            String consultaString = "select * from usuarios";
+            String consultaString = "select * from Usuarios";
             ps = (PreparedStatement) usuarioConexion.getConexion().prepareStatement(consultaString);
             rs = ps.executeQuery();
         } catch (SQLException e) {
@@ -206,7 +206,7 @@ public class ModelUsuarios {
 
     public void consultaGenerarCodigos(ModelConexion usuarioConexion) {
         System.out.println("codigos 7 usuarios");
-        String SQL = "select max(id_usuario) from usuarios";
+        String SQL = "select max(id_usuario) from Usuarios";
 
         try {
             ps = (PreparedStatement) usuarioConexion.getConexion().prepareStatement(SQL);

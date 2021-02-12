@@ -68,9 +68,6 @@ public class ControllerProductos {
         view_productos.jTStockProductos.setText(""+model_productos.getStock());
         view_productos.jTProveedorProductos.setText(""+model_productos.getId_proveedor());
         
-        
-        
-
     }
     
     public void setValores(){

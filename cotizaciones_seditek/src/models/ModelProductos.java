@@ -140,7 +140,7 @@ public class ModelProductos {
     
 
     
-     public void insertarProductos(/*String nombre,String telefono,String email,String direccion*/){
+    public void insertarProductos(){
         try{
             
             sql="INSERT into Productos(id_producto,codigo_producto,nombre_producto,marca,modelo,"
@@ -169,7 +169,7 @@ public class ModelProductos {
         }
      }// insertando datos
     
-    public void eliminarProductos(/*int id_cliente*/){
+    public void eliminarProductos(){
         try{
             sql="DELETE FROM Productos WHERE id_producto= ?;";
             
@@ -184,9 +184,10 @@ public class ModelProductos {
         }
     }//borrar datos
     
-    public void actualizarProductos(/*String nombre,String telefono,String email,String direccion,int id_cliente*/){
+    public void actualizarProductos(){
         try{
-            sql="UPDATE clientes SET nombre=?,telefono=?, email=?, direccion=? WHERE id_cliente=?;";
+            sql="UPDATE Productos SET codigo_producto=?,nombre_producto=?, marca=?, modelo=?, descripcion_usuario=?, "
+                    + "descripcion_cliente, accesorios=?, precio_unitario=?, stock=?, id_proveedor=? WHERE id_producto=?;";
             pst = model_conexion.getConexion().prepareStatement(sql);
             
             pst.setString(1,id_producto);

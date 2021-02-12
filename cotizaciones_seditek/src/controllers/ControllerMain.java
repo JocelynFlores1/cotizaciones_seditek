@@ -63,6 +63,10 @@ public class ControllerMain {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    ControllerMain(ModelMain modelMain, ViewMenu viewMenu, String nombre_usuario, String tipo_usuario) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     /**
      * Separa cada uno de los controlladores almacendados en controllers, de
      * esta forma se puede acceder a todas las variables y métodos publicos de

@@ -159,18 +159,18 @@ public class ViewServicios extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jBActualizarServicio;
-    private javax.swing.JButton jBAgregarServicio;
-    private javax.swing.JButton jBEliminarServicio;
-    private javax.swing.JButton jBLimpiarServicio;
+    public javax.swing.JButton jBActualizarServicio;
+    public javax.swing.JButton jBAgregarServicio;
+    public javax.swing.JButton jBEliminarServicio;
+    public javax.swing.JButton jBLimpiarServicio;
     private javax.swing.JLabel jLCostoServicio;
     private javax.swing.JLabel jLDescripcionServicio;
     private javax.swing.JLabel jLFondoServicios;
     private javax.swing.JLabel jLIdServicio;
     private javax.swing.JLabel jLTipoServicio;
-    private javax.swing.JTextField jTCostoServicio;
-    private javax.swing.JTextField jTDescripcionServicio;
-    private javax.swing.JTextField jTIdServicio;
-    private javax.swing.JTextField jTTipoServicio;
+    public javax.swing.JTextField jTCostoServicio;
+    public javax.swing.JTextField jTDescripcionServicio;
+    public javax.swing.JTextField jTIdServicio;
+    public javax.swing.JTextField jTTipoServicio;
     // End of variables declaration//GEN-END:variables
 }

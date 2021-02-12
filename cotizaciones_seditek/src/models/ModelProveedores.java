@@ -198,7 +198,9 @@ public class ModelProveedores {
     
     public void actualizarProveedores(){
         try{
-            sql="UPDATE clientes SET nombre=?,telefono=?, email=?, direccion=? WHERE id_cliente=?;";
+            sql="UPDATE Proveedores SET nombre_proveedor=?,telefono_proveedor=?,telefono_contacto=?,"
+                    + " email_provedor=?,email_contacto=?, calle_proveedor=?,colonia_proveedor=?, "
+                    + "municipio_proveedor=?,empresa_proovedor=?, rfc_proveedor=?, cp_proveedor=? WHERE id_proveedores=?;";
             pst = model_database.getConexion().prepareStatement(sql);
             
             pst.setString(1,id_proveedor);

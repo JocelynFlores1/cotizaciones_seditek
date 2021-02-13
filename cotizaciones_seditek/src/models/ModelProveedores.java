@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 public class ModelProveedores {
     
-    private final ModelDataBase model_database;
+    //private final ModelDataBase model_database;
     private PreparedStatement pst;
     private ResultSet resut;
     private String sql;
@@ -27,9 +27,6 @@ public class ModelProveedores {
     private int cp_proveedor;
     
 
-    public ModelProveedores(ModelDataBase model_database){
-    this.model_database = model_database;
-    }
     
     
     public String getId_proveedor() {
@@ -158,7 +155,7 @@ public class ModelProveedores {
                     + "empresa_proveedorr,rfc_proveedor,cp_proveedor) "
                     + "values(?,?,?,?,?,?,?,?,?,?,?,?);";
             
-            pst = model_database.getConexion().prepareStatement(sql);
+            //pst = model_database.getConexion().prepareStatement(sql);
             
             pst.setString(1,id_proveedor);
             pst.setString(2,nombre_proveedor);
@@ -185,7 +182,7 @@ public class ModelProveedores {
         try{
             sql="DELETE FROM Productos WHERE id_proveedor= ?;";
             
-            pst = model_database.getConexion().prepareStatement(sql);
+           // pst = model_database.getConexion().prepareStatement(sql);
             
             pst.setString(1,id_proveedor);
             pst.executeUpdate();
@@ -201,7 +198,7 @@ public class ModelProveedores {
             sql="UPDATE Proveedores SET nombre_proveedor=?,telefono_proveedor=?,telefono_contacto=?,"
                     + " email_provedor=?,email_contacto=?, calle_proveedor=?,colonia_proveedor=?, "
                     + "municipio_proveedor=?,empresa_proovedor=?, rfc_proveedor=?, cp_proveedor=? WHERE id_proveedores=?;";
-            pst = model_database.getConexion().prepareStatement(sql);
+          //  pst = model_database.getConexion().prepareStatement(sql);
             
             pst.setString(1,id_proveedor);
             pst.setString(2,nombre_proveedor);

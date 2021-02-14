@@ -264,7 +264,7 @@ public class ControllerProductos {
     
     /**
      * Este metodo permite generar codigos automaticamente con una consulta en
-     * la base de datos desde models.ModelUsuario.GenerarCodigos
+     * la base de datos desde models.ModelProductos.GenerarCodigos
      */
     public void codigos() {
 
@@ -290,8 +290,8 @@ public class ControllerProductos {
             System.out.println(j);
             ModelGenerarCodigos gen = new ModelGenerarCodigos();
             gen.generar(j);
-            view_productos.jTIdProducto.setText("SEDITEK-U" + gen.serie());
-            System.out.println("SEDITEK-U" + gen.serie());
+            view_productos.jTIdProducto.setText("SEDITEK-P" + gen.serie());
+            System.out.println("SEDITEK-P" + gen.serie());
 
         }
     }

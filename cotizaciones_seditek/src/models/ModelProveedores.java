@@ -1,17 +1,18 @@
 package models;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import javax.swing.JOptionPane;
+import java.sql.Statement;
 
 
 public class ModelProveedores {
     
-    //private final ModelDataBase model_database;
-    private PreparedStatement pst;
-    private ResultSet resut;
-    private String sql;
+    private Connection conexion;
+    private Statement st;
+    private ResultSet rs;
+    private PreparedStatement ps;
     
     private String id_proveedor;
     private String nombre_proveedor;
@@ -25,9 +26,40 @@ public class ModelProveedores {
     private String empresa_proveedor;
     private String rfc_proveedor;
     private int cp_proveedor;
-    
+    private String u = "";
 
     
+    public Connection getConexion() {
+        return conexion;
+    }
+
+    public void setConexion(Connection conexion) {
+        this.conexion = conexion;
+    }
+
+    public Statement getSt() {
+        return st;
+    }
+
+    public void setSt(Statement st) {
+        this.st = st;
+    }
+
+    public ResultSet getRs() {
+        return rs;
+    }
+
+    public void setRs(ResultSet rs) {
+        this.rs = rs;
+    }
+
+    public PreparedStatement getPs() {
+        return ps;
+    }
+
+    public void setPs(PreparedStatement ps) {
+        this.ps = ps;
+    }
     
     public String getId_proveedor() {
         return id_proveedor;
@@ -146,92 +178,177 @@ public class ModelProveedores {
     }
     
     
-    
-    public void insertarProveedores(){
-        try{
+    public void modificarDatos() {
+        try {
+            System.out.println("modificar datos variables 1 proveedores");
+            setId_proveedor(rs.getString(1));
+            setNombre_proveedor(rs.getString(2));
+            setTelefono_proveedor(rs.getInt(3));
+            setTelefono_contacto(rs.getInt(4));
+            setEmail_proveedor(rs.getString(5));
+            setEmail_contacto(rs.getString(6));
+            setCalle_proveedor(rs.getString(7));
+            setColonia_proveedor(rs.getString(8));
+            setMunicipio_proveedor(rs.getString(9));
+            setEmpresa_proveedor(rs.getString(10));
+            setRfc_proveedor(rs.getString(11));
+            setCp_proveedor(rs.getInt(12));
             
-            sql="INSERT into Proveedores(id_proveedor,nombre_proveedor,telefono_proveedor,telefono_contacto,"
+            
+        } catch (SQLException e) {
+            System.out.println("Error 01: modificar datos" + e);
+        }
+    }
+    
+    
+    /**
+     * Método que realiza las siguietnes acciones: 
+     * 1.- Conecta con la base 
+     * 2.- Consulta todo los registros .
+     **/
+    public void conectarDB(ModelConexion proveedorConexion) {
+        try {
+            System.out.println("consulta 2 proveedores");
+            String consultaString = "select * from Proveedor";
+            ps = (PreparedStatement) proveedorConexion.getConexion().prepareStatement(consultaString);
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+                modificarDatos();
+            } else {
+                System.out.println("Error de consulta");
+            }
+        } catch (SQLException e) {
+            System.out.println("Error 02: tabla proveedor" + e);
+        }
+    }
+    
+    
+    /**
+     * *
+     * Metodo que realiza la insercción de un nuevo usuario en la base de datos,
+     * obteniendo las variables que se guardaron en el controller
+     *
+     */
+    public void insertarNuevoProveedor(ModelConexion proveedorConexion) {
+        System.out.println("nuevo  3 proveedor");
+        String sqlInsertarProveedor = "INSERT into Proveedores(id_proveedor,nombre_proveedor,telefono_proveedor,telefono_contacto,"
                     + "email_proveedor,email_contacto,calle_proveedor,colonia_proveedor,municipio_proveedor,"
                     + "empresa_proveedorr,rfc_proveedor,cp_proveedor) "
                     + "values(?,?,?,?,?,?,?,?,?,?,?,?);";
+        try {
+            ps = (PreparedStatement) proveedorConexion.getConexion().prepareStatement(sqlInsertarProveedor); //con este comando se podra hacer la modificacion a la tabla en la base de datos
+            System.out.println(getId_proveedor());
+            ps.setString(1, getId_proveedor());
+            ps.setString(2, getNombre_proveedor());
+            ps.setInt(3, getTelefono_proveedor());
+            ps.setInt(4, getTelefono_contacto());
+            ps.setString(5, getEmail_proveedor());
+            ps.setString(6, getEmail_contacto());
+            ps.setString(7, getCalle_proveedor());
+            ps.setString(8, getColonia_proveedor());
+            ps.setString(9, getMunicipio_proveedor());
+            ps.setString(10, getEmpresa_proveedor());
+            ps.setString(11, getRfc_proveedor());
+            ps.setInt(12, getCp_proveedor());
             
-            //pst = model_database.getConexion().prepareStatement(sql);
-            
-            pst.setString(1,id_proveedor);
-            pst.setString(2,nombre_proveedor);
-            pst.setInt(3,telefono_proveedor);
-            pst.setInt(4,telefono_contacto);
-            pst.setString(5,email_proveedor);
-            pst.setString(6,email_contacto);
-            pst.setString(7,calle_proveedor);
-            pst.setString(8,colonia_proveedor);
-            pst.setString(9,municipio_proveedor);
-            pst.setString(10,empresa_proveedor);
-            pst.setString(11,rfc_proveedor);
-            pst.setInt(12,cp_proveedor);
-            
-            pst.executeUpdate();
-            
-            System.out.println("insertando datos de proveedor ");
-        }catch(SQLException ex){
-            JOptionPane.showMessageDialog(null,"Error 108 insertar datos "+ex.getMessage());
+            ps.executeUpdate();
+        } catch (SQLException ex) {
+            System.out.println("Error 03: Insertar nuevo proveedor" + ex);
         }
-     }// insertando datos
+    }
     
-    public void eliminarProveedores(){
-        try{
-            sql="DELETE FROM Productos WHERE id_proveedor= ?;";
-            
-           // pst = model_database.getConexion().prepareStatement(sql);
-            
-            pst.setString(1,id_proveedor);
-            pst.executeUpdate();
- 
-            System.out.println("dato borrado proveedor ");
-        }catch(SQLException ex){
-            JOptionPane.showMessageDialog(null,"Error 109 Borrar datos "+ ex.getMessage());
-        }
-    }//borrar datos
     
-    public void actualizarProveedores(){
-        try{
-            sql="UPDATE Proveedores SET nombre_proveedor=?,telefono_proveedor=?,telefono_contacto=?,"
+    
+        public void modificarDatosProveedor(ModelConexion proveedorConexion) {
+            System.out.println("modificar 4 proveedor");
+            String sqlModificarProveedor = "UPDATE Proveedores SET nombre_proveedor=?,telefono_proveedor=?,telefono_contacto=?,"
                     + " email_provedor=?,email_contacto=?, calle_proveedor=?,colonia_proveedor=?, "
                     + "municipio_proveedor=?,empresa_proovedor=?, rfc_proveedor=?, cp_proveedor=? WHERE id_proveedores=?;";
-          //  pst = model_database.getConexion().prepareStatement(sql);
-            
-            pst.setString(1,id_proveedor);
-            pst.setString(2,nombre_proveedor);
-            pst.setInt(3,telefono_proveedor);
-            pst.setInt(4,telefono_contacto);
-            pst.setString(5,email_proveedor);
-            pst.setString(6,email_contacto);
-            pst.setString(7,calle_proveedor);
-            pst.setString(8,colonia_proveedor);
-            pst.setString(9,municipio_proveedor);
-            pst.setString(10,empresa_proveedor);
-            pst.setString(11,rfc_proveedor);
-            pst.setInt(12,cp_proveedor);
-            
-            pst.executeUpdate();
+            try {
 
-            System.out.println("datos actualizados de proveedor ");
-        }catch(SQLException ex){
-            JOptionPane.showMessageDialog(null,"Error 110 Actualizar datos "+ ex.getMessage());
+                ps = (PreparedStatement) proveedorConexion.getConexion().prepareStatement(sqlModificarProveedor);
+
+                System.out.println(getId_proveedor());
+
+                ps.setString(1, getId_proveedor());
+                ps.setString(2, getNombre_proveedor());
+                ps.setInt(3, getTelefono_proveedor());
+                ps.setInt(4, getTelefono_contacto());
+                ps.setString(5, getEmail_proveedor());
+                ps.setString(6, getEmail_contacto());
+                ps.setString(7, getCalle_proveedor());
+                ps.setString(8, getColonia_proveedor());
+                ps.setString(9, getMunicipio_proveedor());
+                ps.setString(10, getEmpresa_proveedor());
+                ps.setString(11, getRfc_proveedor());
+                ps.setInt(12, getCp_proveedor());
+
+                ps.executeUpdate();
+
+        } catch (SQLException ex) {
+            System.out.println("Error 04: Modificar datos proveedor" + ex);
         }
-    }//actualizar datos
+    }
+    
+    
+    
+    public void borrarDatosProveedor(ModelConexion proveedorConexion) {
+        System.out.println("eliminar 5 proveedor");
+        String sqlBorrarProveedor = "DELETE FROM Productos WHERE id_proveedor= ?;";
+        try {
 
+            ps = (PreparedStatement) proveedorConexion.getConexion().prepareStatement(sqlBorrarProveedor);
+            //Este proceso permite establecer la conexion del objeto creado y enlazar la consulta con la base de datos para poder borrar el producto.
+            ps.setString(1, getId_proveedor());
+            ps.executeUpdate();
+        } catch (SQLException ex) {
+            System.out.println("Error 05: Borrar datos proveedor" + ex);
+        }
+    }
     
     
+    /**
+     * *
+     * Metodo que permite insertar los datos de la tabla de la base de datos en
+     * un jTable en java
+     */
+    public void consultajTableProducto(ModelConexion proveedorConexion) {
+        try {
+            System.out.println("tabla 6 proveedor");
+            String consultaString = "select * from Proveedor";
+            ps = (PreparedStatement) proveedorConexion.getConexion().prepareStatement(consultaString);
+            rs = ps.executeQuery();
+        } catch (SQLException e) {
+            System.out.println("Error 000000: tabla proveedor" + e);
+        }
+    }
     
-    
-    
-    
-    
-    
-    
-    
-    
+    public void consultaGenerarCodigos(ModelConexion proveedorConexion) {
+        System.out.println("codigos 7 proveedor");
+        String SQL = "select max(id_proveedor) from Proveedor";
+
+        try {
+            ps = (PreparedStatement) proveedorConexion.getConexion().prepareStatement(SQL);
+            rs = ps.executeQuery();
+
+            if (rs.next()) {
+                u = rs.getString(1);
+                System.out.println("madx" + rs.getString(1));
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error" + ex);
+        }
+
+    }
+
+    public String getU() {
+        return u;
+    }
+
+    public void setU(String c) {
+        this.u= u;
+    }
     
     
 }

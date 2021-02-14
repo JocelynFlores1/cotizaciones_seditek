@@ -306,7 +306,7 @@ public class ModelProductos {
             ps = (PreparedStatement) productoConexion.getConexion().prepareStatement(consultaString);
             rs = ps.executeQuery();
         } catch (SQLException e) {
-            System.out.println("Error 000000: tabla usuarios" + e);
+            System.out.println("Error 000000: tabla proveedor" + e);
         }
     }
 

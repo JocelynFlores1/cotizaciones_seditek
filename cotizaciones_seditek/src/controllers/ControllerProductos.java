@@ -48,7 +48,7 @@ public class ControllerProductos {
         model_productos.conectarDB(productoConexion);
         CambiarCampos();
         tablaConsulta();
-        System.out.println("Solo se inicia si se abre usuarios");
+        System.out.println("Solo se inicia si se abre productos");
     }
     
     /**
@@ -71,7 +71,7 @@ public class ControllerProductos {
     }
     
 
-        /**
+    /**
      * Método para agregar el actionListener a cada boton de la vista
      */
     public void setActionListener() {

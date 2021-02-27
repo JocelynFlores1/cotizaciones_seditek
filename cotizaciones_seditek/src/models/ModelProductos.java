@@ -200,7 +200,7 @@ public class ModelProductos {
      **/
     public void conectarDB(ModelConexion productoConexion) {
         try {
-            System.out.println("consulta 2 productos");
+            System.out.println("Conexion exitosa");
             String consultaString = "select * from Productos";
             ps = (PreparedStatement) productoConexion.getConexion().prepareStatement(consultaString);
             rs = ps.executeQuery();

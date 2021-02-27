@@ -20,13 +20,13 @@ import java.util.logging.Logger;
 public class ModelConexion {
     
     public Connection con;
-    public Statement st = null;
+    public Statement st ;
     public ResultSet rs;
 
     public Connection getConexion() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://sql5.freemysqlhosting.net/sql5392576", "sql5392576", "lWuSQjZuh2");
+            con = DriverManager.getConnection("jdbc:mysql://jhdjjtqo9w5bzq2t.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/v495puqjjm0nnzem", "pfeu8xqeoutm8fbw", "a6ojgbiubxjcnj39");
             System.out.println("Conexion Exitosa");
 
         } catch (SQLException ex) {

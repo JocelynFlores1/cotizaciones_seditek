@@ -266,18 +266,18 @@ public class ControllerProveedores {
     public void Nuevo_proveedor_actionPerformed() {
         codigos();
                
-        view_proveedores.jTIdProveedor.setText(" ");
-        view_proveedores.jTNombreProveedor.setText(" ");
-        view_proveedores.jTTelefonoProveedor.setText(" ");
-        view_proveedores.jTTelefonoContacto.setText(" ");
-        view_proveedores.jTEmailProveedor.setText(" ");
-        view_proveedores.jTEmailContacto.setText(" ");
-        view_proveedores.jTCalleProveedor.setText(" ");
-        view_proveedores.jTColoniaProveedor.setText(" ");
-        view_proveedores.jTMunicipioProveedor.setText(" ");
-        view_proveedores.jTCpProveedor.setText(" ");
-        view_proveedores.jTEmpresaProveedor.setText(" ");
-        view_proveedores.jTRfcProveedor.setText(" ");
+        //view_proveedores.jTIdProveedor.setText("");
+        view_proveedores.jTNombreProveedor.setText("");
+        view_proveedores.jTTelefonoProveedor.setText("");
+        view_proveedores.jTTelefonoContacto.setText("");
+        view_proveedores.jTEmailProveedor.setText("");
+        view_proveedores.jTEmailContacto.setText("");
+        view_proveedores.jTCalleProveedor.setText("");
+        view_proveedores.jTColoniaProveedor.setText("");
+        view_proveedores.jTMunicipioProveedor.setText("");
+        view_proveedores.jTCpProveedor.setText("");
+        view_proveedores.jTEmpresaProveedor.setText("");
+        view_proveedores.jTRfcProveedor.setText("");
         
     }
 

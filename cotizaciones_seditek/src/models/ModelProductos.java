@@ -251,7 +251,7 @@ public class ModelProductos {
     
         public void modificarDatosProducto(ModelConexion productoConexion) {
         System.out.println("modificar 4 producto");
-        String sqlModificarProducto = "UPDATE Productos SET codigo_producto=?,nombre_producto=?, marca=?, modelo=?, descripcion_usuario=?, "
+        String sqlModificarProducto = "UPDATE Productos SET codigo_producto=?, nombre_producto=?, marca=?, modelo=?, descripcion_usuario=?, "
                     + "descripcion_cliente=?, accesorios=?, precio_unitario=?, stock=?, id_proveedor=? WHERE id_producto=?;";
         try {
 
@@ -259,17 +259,17 @@ public class ModelProductos {
 
             System.out.println(getId_producto());
 
-            ps.setString(1, getId_producto());
-            ps.setString(2, getCodigo_producto());
-            ps.setString(3, getNombre_producto());
-            ps.setString(4, getMarca());
-            ps.setString(5, getModelo());
-            ps.setString(6, getDescripcion_usuario());
-            ps.setString(7, getDescripcion_cliente());
-            ps.setString(8, getAccesorios());
-            ps.setFloat(9, getPrecio_unitario());
-            ps.setInt(10, getStock());
-            ps.setString(11, getId_proveedor());
+            ps.setString(1, getCodigo_producto());
+            ps.setString(2, getNombre_producto());
+            ps.setString(3, getMarca());
+            ps.setString(4, getModelo());
+            ps.setString(5, getDescripcion_usuario());
+            ps.setString(6, getDescripcion_cliente());
+            ps.setString(7, getAccesorios());
+            ps.setFloat(8, getPrecio_unitario());
+            ps.setInt(9, getStock());
+            ps.setString(10, getId_proveedor());
+            ps.setString(11, getId_producto());
             
             ps.executeUpdate();
 

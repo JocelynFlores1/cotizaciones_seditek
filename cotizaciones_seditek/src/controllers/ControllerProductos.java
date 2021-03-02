@@ -100,11 +100,11 @@ public class ControllerProductos {
             model_productos.setId_producto(view_productos.jTIdProducto.getText());
             model_productos.setCodigo_producto(view_productos.jTCodigoProducto.getText());
             model_productos.setNombre_producto(view_productos.jTNombreProducto.getText());
-            model_productos.setMarca(view_productos.jTCodigoProducto.getText());
-            model_productos.setModelo(view_productos.jTNombreProducto.getText());
-            model_productos.setDescripcion_usuario(view_productos.jTCodigoProducto.getText());
-            model_productos.setDescripcion_cliente(view_productos.jTNombreProducto.getText());
-            model_productos.setAccesorios(view_productos.jTCodigoProducto.getText());
+            model_productos.setMarca(view_productos.jTMarcaProducto.getText());
+            model_productos.setModelo(view_productos.jTModeloProducto.getText());
+            model_productos.setDescripcion_usuario(view_productos.jTDescripcionUsuarioProducto.getText());
+            model_productos.setDescripcion_cliente(view_productos.jTDescripcionClienteProducto.getText());
+            model_productos.setAccesorios(view_productos.jTAccesoriosProducto.getText());
             if(!view_productos.jTPrecioProducto.getText().equals(" ")){
             model_productos.setPrecio_unitario(Float.parseFloat(view_productos.jTPrecioProducto.getText()));
             } 
@@ -130,14 +130,14 @@ public class ControllerProductos {
         int cancelar = JOptionPane.showConfirmDialog(null, "¿Desea actualizar los datos del producto?", "Guardar cambios", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
         if (cancelar == 0) {
                         
-            model_productos.setId_producto(view_productos.jTIdProducto.getText());
+            //model_productos.setId_producto(view_productos.jTIdProducto.getText());
             model_productos.setCodigo_producto(view_productos.jTCodigoProducto.getText());
             model_productos.setNombre_producto(view_productos.jTNombreProducto.getText());
-            model_productos.setMarca(view_productos.jTCodigoProducto.getText());
-            model_productos.setModelo(view_productos.jTNombreProducto.getText());
-            model_productos.setDescripcion_usuario(view_productos.jTCodigoProducto.getText());
-            model_productos.setDescripcion_cliente(view_productos.jTNombreProducto.getText());
-            model_productos.setAccesorios(view_productos.jTCodigoProducto.getText());
+            model_productos.setMarca(view_productos.jTMarcaProducto.getText());
+            model_productos.setModelo(view_productos.jTModeloProducto.getText());
+            model_productos.setDescripcion_usuario(view_productos.jTDescripcionUsuarioProducto.getText());
+            model_productos.setDescripcion_cliente(view_productos.jTDescripcionClienteProducto.getText());
+            model_productos.setAccesorios(view_productos.jTAccesoriosProducto.getText());
             if(!view_productos.jTPrecioProducto.getText().equals(" ")){
             model_productos.setPrecio_unitario(Float.parseFloat(view_productos.jTPrecioProducto.getText()));
             } 
@@ -149,7 +149,7 @@ public class ControllerProductos {
             
             
             
-            model_productos.insertarNuevoProducto(productoConexion);
+            model_productos.modificarDatosProducto(productoConexion);
             //Este comando realiza la accion de utlilzar el metodo de modificarDatosUsuario usando el objeto construido en de modelClientes
             JOptionPane.showMessageDialog(null, "Datos modificados correctamente");
             tablaConsulta();
@@ -192,11 +192,13 @@ public class ControllerProductos {
             modelo.addColumn("Marca");
             modelo.addColumn("Modelo");
             modelo.addColumn("Descripción Usuario");
-            modelo.addColumn("Stock");
+            modelo.addColumn("Descripción Cliente");
             modelo.addColumn("Accesorios");
             modelo.addColumn("Precio Unitario");
+            modelo.addColumn("Stock");
             modelo.addColumn("Proveedor");
-            modelo.addColumn("Descripción Cliente");
+            
+            
             
      
             while (model_productos.getRs().next()) {
@@ -211,6 +213,7 @@ public class ControllerProductos {
                 modelo.addRow(filas);
 
             }
+            
         } catch (SQLException ex) {
             System.out.println("Error" + ex);
         }
@@ -228,11 +231,12 @@ public class ControllerProductos {
                 view_productos.jTMarcaProducto.setText(view_productos.jTableProductos.getValueAt(fila, 3).toString());
                 view_productos.jTModeloProducto.setText(view_productos.jTableProductos.getValueAt(fila, 4).toString());
                 view_productos.jTDescripcionUsuarioProducto.setText(view_productos.jTableProductos.getValueAt(fila, 5).toString());
-                view_productos.jTStockProducto.setText(view_productos.jTableProductos.getValueAt(fila, 6).toString());
+                view_productos.jTDescripcionClienteProducto.setText(view_productos.jTableProductos.getValueAt(fila, 6).toString());
                 view_productos.jTAccesoriosProducto.setText(view_productos.jTableProductos.getValueAt(fila, 7).toString());
                 view_productos.jTPrecioProducto.setText(view_productos.jTableProductos.getValueAt(fila, 8).toString());
-                view_productos.jTProveedorProducto.setText(view_productos.jTableProductos.getValueAt(fila, 9).toString());
-                view_productos.jTDescripcionClienteProducto.setText(view_productos.jTableProductos.getValueAt(fila, 10).toString());
+                view_productos.jTStockProducto.setText(view_productos.jTableProductos.getValueAt(fila, 9).toString());
+                view_productos.jTProveedorProducto.setText(view_productos.jTableProductos.getValueAt(fila, 10).toString());
+                
                 
                
                 
@@ -244,19 +248,20 @@ public class ControllerProductos {
     
     
     public void Nuevo_producto_actionPerformed() {
-        codigos();
+        
                
-        view_productos.jTIdProducto.setText(" ");
-        view_productos.jTCodigoProducto.setText(" ");
-        view_productos.jTNombreProducto.setText(" ");
-        view_productos.jTMarcaProducto.setText(" ");
-        view_productos.jTModeloProducto.setText(" ");
-        view_productos.jTDescripcionUsuarioProducto.setText(" ");
-        view_productos.jTDescripcionClienteProducto.setText(" ");
-        view_productos.jTAccesoriosProducto.setText(" ");
-        view_productos.jTPrecioProducto.setText(" ");
-        view_productos.jTStockProducto.setText(" ");
-        view_productos.jTProveedorProducto.setText(" ");
+        //view_productos.jTIdProducto.setText("");
+        view_productos.jTCodigoProducto.setText("");
+        view_productos.jTNombreProducto.setText("");
+        view_productos.jTMarcaProducto.setText("");
+        view_productos.jTModeloProducto.setText("");
+        view_productos.jTDescripcionUsuarioProducto.setText("");
+        view_productos.jTDescripcionClienteProducto.setText("");
+        view_productos.jTAccesoriosProducto.setText("");
+        view_productos.jTPrecioProducto.setText("");
+        view_productos.jTStockProducto.setText("");
+        view_productos.jTProveedorProducto.setText("");
+        codigos();
         
     }
     

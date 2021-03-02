@@ -259,7 +259,7 @@ public class ModelProductos {
 
             System.out.println(getId_producto());
 
-            //ps.setString(1, getId_producto());
+            ps.setString(1, getId_producto());
             ps.setString(2, getCodigo_producto());
             ps.setString(3, getNombre_producto());
             ps.setString(4, getMarca());

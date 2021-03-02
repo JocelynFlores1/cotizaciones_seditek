@@ -104,40 +104,41 @@
                                   <Component id="jTDescripcionUsuarioProducto" min="-2" pref="143" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace pref="26" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace pref="29" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
                                       <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLDescripcionCliente" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLPrecioProducto" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                           <Group type="102" attributes="0">
-                                              <Component id="jLAccesoriosProducto" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                                              <Component id="jLDescripcionCliente" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
+                                              <Component id="jTDescripcionClienteProducto" min="-2" pref="143" max="-2" attributes="0"/>
                                           </Group>
-                                          <Component id="jLProveedorProducto" alignment="0" min="-2" pref="108" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="1" attributes="0">
+                                              <Component id="jLAccesoriosProducto" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
+                                              <Component id="jTAccesoriosProducto" min="-2" pref="143" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Component id="jLPrecioProducto" min="-2" pref="133" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+                                          <Component id="jTPrecioProducto" min="-2" pref="143" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="jLStockProducto" min="-2" pref="73" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                                      <Component id="jTStockProducto" min="-2" pref="143" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLStockProducto" min="-2" pref="73" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="130" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="jLProveedorProducto" min="-2" pref="108" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="95" max="-2" attributes="0"/>
+                                  <Component id="jTProveedorProducto" min="-2" pref="143" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jTStockProducto" min="-2" pref="143" max="-2" attributes="0"/>
-                              <Component id="jTAccesoriosProducto" min="-2" pref="143" max="-2" attributes="0"/>
-                              <Component id="jTPrecioProducto" min="-2" pref="143" max="-2" attributes="0"/>
-                              <Component id="jTProveedorProducto" min="-2" pref="143" max="-2" attributes="0"/>
-                              <Component id="jTDescripcionClienteProducto" min="-2" pref="143" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
                           <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -153,55 +154,50 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jLStockProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                              <Component id="jTStockProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jLAccesoriosProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                              <Component id="jTAccesoriosProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLPrecioProducto" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
-                                              <Component id="jTPrecioProducto" min="-2" pref="30" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Component id="jTProveedorProducto" min="-2" pref="30" max="-2" attributes="0"/>
-                                      </Group>
+                                  <Group type="103" groupAlignment="1" attributes="0">
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jLIdProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                               <Component id="jTIdProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                              <Component id="jLDescripcionCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                              <Component id="jTDescripcionClienteProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jLCodigoProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                               <Component id="jTCodigoProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                              <Component id="jLAccesoriosProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                              <Component id="jTAccesoriosProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jLNombreProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                              <Component id="jTNombreProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="jLNombreProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <Component id="jTNombreProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="103" groupAlignment="0" attributes="0">
+                                                  <Component id="jLPrecioProducto" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <Component id="jTPrecioProducto" min="-2" pref="30" max="-2" attributes="0"/>
+                                              </Group>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jTMarcaProducto" alignment="1" min="-2" pref="30" max="-2" attributes="0"/>
-                                              <Group type="103" groupAlignment="3" attributes="0">
-                                                  <Component id="jLMarcaProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                                  <Component id="jLProveedorProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                                  <Component id="jTMarcaProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <Component id="jLStockProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <Component id="jTStockProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                               </Group>
+                                              <Component id="jLMarcaProducto" min="-2" pref="30" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jLModeloProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                               <Component id="jTModeloProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                              <Component id="jLDescripcionCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                              <Component id="jTDescripcionClienteProducto" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                           </Group>
+                                      </Group>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jTProveedorProducto" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                          <Component id="jLProveedorProducto" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -815,11 +811,11 @@
                                     <Column editable="true" title="Marca" type="java.lang.Object"/>
                                     <Column editable="true" title="Modelo" type="java.lang.Object"/>
                                     <Column editable="true" title="Descripci&#xf3;n Usuario" type="java.lang.Object"/>
-                                    <Column editable="true" title="Stock" type="java.lang.Object"/>
+                                    <Column editable="true" title="Descripci&#xf3;n Cliente" type="java.lang.Object"/>
                                     <Column editable="true" title="Accesorios" type="java.lang.Object"/>
                                     <Column editable="true" title="Precio Unitario" type="java.lang.Object"/>
+                                    <Column editable="true" title="Stock" type="java.lang.Object"/>
                                     <Column editable="true" title="Proveedor" type="java.lang.Object"/>
-                                    <Column editable="true" title="Descripci&#xf3;n Cliente" type="java.lang.Object"/>
                                   </Table>
                                 </Property>
                                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">

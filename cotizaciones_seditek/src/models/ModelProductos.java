@@ -252,7 +252,7 @@ public class ModelProductos {
         public void modificarDatosProducto(ModelConexion productoConexion) {
         System.out.println("modificar 4 producto");
         String sqlModificarProducto = "UPDATE Productos SET codigo_producto=?,nombre_producto=?, marca=?, modelo=?, descripcion_usuario=?, "
-                    + "descripcion_cliente, accesorios=?, precio_unitario=?, stock=?, id_proveedor=? WHERE id_producto=?;";
+                    + "descripcion_cliente=?, accesorios=?, precio_unitario=?, stock=?, id_proveedor=? WHERE id_producto=?;";
         try {
 
             ps = (PreparedStatement) productoConexion.getConexion().prepareStatement(sqlModificarProducto);

@@ -19,6 +19,11 @@ public class main {
         controllers.ControllerLogin controllerLogin = new controllers.ControllerLogin(modelLogin, viewLogin);
         **/
        
+       
+       models.ModelClientes model_clientes = new models.ModelClientes();
+       views.ViewClientes view_clientes = new views.ViewClientes();
+       controllers.ControllerClientes controller_clientes = new controllers.ControllerClientes(model_clientes, view_clientes);
+       
         /**
          * Vista de Productos
         models.ModelProductos model_productos = new models.ModelProductos();
@@ -28,11 +33,12 @@ public class main {
         
         
         
-         //* Vista del Proveedor
+         /** Vista del Proveedor
         models.ModelProveedores model_proveedores = new models.ModelProveedores();
         views.ViewProveedores view_proveedores = new views.ViewProveedores();
         controllers.ControllerProveedores controller_proveedores = new controllers.ControllerProveedores(model_proveedores, view_proveedores);
-        
+        **/
+         
         
         
         /**

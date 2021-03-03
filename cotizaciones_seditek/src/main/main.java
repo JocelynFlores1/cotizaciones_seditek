@@ -27,20 +27,21 @@ public class main {
         * */
         
         
-        /**
-         * Vista del Proveedor
+        
+         //* Vista del Proveedor
         models.ModelProveedores model_proveedores = new models.ModelProveedores();
         views.ViewProveedores view_proveedores = new views.ViewProveedores();
         controllers.ControllerProveedores controller_proveedores = new controllers.ControllerProveedores(model_proveedores, view_proveedores);
-        **/
+        
         
         
         /**
          * Vista de Servicios
-         */
+         
         models.ModelServicios model_servicios = new models.ModelServicios();
         views.ViewServicios view_servicios = new views.ViewServicios();
         controllers.ControllerServicios controller_servicios = new controllers.ControllerServicios(model_servicios, view_servicios);
+        * */
     }
     
 }

@@ -232,9 +232,9 @@ public class ModelProveedores {
      */
     public void insertarNuevoProveedor(ModelConexion proveedorConexion) {
         System.out.println("nuevo  3 proveedor");
-        String sqlInsertarProveedor = "INSERT into Proveedores(id_proveedor,nombre_proveedor,telefono_proveedor,telefono_contacto,"
+        String sqlInsertarProveedor = "INSERT into Proveedor(id_proveedor,nombre_proveedor,telefono_proveedor,telefono_contacto,"
                     + "email_proveedor,email_contacto,calle_proveedor,colonia_proveedor,municipio_proveedor,"
-                    + "empresa_proveedorr,rfc_proveedor,cp_proveedor) "
+                    + "empresa_proveedor,rfc_proveedor,cp_proveedor) "
                     + "values(?,?,?,?,?,?,?,?,?,?,?,?);";
         try {
             ps = (PreparedStatement) proveedorConexion.getConexion().prepareStatement(sqlInsertarProveedor); //con este comando se podra hacer la modificacion a la tabla en la base de datos
@@ -262,27 +262,28 @@ public class ModelProveedores {
     
         public void modificarDatosProveedor(ModelConexion proveedorConexion) {
             System.out.println("modificar 4 proveedor");
-            String sqlModificarProveedor = "UPDATE Proveedores SET nombre_proveedor=?,telefono_proveedor=?,telefono_contacto=?,"
-                    + " email_provedor=?,email_contacto=?, calle_proveedor=?,colonia_proveedor=?, "
-                    + "municipio_proveedor=?,empresa_proovedor=?, rfc_proveedor=?, cp_proveedor=? WHERE id_proveedores=?;";
+            String sqlModificarProveedor = "UPDATE Proveedor SET nombre_proveedor=?,telefono_proveedor=?,telefono_contacto=?,"
+                    + " email_proveedor=?,email_contacto=?, calle_proveedor=?,colonia_proveedor=?, "
+                    + "municipio_proveedor=?,empresa_proveedor=?, rfc_proveedor=?, cp_proveedor=? WHERE id_proveedor=?;";
             try {
 
                 ps = (PreparedStatement) proveedorConexion.getConexion().prepareStatement(sqlModificarProveedor);
 
                 System.out.println(getId_proveedor());
 
-                ps.setString(1, getId_proveedor());
-                ps.setString(2, getNombre_proveedor());
-                ps.setInt(3, getTelefono_proveedor());
-                ps.setInt(4, getTelefono_contacto());
-                ps.setString(5, getEmail_proveedor());
-                ps.setString(6, getEmail_contacto());
-                ps.setString(7, getCalle_proveedor());
-                ps.setString(8, getColonia_proveedor());
-                ps.setString(9, getMunicipio_proveedor());
-                ps.setString(10, getEmpresa_proveedor());
-                ps.setString(11, getRfc_proveedor());
-                ps.setInt(12, getCp_proveedor());
+                
+                ps.setString(1, getNombre_proveedor());
+                ps.setInt(2, getTelefono_proveedor());
+                ps.setInt(3, getTelefono_contacto());
+                ps.setString(4, getEmail_proveedor());
+                ps.setString(5, getEmail_contacto());
+                ps.setString(6, getCalle_proveedor());
+                ps.setString(7, getColonia_proveedor());
+                ps.setString(8, getMunicipio_proveedor());
+                ps.setString(9, getEmpresa_proveedor());
+                ps.setString(10, getRfc_proveedor());
+                ps.setInt(11, getCp_proveedor());
+                ps.setString(12, getId_proveedor());
 
                 ps.executeUpdate();
 
@@ -295,7 +296,7 @@ public class ModelProveedores {
     
     public void borrarDatosProveedor(ModelConexion proveedorConexion) {
         System.out.println("eliminar 5 proveedor");
-        String sqlBorrarProveedor = "DELETE FROM Productos WHERE id_proveedor= ?;";
+        String sqlBorrarProveedor = "DELETE FROM Proveedor WHERE id_proveedor= ?;";
         try {
 
             ps = (PreparedStatement) proveedorConexion.getConexion().prepareStatement(sqlBorrarProveedor);

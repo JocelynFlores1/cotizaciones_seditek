@@ -143,7 +143,7 @@ public class ControllerProveedores {
         int cancelar = JOptionPane.showConfirmDialog(null, "¿Desea actualizar los datos del proveedor?", "Guardar cambios", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
         if (cancelar == 0) {
                         
-            model_proveedores.setId_proveedor(view_proveedores.jTIdProveedor.getText());
+            //model_proveedores.setId_proveedor(view_proveedores.jTIdProveedor.getText());
             model_proveedores.setNombre_proveedor(view_proveedores.jTNombreProveedor.getText());
 
             if(!view_proveedores.jTTelefonoProveedor.getText().equals(" ")){
@@ -164,7 +164,7 @@ public class ControllerProveedores {
             }
             
             
-            model_proveedores.insertarNuevoProveedor(proveedorConexion);
+            model_proveedores.modificarDatosProveedor(proveedorConexion);
             //Este comando realiza la accion de utlilzar el metodo de modificarDatosUsuario usando el objeto construido en de modelClientes
             JOptionPane.showMessageDialog(null, "Datos modificados correctamente");
             tablaConsulta();
@@ -206,15 +206,15 @@ public class ControllerProveedores {
             modelo.addColumn("ID");
             modelo.addColumn("Nombre");
             modelo.addColumn("Teléfono");
-            modelo.addColumn("Email");
             modelo.addColumn("Teléfono Contacto");
+            modelo.addColumn("Email");
             modelo.addColumn("Email Contacto");
             modelo.addColumn("Calle");
             modelo.addColumn("Colonia");
             modelo.addColumn("Municipio");
-            modelo.addColumn("C.P");
             modelo.addColumn("Empresa");
             modelo.addColumn("RFC");
+            modelo.addColumn("C.P");
             
      
             while (model_proveedores.getRs().next()) {
@@ -243,15 +243,15 @@ public class ControllerProveedores {
                 view_proveedores.jTIdProveedor.setText(view_proveedores.jTableProveedores.getValueAt(fila, 0).toString());
                 view_proveedores.jTNombreProveedor.setText(view_proveedores.jTableProveedores.getValueAt(fila, 1).toString());
                 view_proveedores.jTTelefonoProveedor.setText(view_proveedores.jTableProveedores.getValueAt(fila, 2).toString());
-                view_proveedores.jTEmailProveedor.setText(view_proveedores.jTableProveedores.getValueAt(fila, 3).toString());
-                view_proveedores.jTTelefonoContacto.setText(view_proveedores.jTableProveedores.getValueAt(fila, 4).toString());
+                view_proveedores.jTTelefonoContacto.setText(view_proveedores.jTableProveedores.getValueAt(fila, 3).toString());
+                view_proveedores.jTEmailProveedor.setText(view_proveedores.jTableProveedores.getValueAt(fila, 4).toString());
                 view_proveedores.jTEmailContacto.setText(view_proveedores.jTableProveedores.getValueAt(fila, 5).toString());
                 view_proveedores.jTCalleProveedor.setText(view_proveedores.jTableProveedores.getValueAt(fila, 6).toString());
                 view_proveedores.jTColoniaProveedor.setText(view_proveedores.jTableProveedores.getValueAt(fila, 7).toString());
                 view_proveedores.jTMunicipioProveedor.setText(view_proveedores.jTableProveedores.getValueAt(fila, 8).toString());
-                view_proveedores.jTCpProveedor.setText(view_proveedores.jTableProveedores.getValueAt(fila, 9).toString());
-                view_proveedores.jTEmpresaProveedor.setText(view_proveedores.jTableProveedores.getValueAt(fila, 10).toString());
+                view_proveedores.jTEmpresaProveedor.setText(view_proveedores.jTableProveedores.getValueAt(fila, 9).toString());
                 view_proveedores.jTRfcProveedor.setText(view_proveedores.jTableProveedores.getValueAt(fila, 10).toString());
+                view_proveedores.jTCpProveedor.setText(view_proveedores.jTableProveedores.getValueAt(fila, 11).toString());
                 
                
                 
@@ -264,7 +264,7 @@ public class ControllerProveedores {
     
 
     public void Nuevo_proveedor_actionPerformed() {
-        codigos();
+        
                
         //view_proveedores.jTIdProveedor.setText("");
         view_proveedores.jTNombreProveedor.setText("");
@@ -279,6 +279,7 @@ public class ControllerProveedores {
         view_proveedores.jTEmpresaProveedor.setText("");
         view_proveedores.jTRfcProveedor.setText("");
         
+        codigos();
     }
 
 

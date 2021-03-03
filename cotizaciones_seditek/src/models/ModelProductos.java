@@ -249,7 +249,7 @@ public class ModelProductos {
     }
     
     
-        public void modificarDatosProducto(ModelConexion productoConexion) {
+    public void modificarDatosProducto(ModelConexion productoConexion) {
         System.out.println("modificar 4 producto");
         String sqlModificarProducto = "UPDATE Productos SET codigo_producto=?, nombre_producto=?, marca=?, modelo=?, descripcion_usuario=?, "
                     + "descripcion_cliente=?, accesorios=?, precio_unitario=?, stock=?, id_proveedor=? WHERE id_producto=?;";
@@ -306,10 +306,12 @@ public class ModelProductos {
             ps = (PreparedStatement) productoConexion.getConexion().prepareStatement(consultaString);
             rs = ps.executeQuery();
         } catch (SQLException e) {
-            System.out.println("Error 000000: tabla proveedor" + e);
+            System.out.println("Error 000000: tabla producto" + e);
         }
     }
 
+    
+    
     public void consultaGenerarCodigos(ModelConexion productoConexion) {
         System.out.println("codigos 7 productos");
         String SQL = "select max(id_producto) from Productos";

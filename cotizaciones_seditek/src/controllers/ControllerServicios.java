@@ -211,13 +211,13 @@ public class ControllerServicios {
     
     
     public void Nuevo_servicio_actionPerformed() {
-        codigos();
+        
                
         //view_servicios.jTIdServicio.setText("");
         view_servicios.jTTipoServicio.setText("");
         view_servicios.jTDescripcionServicio.setText("");
         view_servicios.jTCostoServicio.setText("");
-        
+        codigos();
     }
     
     

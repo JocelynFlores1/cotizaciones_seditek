@@ -151,7 +151,7 @@ public class ControllerProductos {
             
             model_productos.modificarDatosProducto(productoConexion);
             //Este comando realiza la accion de utlilzar el metodo de modificarDatosUsuario usando el objeto construido en de modelClientes
-            JOptionPane.showMessageDialog(null, "Datos modificados correctamente");
+            JOptionPane.showMessageDialog(null, "Datos del producto modificados correctamente");
             tablaConsulta();
             //Se usa el metodo tablaConsulta para actualizar los registros en jTableProducto
 

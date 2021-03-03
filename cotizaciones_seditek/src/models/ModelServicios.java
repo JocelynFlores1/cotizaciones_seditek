@@ -158,7 +158,7 @@ public class ModelServicios {
     
     public void modificarDatosServicio(ModelConexion servicioConexion) {
         System.out.println("modificar 4 servicio");
-        String sqlModificarServicio = "UPDATE Servicios SET tip_servicio=?, descripcion_servicio=?, costo_servicio=? WHERE id_servicio=?;";
+        String sqlModificarServicio = "UPDATE Servicios SET tipo_servicio=?, descripcion_servicio=?, costo_servicio=? WHERE id_servicio=?;";
         try {
 
             ps = (PreparedStatement) servicioConexion.getConexion().prepareStatement(sqlModificarServicio);

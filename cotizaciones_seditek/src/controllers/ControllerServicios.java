@@ -36,7 +36,7 @@ public class ControllerServicios {
     };
     
     
-    public ControllerServicios(ModelServicios model_servicos, ViewServicios view_servicios){
+    public ControllerServicios(ModelServicios model_servicios, ViewServicios view_servicios){
         
         this.model_servicios = model_servicios;
         this.view_servicios = view_servicios;

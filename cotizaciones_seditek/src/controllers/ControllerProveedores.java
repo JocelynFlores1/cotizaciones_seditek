@@ -198,7 +198,7 @@ public class ControllerProveedores {
             DefaultTableModel modelo = new DefaultTableModel();
             view_proveedores.jTableProveedores.setModel(modelo);
             view_proveedores.jTableProveedores.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
-            model_proveedores.consultajTableProducto(proveedorConexion);
+            model_proveedores.consultajTableProveedor(proveedorConexion);
             
             ResultSetMetaData rsMd = model_proveedores.getRs().getMetaData();
             int cantidadColumnas = rsMd.getColumnCount();

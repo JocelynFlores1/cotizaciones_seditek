@@ -314,7 +314,7 @@ public class ModelProveedores {
      * Metodo que permite insertar los datos de la tabla de la base de datos en
      * un jTable en java
      */
-    public void consultajTableProducto(ModelConexion proveedorConexion) {
+    public void consultajTableProveedor(ModelConexion proveedorConexion) {
         try {
             System.out.println("tabla 6 proveedor");
             String consultaString = "select * from Proveedor";

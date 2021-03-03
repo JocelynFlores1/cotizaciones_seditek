@@ -165,10 +165,11 @@ public class ModelServicios {
 
             System.out.println(getId_servicio());
 
-            ps.setString(1,getId_servicio());
-            ps.setString(2,getTipo_servicio());
-            ps.setString(3,getDescripcion_servicio());
-            ps.setFloat(4,getCosto_servicio());
+            
+            ps.setString(1,getTipo_servicio());
+            ps.setString(2,getDescripcion_servicio());
+            ps.setFloat(3,getCosto_servicio());
+            ps.setString(4,getId_servicio());
             
             ps.executeUpdate();
 

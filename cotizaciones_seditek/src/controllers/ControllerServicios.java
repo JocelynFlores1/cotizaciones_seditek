@@ -121,7 +121,7 @@ public class ControllerServicios {
         if (cancelar == 0) {
                         
             System.out.print(model_servicios);
-            model_servicios.setId_servicio(view_servicios.jTIdServicio.getText());
+            //model_servicios.setId_servicio(view_servicios.jTIdServicio.getText());
             model_servicios.setTipo_servicio(view_servicios.jTTipoServicio.getText());
             model_servicios.setDescripcion_servicio(view_servicios.jTDescripcionServicio.getText());
             if(!view_servicios.jTCostoServicio.getText().equals(" ")){
@@ -131,9 +131,9 @@ public class ControllerServicios {
             
             
             
-            model_servicios.insertarNuevoServicio(servicioConexion);
+            model_servicios.modificarDatosServicio(servicioConexion);
             //Este comando realiza la accion de utlilzar el metodo de modificarDatosUsuario usando el objeto construido en de modelServicios
-            JOptionPane.showMessageDialog(null, "Datos modificados correctamente");
+            JOptionPane.showMessageDialog(null, "Datos del servicio modificados correctamente");
             tablaConsulta();
             //Se usa el metodo tablaConsulta para actualizar los registros en jTableServicios
 
@@ -213,10 +213,10 @@ public class ControllerServicios {
     public void Nuevo_servicio_actionPerformed() {
         codigos();
                
-        view_servicios.jTIdServicio.setText(" ");
-        view_servicios.jTTipoServicio.setText(" ");
-        view_servicios.jTDescripcionServicio.setText(" ");
-        view_servicios.jTCostoServicio.setText(" ");
+        //view_servicios.jTIdServicio.setText("");
+        view_servicios.jTTipoServicio.setText("");
+        view_servicios.jTDescripcionServicio.setText("");
+        view_servicios.jTCostoServicio.setText("");
         
     }
     

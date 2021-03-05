@@ -30,7 +30,7 @@ public class ControllerMain {
      */
     private Object controllers[];
 
-    private ControllerUsuario controllerUsuario;
+    private ControllerUsuarios controllerUsuario;
     private ControllerInicio controllerInicio;
     private final String nombre_usuario;
     private final String tipo_usuario;
@@ -161,8 +161,8 @@ public class ControllerMain {
 
     private void jmi_usuarios_actionPerformed() {
         models.ModelUsuarios modelUsuarios = new models.ModelUsuarios();
-        views.viewUsuarios viewUsuarios = new views.viewUsuarios();
-        controllers.ControllerUsuario controllerUsuario = new controllers.ControllerUsuario(modelUsuarios, viewUsuarios);
+        views.ViewUsuarios viewUsuarios = new views.ViewUsuarios();
+        controllers.ControllerUsuarios controllerUsuario = new controllers.ControllerUsuarios(modelUsuarios, viewUsuarios);
 
         viewMenu.setContentPane(controllerUsuario.viewUsuarios);
         viewMenu.revalidate();

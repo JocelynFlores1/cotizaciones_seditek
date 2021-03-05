@@ -156,8 +156,7 @@ public class ModelUsuarios {
      */
     public void modificarDatosUsuario(ModelConexion usuarioConexion) {
         System.out.println("modificar 4 usuarios");
-        String sqlModificarUsuario = "UPDATE usuarios SET "
-                + "nombre_usuario=?, tipo_usuario=?, Password=? WHERE id_usuario = ?";
+        String sqlModificarUsuario = "UPDATE usuarios SET nombre_usuario=?, tipo_usuario=?, password=? where id_usuario=?";
         try {
 
             ps = (PreparedStatement) usuarioConexion.getConexion().prepareStatement(sqlModificarUsuario);
@@ -167,6 +166,7 @@ public class ModelUsuarios {
             ps.setString(1, getNombre_usuario());
             ps.setString(2, getTipo_usuario());
             ps.setString(3, getPassword());
+            ps.setString(4, getId_usuario());
             ps.executeUpdate();
 
         } catch (SQLException ex) {

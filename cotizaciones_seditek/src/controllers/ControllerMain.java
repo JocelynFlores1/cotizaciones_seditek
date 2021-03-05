@@ -13,7 +13,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import models.ModelUsuarios;
+
 
 /**
  *
@@ -21,7 +21,7 @@ import models.ModelUsuarios;
  */
 public class ControllerMain {
     
-      private final ModelMain modelMain;
+    private final ModelMain modelMain;
     private final ViewMenu viewMenu;
 
     /**
@@ -44,11 +44,12 @@ public class ControllerMain {
      *
      * @param modelMain
      * @param viewMenu
-     * @param tipo_usuario
      * @param nombre_usuario
+     * @param tipo_usuario
      * @param password
      */
-    public ControllerMain(ModelMain modelMain, ViewMenu viewMenu, String tipo_usuario, String nombre_usuario, String password) {
+
+    public ControllerMain(ModelMain modelMain, ViewMenu viewMenu, String nombre_usuario, String tipo_usuario, String password) {
         this.modelMain = modelMain;
         this.viewMenu = viewMenu;
         this.nombre_usuario = nombre_usuario;
@@ -56,50 +57,38 @@ public class ControllerMain {
         this.password = password;
         setActionListener();
         setMouseListener();
-        initComponets();
-    }
-
-    ControllerMain(ModelMain modelMain, String nombre_usuario, String tipo_usuario) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    ControllerMain(ModelMain modelMain, ViewMenu viewMenu, String nombre_usuario, String tipo_usuario) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+        initComponents();    }
     /**
      * Separa cada uno de los controlladores almacendados en controllers, de
      * esta forma se puede acceder a todas las variables y métodos publicos de
      * cada uno.
      */
+
     /**
-     * Muesta la vista principal ViewMain.
+     * Muestra la vista principal del ViewMain
      */
-    private void initComponets() {
-        viewMenu.setTitle("Ferreteria   A C M E");
+    
+    private void initComponents(){
+        viewMenu.setTitle("S E D I T E K");
         viewMenu.setLocationRelativeTo(null);
         viewMenu.setVisible(true);
         viewMenu.jmUsuarioSesion.setText("Usuario: " + nombre_usuario);
         jmi_inicio_actionPerformed();
     }
-
-    /**
-     * Asigna el actionListener a cada uno de los JMenuItems de la vista
-     * ViewMain.
-     */
-    private void setActionListener() {
+    
+    private void setActionListener(){
         viewMenu.jmUsuarios.addActionListener(actionListener);
-
+        viewMenu.jmCerrarSesion.addActionListener(actionListener);
     }
-
+    
     private void setMouseListener() {
-        viewMenu.jmInicio.addMouseListener(mouseListener);
+       viewMenu.jmInicio.addMouseListener(mouseListener);
     }
-
-    private final MouseListener mouseListener = new MouseListener() {
+    
+    private final MouseListener mouseListener = new MouseListener(){
         @Override
         public void mouseClicked(MouseEvent e) {
-            if (e.getSource() == viewMenu.jmInicio) {
+            if(e.getSource () == viewMenu.jmInicio){
                 jmi_inicio_actionPerformed();
             }
         }
@@ -110,7 +99,6 @@ public class ControllerMain {
 
         @Override
         public void mouseReleased(MouseEvent e) {
-
         }
 
         @Override
@@ -120,21 +108,20 @@ public class ControllerMain {
         @Override
         public void mouseExited(MouseEvent e) {
         }
+        
     };
-
-    /**
-     * Evalua el componente que genero el evento y llama a un método en
-     * particular.
-     */
-    private final ActionListener actionListener = new ActionListener() {
+    
+    private final ActionListener actionListener = new ActionListener(){
         @Override
         public void actionPerformed(ActionEvent e) {
-            if (e.getSource() == viewMenu.jmUsuarios) {
+            if (e.getSource() == viewMenu.jmUsuarios){
                 jmi_usuarios_actionPerformed();
-            } 
+            }else if (e.getSource() == viewMenu.jmCerrarSesion){
+                jmi_cerrarSesion_actionPerformed();
+            }
         }
+        
     };
-
     /**
      * 1.- Obtiene los valores de nombre y email del modelAgenda y
      * posteriormente los asigna a las variables nombre y email del
@@ -158,19 +145,23 @@ public class ControllerMain {
         System.out.println("Inicio");
     }
 
-
     private void jmi_usuarios_actionPerformed() {
         models.ModelUsuarios modelUsuarios = new models.ModelUsuarios();
         views.ViewUsuarios viewUsuarios = new views.ViewUsuarios();
-        controllers.ControllerUsuarios controllerUsuario = new controllers.ControllerUsuarios(modelUsuarios, viewUsuarios);
-
-        viewMenu.setContentPane(controllerUsuario.viewUsuarios);
+        controllers.ControllerUsuarios controllerUsuarios = new controllers.ControllerUsuarios(modelUsuarios, viewUsuarios);
+        viewMenu.setContentPane(controllerUsuarios.viewUsuarios);
         viewMenu.revalidate();
         viewMenu.repaint();
         System.out.println("Usuarios");
     }
 
+    public void jmi_cerrarSesion_actionPerformed() {
+        viewMenu.dispose();
 
+        ModelLogin modelLogin = new ModelLogin();
+        ViewLogin viewLogin = new ViewLogin();
+        ControllerLogin controllerLogin = new ControllerLogin(modelLogin, viewLogin);
+    }
 
     /**
      * Muestra el JPanel ViewAgenda dentro del JFrame ViewMain, (incluido todo
@@ -179,8 +170,10 @@ public class ControllerMain {
     /**
      * Cierra la aplicacion.
      */
+    
     private void jmi_salir_actionPerformed() {
         System.exit(0);
     }
+
     
 }

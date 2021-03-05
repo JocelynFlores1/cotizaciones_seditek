@@ -61,10 +61,11 @@ public class ControllerLogin implements ActionListener {
             if (modelLogin.login()) {
                 String nombre_usuario = modelLogin.getUsuario();
                 String tipo_usuario = modelLogin.getTipoUsuario();
+                String password = modelLogin.getPassword();
                 
                 ModelMain modelMain = new ModelMain();
                 ViewMenu viewMenu = new ViewMenu();
-                ControllerMain controllerMain = new ControllerMain(modelMain, viewMenu, nombre_usuario, tipo_usuario);
+                ControllerMain controllerMain = new ControllerMain(modelMain, viewMenu, nombre_usuario, tipo_usuario, password);
                 
                 viewLogin.dispose();
             } else {

@@ -120,20 +120,19 @@ public class ControllerUsuarios {
     }
 
     public void jmi_modificarU_actionPerformed() {
+
         //JOptionPane.showConfirmDialog permite al usuario elegir si realizar la accion del boton solicitado o simplemente cancelarlo
         int cancelar = JOptionPane.showConfirmDialog(null, "¿Desea actualizar los datos del usuario?", "Guardar cambios", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
         if (cancelar == 0) {
-            modelUsuarios.setId_usuario(viewUsuarios.jtf_id_usuario.getText());
             modelUsuarios.setNombre_usuario(viewUsuarios.jtf_nombre_usuario.getText());
             modelUsuarios.setTipo_usuario(viewUsuarios.jtf_tipo_usuario.getText());
             modelUsuarios.setPassword(viewUsuarios.jtf_password.getText());
-            
+            modelUsuarios.setId_usuario(viewUsuarios.jtf_id_usuario.getText());
 
             modelUsuarios.modificarDatosUsuario(usuarioConexion);
-            //Este comando realiza la accion de utlilzar el metodo de modificarDatosUsuario usando el objeto construido en de modelClientes
-            JOptionPane.showMessageDialog(null, "Datos modificados correctamente");
+            JOptionPane.showMessageDialog(null, "Datos del usuario modificados correctamente");
             tablaConsulta();
-            //Se usa el metodo tablaConsulta para actualizar los registros en jTableUsuarios
+            //Se usa el metodo tablaConsulta para actualizar los registros en jTableProducto
 
         } else {
             ///Respuesta que se obtiene cuando se cancela la accion del boton elegido
@@ -205,7 +204,6 @@ public class ControllerUsuarios {
     }
 
     public void jmi_nuevoU_actionPerformed() {
-        codigos();
         viewUsuarios.jtf_id_usuario.setText("");
         viewUsuarios.jtf_nombre_usuario.setText("");
         viewUsuarios.jtf_tipo_usuario.setText("");

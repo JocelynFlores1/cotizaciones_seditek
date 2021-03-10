@@ -62,10 +62,10 @@ public class ViewCotizaciones extends javax.swing.JFrame {
         jLPromoEsp = new javax.swing.JLabel();
         jTFPromoEsp = new javax.swing.JTextField();
         jLCondCome = new javax.swing.JLabel();
-        jTFCondCome = new javax.swing.JTextField();
         jBAgregar = new javax.swing.JButton();
         jBGuardar = new javax.swing.JButton();
         jBPrint = new javax.swing.JButton();
+        jCBConCome = new javax.swing.JComboBox<>();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jpBorde = new javax.swing.JPanel();
         jpPieDePagina1 = new javax.swing.JPanel();
@@ -162,6 +162,8 @@ public class ViewCotizaciones extends javax.swing.JFrame {
 
         jBPrint.setText("Imprimir");
 
+        jCBConCome.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         jLayeredPane2.setLayer(jPanel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jLNoCotizacion, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jTFNoCotiacion, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -192,10 +194,10 @@ public class ViewCotizaciones extends javax.swing.JFrame {
         jLayeredPane2.setLayer(jLPromoEsp, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jTFPromoEsp, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jLCondCome, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jTFCondCome, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jBAgregar, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jBGuardar, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jBPrint, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(jCBConCome, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane2Layout = new javax.swing.GroupLayout(jLayeredPane2);
         jLayeredPane2.setLayout(jLayeredPane2Layout);
@@ -266,9 +268,9 @@ public class ViewCotizaciones extends javax.swing.JFrame {
                         .addComponent(jTFPromoEsp, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jLayeredPane2Layout.createSequentialGroup()
                         .addComponent(jLCondCome)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTFCondCome, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jCBConCome, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jBAgregar)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jBGuardar)
@@ -325,8 +327,8 @@ public class ViewCotizaciones extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane2Layout.createSequentialGroup()
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLCondCome)
-                            .addComponent(jTFCondCome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jBAgregar))
+                            .addComponent(jBAgregar)
+                            .addComponent(jCBConCome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(33, 33, 33))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane2Layout.createSequentialGroup()
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -609,6 +611,7 @@ public class ViewCotizaciones extends javax.swing.JFrame {
     public javax.swing.JButton jBBuscar;
     public javax.swing.JButton jBGuardar;
     public javax.swing.JButton jBPrint;
+    public javax.swing.JComboBox<String> jCBConCome;
     public javax.swing.JComboBox<String> jCBMes;
     public javax.swing.JComboBox<String> jCBSelecCliente;
     public com.toedter.calendar.JDateChooser jDCFecha;
@@ -642,7 +645,6 @@ public class ViewCotizaciones extends javax.swing.JFrame {
     public javax.swing.JTextField jTFAtencion;
     public javax.swing.JTextField jTFBuscar;
     public javax.swing.JTextField jTFCelular;
-    private javax.swing.JTextField jTFCondCome;
     public javax.swing.JTextField jTFEmail;
     public javax.swing.JTextField jTFEmpresa;
     public javax.swing.JTextField jTFNoCotiacion;

@@ -115,8 +115,6 @@ public class ViewCotizaciones extends javax.swing.JFrame {
 
         jLabel3.setText("Selecciona cliente:");
 
-        jCBSelecCliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jLTelefono.setText("Telefono:");
 
         jTFTelefono.setEditable(false);
@@ -176,8 +174,6 @@ public class ViewCotizaciones extends javax.swing.JFrame {
         jBGuardar.setText("Guardar");
 
         jBPrint.setText("Imprimir");
-
-        jCBConCome.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLayeredPane2.setLayer(jPanel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jLNoCotizacion, javax.swing.JLayeredPane.DEFAULT_LAYER);

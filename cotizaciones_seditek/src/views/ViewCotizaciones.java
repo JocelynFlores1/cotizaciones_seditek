@@ -119,17 +119,32 @@ public class ViewCotizaciones extends javax.swing.JFrame {
 
         jLTelefono.setText("Telefono:");
 
+        jTFTelefono.setEditable(false);
+        jTFTelefono.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+
         jLAtencion.setText("Atención:");
 
         jLRFC.setText("RFC:");
 
+        jTFRFC.setEditable(false);
+        jTFRFC.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+
         jLabel4.setText("Empresa:");
+
+        jTFEmpresa.setEditable(false);
+        jTFEmpresa.setDisabledTextColor(new java.awt.Color(0, 0, 0));
 
         jLFecha.setText("Fecha:");
 
         jLCelular.setText("Celular:");
 
         jLEmail.setText("Email:");
+
+        jTFCelular.setEditable(false);
+        jTFCelular.setDisabledTextColor(new java.awt.Color(0, 0, 0));
+
+        jTFEmail.setEditable(false);
+        jTFEmail.setDisabledTextColor(new java.awt.Color(0, 0, 0));
 
         jBAgreProduct.setText("Agregar Producto");
 

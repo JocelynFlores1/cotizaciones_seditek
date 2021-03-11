@@ -12,8 +12,8 @@ public class main {
     public static void main(String[] args) {
         
         
-       /** 
-        * Vista del Login
+       /**
+        //* Vista del Login
         models.ModelLogin modelLogin = new models.ModelLogin();
         views.ViewLogin viewLogin = new views.ViewLogin();
         controllers.ControllerLogin controllerLogin = new controllers.ControllerLogin(modelLogin, viewLogin);
@@ -25,15 +25,15 @@ public class main {
        controllers.ControllerClientes controller_clientes = new controllers.ControllerClientes(model_clientes, view_clientes);
        
         /**
-         * Vista de Productos
+        // * Vista de Productos
         models.ModelProductos model_productos = new models.ModelProductos();
         views.ViewProductos view_productos = new views.ViewProductos();
         controllers.ControllerProductos controller_productos = new controllers.ControllerProductos(model_productos, view_productos);
-        * */
+        **/
         
         
-        
-         /** Vista del Proveedor
+        /**
+         // Vista del Proveedor
         models.ModelProveedores model_proveedores = new models.ModelProveedores();
         views.ViewProveedores view_proveedores = new views.ViewProveedores();
         controllers.ControllerProveedores controller_proveedores = new controllers.ControllerProveedores(model_proveedores, view_proveedores);
@@ -41,13 +41,13 @@ public class main {
          
         
         
-        /**
-         * Vista de Servicios
+        
+         //* Vista de Servicios
          
         models.ModelServicios model_servicios = new models.ModelServicios();
         views.ViewServicios view_servicios = new views.ViewServicios();
         controllers.ControllerServicios controller_servicios = new controllers.ControllerServicios(model_servicios, view_servicios);
-        * */
+        
     }
     
 }

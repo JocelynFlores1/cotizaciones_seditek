@@ -120,25 +120,25 @@
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace type="separate" pref="54" max="32767" attributes="0"/>
+                          <EmptySpace pref="51" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLMunicipioCliente" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
                               <Component id="jLEmpresaCliente" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jLRfcCliente" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="jLCalleCliente" alignment="0" min="-2" pref="73" max="-2" attributes="0"/>
                               <Component id="jLColoniaCliente" min="-2" max="-2" attributes="0"/>
                               <Component id="jLCpCliente" min="-2" pref="108" max="-2" attributes="0"/>
+                              <Component id="jLRfcCliente" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jTRfcCliente" min="-2" pref="143" max="-2" attributes="0"/>
                               <Component id="jTCalleCliente" min="-2" pref="143" max="-2" attributes="0"/>
                               <Component id="jTColoniaCliente" min="-2" pref="143" max="-2" attributes="0"/>
                               <Component id="jTMunicipioCliente" min="-2" pref="143" max="-2" attributes="0"/>
                               <Component id="jTCpCliente" min="-2" pref="143" max="-2" attributes="0"/>
                               <Component id="jTEmpresaCliente" min="-2" pref="143" max="-2" attributes="0"/>
-                              <Component id="jTRfcCliente" min="-2" pref="143" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
                           <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -154,34 +154,19 @@
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLIdCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                          <Component id="jTIdCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="103" groupAlignment="3" attributes="0">
+                                          <Component id="jLRfcCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                          <Component id="jTRfcCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jLCalleCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                              <Component id="jTCalleCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jLColoniaCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                              <Component id="jTColoniaCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jLMunicipioCliente" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
-                                              <Component id="jTMunicipioCliente" min="-2" pref="30" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jTCpCliente" min="-2" pref="30" max="-2" attributes="0"/>
-                                              <Component id="jLCpCliente" min="-2" pref="30" max="-2" attributes="0"/>
-                                          </Group>
-                                      </Group>
-                                      <Group type="102" attributes="0">
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jLIdCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                              <Component id="jTIdCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                          </Group>
-                                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="3" attributes="0">
                                               <Component id="jLNombreCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
                                               <Component id="jTNombreCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
@@ -197,22 +182,40 @@
                                               <Component id="jLApellidoMaterno" min="-2" pref="30" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
-                                          <Group type="103" groupAlignment="3" attributes="0">
-                                              <Component id="jLTelefonoCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                              <Component id="jTTelefonoCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                              <Component id="jLEmpresaCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                              <Component id="jTEmpresaCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                                  <Component id="jLEmpresaCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <Component id="jTEmpresaCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="103" groupAlignment="3" attributes="0">
+                                                  <Component id="jLTelefonoCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                                  <Component id="jTTelefonoCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                              </Group>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jTCpCliente" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                              <Component id="jLCpCliente" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                              <Component id="jTTelefonoEmpresa" min="-2" pref="30" max="-2" attributes="0"/>
+                                              <Component id="jLTelefonoEmpresa" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                  </Group>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="3" attributes="0">
-                                          <Component id="jTTelefonoEmpresa" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
-                                          <Component id="jTRfcCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="jLCalleCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                              <Component id="jTCalleCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="jLColoniaCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                              <Component id="jTColoniaCliente" alignment="3" min="-2" pref="30" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="jLMunicipioCliente" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
+                                              <Component id="jTMunicipioCliente" min="-2" pref="30" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
-                                      <Component id="jLTelefonoEmpresa" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
-                                      <Component id="jLRfcCliente" alignment="0" min="-2" pref="30" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
@@ -864,12 +867,12 @@
                                     <Column editable="true" title="Tel&#xe9;fono" type="java.lang.Object"/>
                                     <Column editable="true" title="Tel&#xe9;fono Empresa" type="java.lang.Object"/>
                                     <Column editable="true" title="Email" type="java.lang.Object"/>
+                                    <Column editable="true" title="RFC" type="java.lang.Object"/>
                                     <Column editable="true" title="Calle" type="java.lang.Object"/>
                                     <Column editable="true" title="Colonia" type="java.lang.Object"/>
                                     <Column editable="true" title="Municipio" type="java.lang.Object"/>
-                                    <Column editable="true" title="C.P" type="java.lang.Object"/>
                                     <Column editable="true" title="Empresa" type="java.lang.Object"/>
-                                    <Column editable="true" title="RFC" type="java.lang.Object"/>
+                                    <Column editable="true" title="C.P" type="java.lang.Object"/>
                                   </Table>
                                 </Property>
                                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">

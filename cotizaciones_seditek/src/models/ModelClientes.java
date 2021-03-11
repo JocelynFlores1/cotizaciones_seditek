@@ -261,6 +261,7 @@ public class ModelClientes {
             System.out.println(getId_cliente());
             
             ps.setString(1, getId_cliente());
+            
             ps.setString(2, getNombre_cliente());
             ps.setString(3, getApellido_paterno());
             ps.setString(4, getApellido_materno());

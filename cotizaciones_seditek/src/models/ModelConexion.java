@@ -26,7 +26,7 @@ public class ModelConexion {
     public Connection getConexion() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://um09y46w14qyg6w2:mqio1vovph8f7gir@z5zm8hebixwywy9d.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/zs24at5q2gx9egvg", "pfeu8xqeoutm8fbw", "a6ojgbiubxjcnj39");
+            con = DriverManager.getConnection("jdbc:mysql://z5zm8hebixwywy9d.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/zs24at5q2gx9egvg", "um09y46w14qyg6w2", "mqio1vovph8f7gir");
             System.out.println("Conexion Exitosa");
 
         } catch (SQLException ex) {

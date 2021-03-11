@@ -104,24 +104,39 @@ public class ControllerClientes {
     public void Insertar_cliente_actionPerformed() {
         //JOptionPane.showConfirmDialog permite al usuario elegir si realizar la accion del boton solicitado o simplemente cancelarlo
         int cancelar = JOptionPane.showConfirmDialog(null, "¿Vas a guardar un nuevo cliente?", "Guardar cliente", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
+        
+        if(view_clientes.jTIdCliente.getText().equals("") || view_clientes.jTNombreCliente.getText().equals("") ||
+                view_clientes.jTApellidoPaterno.getText().equals("") || view_clientes.jTApellidoMaterno.getText().equals("")||
+                view_clientes.jTTelefonoCliente.getText().equals("") || view_clientes.jTTelefonoEmpresa.getText().equals("") ||
+                view_clientes.jTEmailCliente.getText().equals("") || view_clientes.jTRfcCliente.getText().equals("") ||
+                view_clientes.jTCalleCliente.getText().equals("") || view_clientes.jTColoniaCliente.getText().equals("") ||
+                view_clientes.jTMunicipioCliente.getText().equals("") || view_clientes.jTEmpresaCliente.getText().equals("") ||
+                view_clientes.jTCpCliente.getText().equals("")){
+                
+        JOptionPane.showMessageDialog(null,"Debes llenar todos los campos");
+        }else{
+        
         if (cancelar == 0) {
         
             model_clientes.setId_cliente(view_clientes.jTIdCliente.getText());
             model_clientes.setNombre_cliente(view_clientes.jTNombreCliente.getText());
             model_clientes.setApellido_paterno(view_clientes.jTApellidoPaterno.getText());
             model_clientes.setApellido_materno(view_clientes.jTApellidoMaterno.getText());
+            
             if(!view_clientes.jTTelefonoCliente.getText().equals(" ")){
             model_clientes.setTelefono_cliente(Integer.parseInt(view_clientes.jTTelefonoCliente.getText()));
             } 
             if(!view_clientes.jTTelefonoEmpresa.getText().equals(" ")){
             model_clientes.setTelefono_empresa(Integer.parseInt(view_clientes.jTTelefonoEmpresa.getText()));
             }
+            
             model_clientes.setEmail_cliente(view_clientes.jTEmailCliente.getText());
             model_clientes.setRfc_cliente(view_clientes.jTRfcCliente.getText());
             model_clientes.setCalle_cliente(view_clientes.jTCalleCliente.getText());
             model_clientes.setColonia_cliente(view_clientes.jTColoniaCliente.getText());
             model_clientes.setMunicipio_cliente(view_clientes.jTMunicipioCliente.getText());
             model_clientes.setEmpresa_cliente(view_clientes.jTEmpresaCliente.getText());
+            
             if(!view_clientes.jTCpCliente.getText().equals(" ")){
             model_clientes.setCp_cliente(Integer.parseInt(view_clientes.jTCpCliente.getText()));
             }
@@ -135,6 +150,7 @@ public class ControllerClientes {
             ///Respuesta que se obtiene cuando se cancela la accion del boton elegido
             JOptionPane.showMessageDialog(null, "No se guardo ningun producto");
         }
+    }
     }
     
     
@@ -204,7 +220,6 @@ public class ControllerClientes {
             int cantidadColumnas = rsMd.getColumnCount();
 
             modelo.addColumn("ID");
-            modelo.addColumn("Codigo");
             modelo.addColumn("Nombre");
             modelo.addColumn("Apellido Paterno");
             modelo.addColumn("Apellido Materno");

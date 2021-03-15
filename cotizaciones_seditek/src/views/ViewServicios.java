@@ -122,7 +122,7 @@ public class ViewServicios extends javax.swing.JFrame {
 
         jBInsertarServicio.setBackground(new java.awt.Color(0, 102, 204));
         jBInsertarServicio.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
-        jBInsertarServicio.setForeground(new java.awt.Color(0, 102, 204));
+        jBInsertarServicio.setForeground(new java.awt.Color(255, 255, 255));
         jBInsertarServicio.setText("Insertar");
         jBInsertarServicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -132,7 +132,7 @@ public class ViewServicios extends javax.swing.JFrame {
 
         jBNuevoServicio.setBackground(new java.awt.Color(0, 102, 204));
         jBNuevoServicio.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
-        jBNuevoServicio.setForeground(new java.awt.Color(0, 102, 204));
+        jBNuevoServicio.setForeground(new java.awt.Color(255, 255, 255));
         jBNuevoServicio.setText("Nuevo");
         jBNuevoServicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,12 +142,12 @@ public class ViewServicios extends javax.swing.JFrame {
 
         jBEliminarServicio.setBackground(new java.awt.Color(0, 102, 204));
         jBEliminarServicio.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
-        jBEliminarServicio.setForeground(new java.awt.Color(0, 102, 204));
+        jBEliminarServicio.setForeground(new java.awt.Color(255, 255, 255));
         jBEliminarServicio.setText("Eliminar");
 
         jBModificarServicio.setBackground(new java.awt.Color(0, 102, 204));
         jBModificarServicio.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
-        jBModificarServicio.setForeground(new java.awt.Color(0, 102, 204));
+        jBModificarServicio.setForeground(new java.awt.Color(255, 255, 255));
         jBModificarServicio.setText("Modificar");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);

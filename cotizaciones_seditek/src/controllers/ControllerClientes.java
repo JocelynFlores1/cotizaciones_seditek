@@ -61,18 +61,18 @@ public class ControllerClientes {
      */
     public void CambiarCampos() {
         
-        view_clientes.jTIdCliente.setText(""+model_clientes.getId_cliente());
-        view_clientes.jTNombreCliente.setText(""+model_clientes.getNombre_cliente());
-        view_clientes.jTApellidoPaterno.setText(""+model_clientes.getApellido_paterno());
-        view_clientes.jTApellidoMaterno.setText(""+model_clientes.getApellido_materno());
+        view_clientes.jTIdCliente.setText(model_clientes.getId_cliente());
+        view_clientes.jTNombreCliente.setText(model_clientes.getNombre_cliente());
+        view_clientes.jTApellidoPaterno.setText(model_clientes.getApellido_paterno());
+        view_clientes.jTApellidoMaterno.setText(model_clientes.getApellido_materno());
         view_clientes.jTTelefonoCliente.setText(""+model_clientes.getTelefono_cliente());
         view_clientes.jTTelefonoEmpresa.setText(""+model_clientes.getTelefono_empresa());
-        view_clientes.jTEmailCliente.setText(""+model_clientes.getEmail_cliente());
-        view_clientes.jTRfcCliente.setText(""+model_clientes.getRfc_cliente());
-        view_clientes.jTCalleCliente.setText(""+model_clientes.getCalle_cliente());
-        view_clientes.jTColoniaCliente.setText(""+model_clientes.getColonia_cliente());
-        view_clientes.jTMunicipioCliente.setText(""+model_clientes.getMunicipio_cliente());
-        view_clientes.jTEmpresaCliente.setText(""+model_clientes.getEmpresa_cliente());
+        view_clientes.jTEmailCliente.setText(model_clientes.getEmail_cliente());
+        view_clientes.jTRfcCliente.setText(model_clientes.getRfc_cliente());
+        view_clientes.jTCalleCliente.setText(model_clientes.getCalle_cliente());
+        view_clientes.jTColoniaCliente.setText(model_clientes.getColonia_cliente());
+        view_clientes.jTMunicipioCliente.setText(model_clientes.getMunicipio_cliente());
+        view_clientes.jTEmpresaCliente.setText(model_clientes.getEmpresa_cliente());
         view_clientes.jTCpCliente.setText(""+model_clientes.getCp_cliente());
         
         

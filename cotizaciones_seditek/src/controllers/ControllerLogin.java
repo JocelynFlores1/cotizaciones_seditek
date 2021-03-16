@@ -69,7 +69,7 @@ public class ControllerLogin implements ActionListener {
                 
                 viewLogin.dispose();
             } else {
-                System.out.println("Datos incorrectos");
+                JOptionPane.showMessageDialog(null,"Datos incorrectos");
             }
         } else {
             JOptionPane.showMessageDialog(null, "Debe ingresar sus datos");

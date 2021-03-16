@@ -16,6 +16,7 @@ import javax.swing.JOptionPane;
  * @author flore
  */
 public class ModelLogin {
+    private String id_usuario;
     private String nombre_usuario;
     private String tipo_usuario;
     private String password;
@@ -24,6 +25,13 @@ public class ModelLogin {
     private Statement st;
     private ResultSet rs;
     private java.sql.PreparedStatement ps;
+    
+    public String getId(){
+        return id_usuario;
+    }
+    public void setId(String id_usuario){
+       this.id_usuario = id_usuario;
+    }
 
     public String getUsuario() {
         return nombre_usuario;
@@ -86,7 +94,7 @@ public class ModelLogin {
         ModelConexion loginConexion = new ModelConexion();
         loginConexion.getConexion();
 
-        String sql = "SELECT nombre_usuario,tipo_usuario FROM Usuarios WHERE nombre_usuario  = ?";
+        String sql = "SELECT id_usuario,nombre_usuario,tipo_usuario, password FROM usuarios WHERE nombre_usuario  = ?";
         try {
 
             ps = (PreparedStatement) loginConexion.getConexion().prepareStatement(sql);
@@ -95,17 +103,10 @@ public class ModelLogin {
             rs = ps.executeQuery();
 
             if (rs.next()) {
-                if (getPassword().equals(rs.getString(2))) {
-                    setUsuario(rs.getString(1));
-                    setTipoUsuario(rs.getString(4));
-
-                    PreparedStatement psDos = (PreparedStatement) loginConexion.getConexion();
-                    psDos.setString(1, getUsuario());
-                    ResultSet rsDos = psDos.executeQuery();
-
-                    if (rsDos.next()) {
-                        setUsuario(rsDos.getString(1));
-                    }
+                if (getPassword().equals(rs.getString(4))) {
+                    setId(rs.getString(1));
+                    setUsuario(rs.getString(2));
+                    setTipoUsuario(rs.getString(3));
                     return true;
                 } else {
                     return false;

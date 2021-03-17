@@ -32,7 +32,6 @@ public class ModelRespaldos {
 
             Process p = Runtime.getRuntime().exec("jdbc:mysql://z5zm8hebixwywy9d.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/zs24at5q2gx9egvgt");
             //C:\\xampp\\mysql\\bin\\mysqldump ->(Ruta donde se encuentra mysqldump dependiendo de la ruta de instalacion) 
-            //Se usa para toda la base de datos ---->        --host=noutectyspdf.ddns.net -P3306 -udagasoft -pferreteriasacme -B ferreteriasacme backup desde pc Norberto
             InputStream is = p.getInputStream();//Pedimos la entrada
             try (FileOutputStream fos = new FileOutputStream("src/bd/"+ nombreDocumento) //creamos el archivo para le respaldo
             ) {

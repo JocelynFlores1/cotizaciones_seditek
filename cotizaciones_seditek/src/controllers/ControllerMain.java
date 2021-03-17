@@ -78,6 +78,7 @@ public class ControllerMain {
     
     private void setActionListener(){
         viewMenu.jmUsuarios.addActionListener(actionListener);
+        viewMenu.jmRespaldos.addActionListener(actionListener);
         viewMenu.jmCerrarSesion.addActionListener(actionListener);
     }
     
@@ -116,6 +117,9 @@ public class ControllerMain {
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == viewMenu.jmUsuarios){
                 jmi_usuarios_actionPerformed();
+            }else if(e.getSource() ==viewMenu.jmRespaldos){
+                jmi_respaldos_actionPerformed();
+                
             }else if (e.getSource() == viewMenu.jmCerrarSesion){
                 jmi_cerrarSesion_actionPerformed();
             }
@@ -153,6 +157,13 @@ public class ControllerMain {
         viewMenu.revalidate();
         viewMenu.repaint();
         System.out.println("Usuarios");
+    }
+    
+    public void jmi_respaldos_actionPerformed() {
+        models.ModelRespaldos respaldosBD = new models.ModelRespaldos();
+        controllers.ControllerRespaldos controllerRespaldos = new controllers.ControllerRespaldos(respaldosBD);
+        controllerRespaldos.respaldo();
+        System.out.println("Respaldo de base de datos");
     }
 
     public void jmi_cerrarSesion_actionPerformed() {

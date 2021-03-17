@@ -35,6 +35,7 @@ public class ViewMenu extends javax.swing.JFrame {
         jmUsuarioSesion = new javax.swing.JMenuItem();
         jmCerrarSesion = new javax.swing.JMenuItem();
         jmBD = new javax.swing.JMenu();
+        jmRespaldos = new javax.swing.JMenuItem();
         jmInicio1 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -65,6 +66,15 @@ public class ViewMenu extends javax.swing.JFrame {
         jMenuBar1.add(jmSesion);
 
         jmBD.setText("Base de datos");
+
+        jmRespaldos.setText("Respaldos");
+        jmRespaldos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmRespaldosActionPerformed(evt);
+            }
+        });
+        jmBD.add(jmRespaldos);
+
         jMenuBar1.add(jmBD);
 
         jmInicio1.setText("Inicio");
@@ -89,6 +99,10 @@ public class ViewMenu extends javax.swing.JFrame {
     private void jmUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmUsuariosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jmUsuariosActionPerformed
+
+    private void jmRespaldosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmRespaldosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jmRespaldosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -131,6 +145,7 @@ public class ViewMenu extends javax.swing.JFrame {
     public javax.swing.JMenuItem jmCerrarSesion;
     public javax.swing.JMenu jmInicio;
     public javax.swing.JMenu jmInicio1;
+    public javax.swing.JMenuItem jmRespaldos;
     private javax.swing.JMenu jmSesion;
     public javax.swing.JMenuItem jmUsuarioSesion;
     public javax.swing.JMenuItem jmUsuarios;

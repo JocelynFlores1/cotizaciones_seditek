@@ -31,6 +31,10 @@ public class ControllerMain {
     private Object controllers[];
 
     private ControllerUsuarios controllerUsuario;
+    private ControllerClientes controller_clientes;
+    private ControllerProveedores controller_proveedores;
+    private ControllerProductos controller_productos;
+    private ControllerServicios controller_servicios;
     private ControllerInicio controllerInicio;
     private final String nombre_usuario;
     private final String tipo_usuario;
@@ -74,10 +78,15 @@ public class ControllerMain {
         viewMenu.setVisible(true);
         viewMenu.jmUsuarioSesion.setText("Usuario: " + nombre_usuario);
         jmi_inicio_actionPerformed();
+        
     }
     
     private void setActionListener(){
         viewMenu.jmUsuarios.addActionListener(actionListener);
+        viewMenu.jmClientes.addActionListener(actionListener);
+        viewMenu.jmProveedores.addActionListener(actionListener);
+        viewMenu.jmProductos.addActionListener(actionListener);
+        viewMenu.jmServicios.addActionListener(actionListener);
         viewMenu.jmRespaldos.addActionListener(actionListener);
         viewMenu.jmCerrarSesion.addActionListener(actionListener);
     }
@@ -117,6 +126,18 @@ public class ControllerMain {
         public void actionPerformed(ActionEvent e) {
             if (e.getSource() == viewMenu.jmUsuarios){
                 jmi_usuarios_actionPerformed();
+            }else if(e.getSource() ==viewMenu.jmClientes){
+                jmi_clientes_actionPerformed();
+                
+            }else if(e.getSource() ==viewMenu.jmProveedores){
+                jmi_proveedores_actionPerformed();
+                
+            }else if(e.getSource() ==viewMenu.jmProductos){
+                jmi_productos_actionPerformed();
+                
+            }else if(e.getSource() ==viewMenu.jmServicios){
+                jmi_servicios_actionPerformed();
+                
             }else if(e.getSource() ==viewMenu.jmRespaldos){
                 jmi_respaldos_actionPerformed();
                 
@@ -148,6 +169,8 @@ public class ControllerMain {
         viewMenu.repaint();
         System.out.println("Inicio");
     }
+    
+    
 
     private void jmi_usuarios_actionPerformed() {
         models.ModelUsuarios modelUsuarios = new models.ModelUsuarios();
@@ -158,6 +181,48 @@ public class ControllerMain {
         viewMenu.repaint();
         System.out.println("Usuarios");
     }
+    
+    
+    private void jmi_clientes_actionPerformed() {
+        models.ModelClientes model_clientes = new models.ModelClientes();
+        views.ViewClientes view_clientes = new views.ViewClientes();
+        controllers.ControllerClientes controller_clientes = new controllers.ControllerClientes(model_clientes, view_clientes);
+        viewMenu.setContentPane(controller_clientes.view_clientes);
+        viewMenu.revalidate();
+        viewMenu.repaint();
+        System.out.println("Clientes");
+    }
+    
+    private void jmi_proveedores_actionPerformed() {
+        models.ModelProveedores model_proveedores = new models.ModelProveedores();
+        views.ViewProveedores view_proveedores = new views.ViewProveedores();
+        controllers.ControllerProveedores controller_proveedores = new controllers.ControllerProveedores(model_proveedores, view_proveedores);
+        viewMenu.setContentPane(controller_proveedores.view_proveedores);
+        viewMenu.revalidate();
+        viewMenu.repaint();
+        System.out.println("Proveedores");
+    }
+    
+    private void jmi_productos_actionPerformed() {
+        models.ModelProductos model_productos = new models.ModelProductos();
+        views.ViewProductos view_productos = new views.ViewProductos();
+        controllers.ControllerProductos controller_productos = new controllers.ControllerProductos(model_productos, view_productos);
+        viewMenu.setContentPane(controller_productos.view_productos);
+        viewMenu.revalidate();
+        viewMenu.repaint();
+        System.out.println("Productos");
+    }
+    
+    private void jmi_servicios_actionPerformed() {
+        models.ModelServicios model_servicios = new models.ModelServicios();
+        views.ViewServicios view_servicios = new views.ViewServicios();
+        controllers.ControllerServicios controller_servicios = new controllers.ControllerServicios(model_servicios, view_servicios);
+        viewMenu.setContentPane(controller_servicios.view_servicios);
+        viewMenu.revalidate();
+        viewMenu.repaint();
+        System.out.println("Servicios");
+    }
+    
     
     public void jmi_respaldos_actionPerformed() {
         models.ModelRespaldos respaldosBD = new models.ModelRespaldos();

@@ -31,6 +31,10 @@ public class ViewMenu extends javax.swing.JFrame {
         jmInicio = new javax.swing.JMenu();
         jmVentanas = new javax.swing.JMenu();
         jmUsuarios = new javax.swing.JMenuItem();
+        jmClientes = new javax.swing.JMenuItem();
+        jmProveedores = new javax.swing.JMenuItem();
+        jmProductos = new javax.swing.JMenuItem();
+        jmServicios = new javax.swing.JMenuItem();
         jmSesion = new javax.swing.JMenu();
         jmUsuarioSesion = new javax.swing.JMenuItem();
         jmCerrarSesion = new javax.swing.JMenuItem();
@@ -52,6 +56,18 @@ public class ViewMenu extends javax.swing.JFrame {
             }
         });
         jmVentanas.add(jmUsuarios);
+
+        jmClientes.setText("Clientes");
+        jmVentanas.add(jmClientes);
+
+        jmProveedores.setText("Proveedores");
+        jmVentanas.add(jmProveedores);
+
+        jmProductos.setText("Productos");
+        jmVentanas.add(jmProductos);
+
+        jmServicios.setText("Servicios");
+        jmVentanas.add(jmServicios);
 
         jMenuBar1.add(jmVentanas);
 
@@ -143,9 +159,13 @@ public class ViewMenu extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     public javax.swing.JMenu jmBD;
     public javax.swing.JMenuItem jmCerrarSesion;
+    public javax.swing.JMenuItem jmClientes;
     public javax.swing.JMenu jmInicio;
     public javax.swing.JMenu jmInicio1;
+    public javax.swing.JMenuItem jmProductos;
+    public javax.swing.JMenuItem jmProveedores;
     public javax.swing.JMenuItem jmRespaldos;
+    public javax.swing.JMenuItem jmServicios;
     private javax.swing.JMenu jmSesion;
     public javax.swing.JMenuItem jmUsuarioSesion;
     public javax.swing.JMenuItem jmUsuarios;

@@ -65,8 +65,8 @@ public class ControllerClientes {
         view_clientes.jTNombreCliente.setText(model_clientes.getNombre_cliente());
         view_clientes.jTApellidoPaterno.setText(model_clientes.getApellido_paterno());
         view_clientes.jTApellidoMaterno.setText(model_clientes.getApellido_materno());
-        view_clientes.jTTelefonoCliente.setText(""+model_clientes.getTelefono_cliente());
-        view_clientes.jTTelefonoEmpresa.setText(""+model_clientes.getTelefono_empresa());
+        view_clientes.jTTelefonoCliente.setText(model_clientes.getTelefono_cliente());
+        view_clientes.jTTelefonoEmpresa.setText(model_clientes.getTelefono_empresa());
         view_clientes.jTEmailCliente.setText(model_clientes.getEmail_cliente());
         view_clientes.jTRfcCliente.setText(model_clientes.getRfc_cliente());
         view_clientes.jTCalleCliente.setText(model_clientes.getCalle_cliente());
@@ -123,12 +123,11 @@ public class ControllerClientes {
             model_clientes.setApellido_paterno(view_clientes.jTApellidoPaterno.getText());
             model_clientes.setApellido_materno(view_clientes.jTApellidoMaterno.getText());
             
-            if(!view_clientes.jTTelefonoCliente.getText().equals(" ")){
-            model_clientes.setTelefono_cliente(Integer.parseInt(view_clientes.jTTelefonoCliente.getText()));
-            } 
-            if(!view_clientes.jTTelefonoEmpresa.getText().equals(" ")){
-            model_clientes.setTelefono_empresa(Integer.parseInt(view_clientes.jTTelefonoEmpresa.getText()));
-            }
+           
+            model_clientes.setTelefono_cliente(view_clientes.jTTelefonoCliente.getText());
+            
+            model_clientes.setTelefono_empresa(view_clientes.jTTelefonoEmpresa.getText());
+            
             
             model_clientes.setEmail_cliente(view_clientes.jTEmailCliente.getText());
             model_clientes.setRfc_cliente(view_clientes.jTRfcCliente.getText());
@@ -164,12 +163,11 @@ public class ControllerClientes {
             model_clientes.setNombre_cliente(view_clientes.jTNombreCliente.getText());
             model_clientes.setApellido_paterno(view_clientes.jTApellidoPaterno.getText());
             model_clientes.setApellido_materno(view_clientes.jTApellidoMaterno.getText());
-            if(!view_clientes.jTTelefonoCliente.getText().equals(" ")){
-            model_clientes.setTelefono_cliente(Integer.parseInt(view_clientes.jTTelefonoCliente.getText()));
-            } 
-            if(!view_clientes.jTTelefonoEmpresa.getText().equals(" ")){
-            model_clientes.setTelefono_empresa(Integer.parseInt(view_clientes.jTTelefonoEmpresa.getText()));
-            }
+            
+            model_clientes.setTelefono_cliente(view_clientes.jTTelefonoCliente.getText());
+            
+            model_clientes.setTelefono_empresa(view_clientes.jTTelefonoEmpresa.getText());
+            
             model_clientes.setEmail_cliente(view_clientes.jTEmailCliente.getText());
             model_clientes.setRfc_cliente(view_clientes.jTRfcCliente.getText());
             model_clientes.setCalle_cliente(view_clientes.jTCalleCliente.getText());
@@ -201,7 +199,7 @@ public class ControllerClientes {
             model_clientes.setId_cliente(view_clientes.jTIdCliente.getText());
             model_clientes.borrarDatosCliente(clienteConexion);
             tablaConsulta();
-            JOptionPane.showMessageDialog(null, "Los datos del producto han sido eliminados");
+            JOptionPane.showMessageDialog(null, "Los datos del cliente han sido eliminados");
         } else {
             ///Respuesta que se obtiene cuando se cancela la accion del boton elegido
             JOptionPane.showMessageDialog(null, "No se borro ningun registro");

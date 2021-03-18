@@ -62,18 +62,18 @@ public class ControllerProveedores {
      */
     public void CambiarCampos() {
         
-        view_proveedores.jTIdProveedor.setText(""+model_proveedores.getId_proveedor());
-        view_proveedores.jTNombreProveedor.setText(""+model_proveedores.getNombre_proveedor());
-        view_proveedores.jTTelefonoProveedor.setText(""+model_proveedores.getTelefono_proveedor());
-        view_proveedores.jTTelefonoContacto.setText(""+model_proveedores.getTelefono_contacto());
-        view_proveedores.jTEmailProveedor.setText(""+model_proveedores.getEmail_proveedor());
-        view_proveedores.jTEmailContacto.setText(""+model_proveedores.getEmail_contacto());
-        view_proveedores.jTCalleProveedor.setText(""+model_proveedores.getCalle_proveedor());
-        view_proveedores.jTColoniaProveedor.setText(""+model_proveedores.getColonia_proveedor());
-        view_proveedores.jTMunicipioProveedor.setText(""+model_proveedores.getMunicipio_proveedor());
+        view_proveedores.jTIdProveedor.setText(model_proveedores.getId_proveedor());
+        view_proveedores.jTNombreProveedor.setText(model_proveedores.getNombre_proveedor());
+        view_proveedores.jTTelefonoProveedor.setText(model_proveedores.getTelefono_proveedor());
+        view_proveedores.jTTelefonoContacto.setText(model_proveedores.getTelefono_contacto());
+        view_proveedores.jTEmailProveedor.setText(model_proveedores.getEmail_proveedor());
+        view_proveedores.jTEmailContacto.setText(model_proveedores.getEmail_contacto());
+        view_proveedores.jTCalleProveedor.setText(model_proveedores.getCalle_proveedor());
+        view_proveedores.jTColoniaProveedor.setText(model_proveedores.getColonia_proveedor());
+        view_proveedores.jTMunicipioProveedor.setText(model_proveedores.getMunicipio_proveedor());
         view_proveedores.jTCpProveedor.setText(""+model_proveedores.getCp_proveedor());
-        view_proveedores.jTEmpresaProveedor.setText(""+model_proveedores.getEmpresa_proveedor());
-        view_proveedores.jTRfcProveedor.setText(""+model_proveedores.getRfc_proveedor());
+        view_proveedores.jTEmpresaProveedor.setText(model_proveedores.getEmpresa_proveedor());
+        view_proveedores.jTRfcProveedor.setText(model_proveedores.getRfc_proveedor());
     }
        
     
@@ -119,12 +119,9 @@ public class ControllerProveedores {
             model_proveedores.setId_proveedor(view_proveedores.jTIdProveedor.getText());
             model_proveedores.setNombre_proveedor(view_proveedores.jTNombreProveedor.getText());
 
-            if(!view_proveedores.jTTelefonoProveedor.getText().equals(" ")){
-                model_proveedores.setTelefono_proveedor(Integer.parseInt(view_proveedores.jTTelefonoProveedor.getText()));
-            }
-            if(!view_proveedores.jTTelefonoContacto.getText().equals(" ")){
-                model_proveedores.setTelefono_contacto(Integer.parseInt(view_proveedores.jTTelefonoContacto.getText()));
-            }       
+            
+            model_proveedores.setTelefono_proveedor(view_proveedores.jTTelefonoProveedor.getText());
+            model_proveedores.setTelefono_contacto(view_proveedores.jTTelefonoContacto.getText());     
             model_proveedores.setEmail_proveedor(view_proveedores.jTEmailProveedor.getText());
             model_proveedores.setEmail_contacto(view_proveedores.jTEmailContacto.getText());
             model_proveedores.setCalle_proveedor(view_proveedores.jTCalleProveedor.getText());
@@ -157,12 +154,10 @@ public class ControllerProveedores {
             //model_proveedores.setId_proveedor(view_proveedores.jTIdProveedor.getText());
             model_proveedores.setNombre_proveedor(view_proveedores.jTNombreProveedor.getText());
 
-            if(!view_proveedores.jTTelefonoProveedor.getText().equals(" ")){
-                model_proveedores.setTelefono_proveedor(Integer.parseInt(view_proveedores.jTTelefonoProveedor.getText()));
-            }
-            if(!view_proveedores.jTTelefonoContacto.getText().equals(" ")){
-                model_proveedores.setTelefono_contacto(Integer.parseInt(view_proveedores.jTTelefonoContacto.getText()));
-            }       
+            model_proveedores.setTelefono_proveedor(view_proveedores.jTTelefonoProveedor.getText());
+
+            model_proveedores.setTelefono_contacto(view_proveedores.jTTelefonoContacto.getText());
+                   
             model_proveedores.setEmail_proveedor(view_proveedores.jTEmailProveedor.getText());
             model_proveedores.setEmail_contacto(view_proveedores.jTEmailContacto.getText());
             model_proveedores.setCalle_proveedor(view_proveedores.jTCalleProveedor.getText());

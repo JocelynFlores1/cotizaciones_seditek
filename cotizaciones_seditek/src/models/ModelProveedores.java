@@ -16,8 +16,8 @@ public class ModelProveedores {
     
     private String id_proveedor;
     private String nombre_proveedor;
-    private int telefono_proveedor;
-    private int telefono_contacto;
+    private String telefono_proveedor;
+    private String telefono_contacto;
     private String email_proveedor;
     private String email_contacto;
     private String calle_proveedor;
@@ -80,22 +80,22 @@ public class ModelProveedores {
         this.nombre_proveedor = nombre_proveedor;
     }
 
-    public int getTelefono_proveedor() {
+    public String getTelefono_proveedor() {
         return telefono_proveedor;
     }
 
 
-    public void setTelefono_proveedor(int telefono_proveedor) {
+    public void setTelefono_proveedor(String telefono_proveedor) {
         this.telefono_proveedor = telefono_proveedor;
     }
 
 
-    public int getTelefono_contacto() {
+    public String getTelefono_contacto() {
         return telefono_contacto;
     }
 
 
-    public void setTelefono_contacto(int telefono_contacto) {
+    public void setTelefono_contacto(String telefono_contacto) {
         this.telefono_contacto = telefono_contacto;
     }
 
@@ -183,8 +183,8 @@ public class ModelProveedores {
             System.out.println("modificar datos variables 1 proveedores");
             setId_proveedor(rs.getString(1));
             setNombre_proveedor(rs.getString(2));
-            setTelefono_proveedor(rs.getInt(3));
-            setTelefono_contacto(rs.getInt(4));
+            setTelefono_proveedor(rs.getString(3));
+            setTelefono_contacto(rs.getString(4));
             setEmail_proveedor(rs.getString(5));
             setEmail_contacto(rs.getString(6));
             setCalle_proveedor(rs.getString(7));
@@ -241,8 +241,8 @@ public class ModelProveedores {
             System.out.println(getId_proveedor());
             ps.setString(1, getId_proveedor());
             ps.setString(2, getNombre_proveedor());
-            ps.setInt(3, getTelefono_proveedor());
-            ps.setInt(4, getTelefono_contacto());
+            ps.setString(3, getTelefono_proveedor());
+            ps.setString(4, getTelefono_contacto());
             ps.setString(5, getEmail_proveedor());
             ps.setString(6, getEmail_contacto());
             ps.setString(7, getCalle_proveedor());
@@ -273,8 +273,8 @@ public class ModelProveedores {
 
                 
                 ps.setString(1, getNombre_proveedor());
-                ps.setInt(2, getTelefono_proveedor());
-                ps.setInt(3, getTelefono_contacto());
+                ps.setString(2, getTelefono_proveedor());
+                ps.setString(3, getTelefono_contacto());
                 ps.setString(4, getEmail_proveedor());
                 ps.setString(5, getEmail_contacto());
                 ps.setString(6, getCalle_proveedor());

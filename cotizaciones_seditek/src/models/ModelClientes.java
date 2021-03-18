@@ -25,8 +25,8 @@ public class ModelClientes {
     private String nombre_cliente;
     private String apellido_paterno;
     private String apellido_materno;
-    private int telefono_cliente;
-    private int telefono_empresa;
+    private String telefono_cliente;
+    private String telefono_empresa;
     private String email_cliente;
     private String rfc_cliente;
     private String calle_cliente;
@@ -112,22 +112,22 @@ public class ModelClientes {
     }
 
 
-    public int getTelefono_cliente() {
+    public String getTelefono_cliente() {
         return telefono_cliente;
     }
 
 
-    public void setTelefono_cliente(int telefono_cliente) {
+    public void setTelefono_cliente(String telefono_cliente) {
         this.telefono_cliente = telefono_cliente;
     }
 
 
-    public int getTelefono_empresa() {
+    public String getTelefono_empresa() {
         return telefono_empresa;
     }
 
 
-    public void setTelefono_empresa(int telefono_empresa) {
+    public void setTelefono_empresa(String telefono_empresa) {
         this.telefono_empresa = telefono_empresa;
     }
 
@@ -210,8 +210,8 @@ public class ModelClientes {
             setNombre_cliente(rs.getString(2));
             setApellido_paterno(rs.getString(3));
             setApellido_materno(rs.getString(4));
-            setTelefono_cliente(rs.getInt(5));
-            setTelefono_empresa(rs.getInt(6));
+            setTelefono_cliente(rs.getString(5));
+            setTelefono_empresa(rs.getString(6));
             setEmail_cliente(rs.getString(7));
             setRfc_cliente(rs.getString(8));
             setCalle_cliente(rs.getString(9));
@@ -265,8 +265,8 @@ public class ModelClientes {
             ps.setString(2, getNombre_cliente());
             ps.setString(3, getApellido_paterno());
             ps.setString(4, getApellido_materno());
-            ps.setInt(5, getTelefono_cliente());
-            ps.setInt(6, getTelefono_empresa());
+            ps.setString(5, getTelefono_cliente());
+            ps.setString(6, getTelefono_empresa());
             ps.setString(7, getEmail_cliente());
             ps.setString(8, getRfc_cliente());
             ps.setString(9, getCalle_cliente());
@@ -298,8 +298,8 @@ public class ModelClientes {
             ps.setString(1, getNombre_cliente());
             ps.setString(2, getApellido_paterno());
             ps.setString(3, getApellido_materno());
-            ps.setInt(4, getTelefono_cliente());
-            ps.setInt(5, getTelefono_empresa());
+            ps.setString(4, getTelefono_cliente());
+            ps.setString(5, getTelefono_empresa());
             ps.setString(6, getEmail_cliente());
             ps.setString(7, getRfc_cliente());
             ps.setString(8, getCalle_cliente());

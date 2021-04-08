@@ -15,7 +15,7 @@ import javax.swing.ImageIcon;
 public class ModelImagen extends javax.swing.JPanel {
 
     public ModelImagen() {
-        this.setSize(700, 700); //se selecciona el tamaño del panel
+        this.setSize(1500, 700); //se selecciona el tamaño del panel
     }
 
 //Se crea un método cuyo parámetro debe ser un objeto Graphics

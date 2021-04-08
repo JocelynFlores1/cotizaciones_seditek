@@ -26,6 +26,7 @@ public class ModelUsuarios {
     private String id_usuario;
     private String nombre_usuario;
     private String tipo_usuario;
+    private String pregunta;
     private String password;
     private String u = "";
     
@@ -84,7 +85,14 @@ public class ModelUsuarios {
     public void setTipo_usuario(String tipo_usuario) {
         this.tipo_usuario = tipo_usuario;
     }
+    public String getPregunta() {
+        return tipo_usuario;
+    }
 
+    public void setPregunta(String pregunta) {
+        this.pregunta = pregunta;
+    }
+    
     public String getPassword() {
         return password;
     }
@@ -99,7 +107,8 @@ public class ModelUsuarios {
             setId_usuario(rs.getString(1));
             setNombre_usuario(rs.getString(2));
             setTipo_usuario(rs.getString(3));
-            setPassword(rs.getString(4));
+            setPregunta(rs.getString(4));
+            setPassword(rs.getString(5));
             
         } catch (SQLException e) {
             System.out.println("Error 01: modificar datos" + e);
@@ -135,14 +144,15 @@ public class ModelUsuarios {
      */
     public void insertarNuevoUsuario(ModelConexion usuarioConexion) {
         System.out.println("nuevo  3 usuarios");
-        String sqlInsertarUsuario = "INSERT into usuarios(id_usuario,nombre_usuario,tipo_usuario,password) VALUES(?,?,?,?)";
+        String sqlInsertarUsuario = "INSERT into usuarios(id_usuario,nombre_usuario,tipo_usuario,pregunta,password) VALUES(?,?,?,?,?)";
         try {
             ps = (PreparedStatement) usuarioConexion.getConexion().prepareStatement(sqlInsertarUsuario); //con este comando se podra hacer la modificacion a la tabla en la base de datos
             System.out.println(getId_usuario());
             ps.setString(1, getId_usuario());
             ps.setString(2, getNombre_usuario());
             ps.setString(3, getTipo_usuario());
-            ps.setString(4, getPassword());
+            ps.setString(4, getPregunta());
+            ps.setString(5, getPassword());
             ps.executeUpdate();
         } catch (SQLException ex) {
             System.out.println("Error 03: Insertar nuevo usuario" + ex);
@@ -156,7 +166,7 @@ public class ModelUsuarios {
      */
     public void modificarDatosUsuario(ModelConexion usuarioConexion) {
         System.out.println("modificar 4 usuarios");
-        String sqlModificarUsuario = "UPDATE usuarios SET nombre_usuario=?, tipo_usuario=?, password=? where id_usuario=?";
+        String sqlModificarUsuario = "UPDATE usuarios SET nombre_usuario=?, tipo_usuario=?, pregunta=?, password=? where id_usuario=?";
         try {
 
             ps = (PreparedStatement) usuarioConexion.getConexion().prepareStatement(sqlModificarUsuario);
@@ -166,7 +176,8 @@ public class ModelUsuarios {
             ps.setString(1, getNombre_usuario());
             ps.setString(2, getTipo_usuario());
             ps.setString(3, getPassword());
-            ps.setString(4, getId_usuario());
+            ps.setString(4, getPregunta());
+            ps.setString(5, getId_usuario());
             ps.executeUpdate();
 
         } catch (SQLException ex) {

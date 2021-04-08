@@ -15,7 +15,7 @@ import javax.swing.ImageIcon;
 public class ModelImagen extends javax.swing.JPanel {
 
     public ModelImagen() {
-        this.setSize(1000, 700); //se selecciona el tamaño del panel
+        this.setSize(700, 700); //se selecciona el tamaño del panel
     }
 
 //Se crea un método cuyo parámetro debe ser un objeto Graphics
@@ -24,7 +24,7 @@ public class ModelImagen extends javax.swing.JPanel {
         Dimension tam = getSize();
 
 //Se selecciona la imagen que tenemos en el paquete de la //ruta del programa
-        ImageIcon Img = new ImageIcon(getClass().getResource("/img/fondo.PNG"));
+        ImageIcon Img = new ImageIcon(getClass().getResource("/img/fondo1.PNG"));
 
 //se dibuja la imagen que tenemos en el paquete Images //dentro de un panel
         g.drawImage(Img.getImage(),0,0,tam.width,tam.height,null); 

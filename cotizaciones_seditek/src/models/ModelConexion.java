@@ -19,11 +19,11 @@ import java.util.logging.Logger;
  */
 public class ModelConexion {
     
-    public Connection con;
+    static Connection con;
     public Statement st ;
     public ResultSet rs;
 
-    public Connection getConexion() {
+    public static Connection getConexion() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://z5zm8hebixwywy9d.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/zs24at5q2gx9egvg", "um09y46w14qyg6w2", "mqio1vovph8f7gir");

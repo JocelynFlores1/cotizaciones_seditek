@@ -77,6 +77,7 @@ public class ControllerUsuarios {
         viewUsuarios.jtf_nombre_usuario.setText(modelUsuarios.getNombre_usuario());
         viewUsuarios.jtf_tipo_usuario.setText(modelUsuarios.getTipo_usuario());
         viewUsuarios.jt_pregunta.setText(modelUsuarios.getPregunta());
+        viewUsuarios.jt_respuesta.setText(modelUsuarios.getRespuesta());
         viewUsuarios.jtf_password.setText(modelUsuarios.getPassword());
     }
 
@@ -109,6 +110,7 @@ public class ControllerUsuarios {
             modelUsuarios.setNombre_usuario(viewUsuarios.jtf_nombre_usuario.getText());
             modelUsuarios.setTipo_usuario(viewUsuarios.jtf_tipo_usuario.getText());
             modelUsuarios.setPregunta(viewUsuarios.jt_pregunta.getText());
+            modelUsuarios.setRespuesta(viewUsuarios.jt_respuesta.getText());
             modelUsuarios.setPassword(viewUsuarios.jtf_password.getText());
            
 
@@ -129,6 +131,7 @@ public class ControllerUsuarios {
             modelUsuarios.setNombre_usuario(viewUsuarios.jtf_nombre_usuario.getText());
             modelUsuarios.setTipo_usuario(viewUsuarios.jtf_tipo_usuario.getText());
             modelUsuarios.setPregunta(viewUsuarios.jt_pregunta.getText());
+            modelUsuarios.setRespuesta(viewUsuarios.jt_respuesta.getText());
             modelUsuarios.setPassword(viewUsuarios.jtf_password.getText());
             modelUsuarios.setId_usuario(viewUsuarios.jtf_id_usuario.getText());
 
@@ -171,6 +174,7 @@ public class ControllerUsuarios {
             modelo.addColumn("Nombre");
             modelo.addColumn("Tipo usuario");
             modelo.addColumn("Pregunta de seguridad");
+            modelo.addColumn("Respuesta");
             modelo.addColumn("Contraseña");
      
             while (modelUsuarios.getRs().next()) {
@@ -200,7 +204,8 @@ public class ControllerUsuarios {
                 viewUsuarios.jtf_nombre_usuario.setText(viewUsuarios.jt_usuarios.getValueAt(fila, 1).toString());
                 viewUsuarios.jtf_tipo_usuario.setText(viewUsuarios.jt_usuarios.getValueAt(fila, 2).toString());
                 viewUsuarios.jt_pregunta.setText(viewUsuarios.jt_usuarios.getValueAt(fila, 3).toString());
-                viewUsuarios.jtf_password.setText(viewUsuarios.jt_usuarios.getValueAt(fila, 4).toString());
+                viewUsuarios.jt_respuesta.setText(viewUsuarios.jt_usuarios.getValueAt(fila, 4).toString());
+                viewUsuarios.jtf_password.setText(viewUsuarios.jt_usuarios.getValueAt(fila, 5).toString());
                 
             }
         } catch (Exception err) {
@@ -213,6 +218,7 @@ public class ControllerUsuarios {
         viewUsuarios.jtf_nombre_usuario.setText("");
         viewUsuarios.jtf_tipo_usuario.setText("");
         viewUsuarios.jt_pregunta.setText("");
+        viewUsuarios.jt_respuesta.setText("");
         viewUsuarios.jtf_password.setText("");
         
     }

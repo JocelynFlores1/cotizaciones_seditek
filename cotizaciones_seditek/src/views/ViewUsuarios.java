@@ -52,6 +52,8 @@ public class ViewUsuarios extends javax.swing.JFrame {
         jb_modificar = new javax.swing.JButton();
         jl_pregunta = new javax.swing.JLabel();
         jt_pregunta = new javax.swing.JTextField();
+        jl_respuesta = new javax.swing.JLabel();
+        jt_respuesta = new javax.swing.JTextField();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         jpBorde = new javax.swing.JPanel();
         jpPieDePagina1 = new javax.swing.JPanel();
@@ -200,6 +202,15 @@ public class ViewUsuarios extends javax.swing.JFrame {
         jl_pregunta.setForeground(new java.awt.Color(153, 153, 153));
         jl_pregunta.setText("Pregunta de seguridad");
 
+        jl_respuesta.setFont(new java.awt.Font("Segoe UI Semilight", 1, 18)); // NOI18N
+        jl_respuesta.setText("Respuesta");
+
+        jt_respuesta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jt_respuestaActionPerformed(evt);
+            }
+        });
+
         jLayeredPane2.setLayer(jPanel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jl_id_usuario, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jtf_id_usuario, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -213,6 +224,8 @@ public class ViewUsuarios extends javax.swing.JFrame {
         jLayeredPane2.setLayer(jPanel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jl_pregunta, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane2.setLayer(jt_pregunta, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(jl_respuesta, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(jt_respuesta, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane2Layout = new javax.swing.GroupLayout(jLayeredPane2);
         jLayeredPane2.setLayout(jLayeredPane2Layout);
@@ -221,26 +234,28 @@ public class ViewUsuarios extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                .addContainerGap(52, Short.MAX_VALUE)
+                .addContainerGap(117, Short.MAX_VALUE)
                 .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                        .addComponent(jl_password, javax.swing.GroupLayout.DEFAULT_SIZE, 169, Short.MAX_VALUE)
+                        .addComponent(jl_password, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
                         .addGap(524, 524, 524))
                     .addGroup(jLayeredPane2Layout.createSequentialGroup()
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jl_pregunta)
                             .addGroup(jLayeredPane2Layout.createSequentialGroup()
                                 .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jl_id_usuario)
                                     .addComponent(jl_tipo_usuario)
-                                    .addComponent(jl_nombre_usuario))
+                                    .addComponent(jl_nombre_usuario)
+                                    .addComponent(jl_respuesta))
                                 .addGap(124, 124, 124)
                                 .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(jtf_password, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
                                     .addComponent(jtf_id_usuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
                                     .addComponent(jtf_nombre_usuario, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jtf_tipo_usuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
-                                    .addComponent(jt_pregunta, javax.swing.GroupLayout.Alignment.LEADING)))
-                            .addComponent(jl_pregunta))
+                                    .addComponent(jt_pregunta, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jt_respuesta))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -262,11 +277,15 @@ public class ViewUsuarios extends javax.swing.JFrame {
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jl_tipo_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtf_tipo_usuario, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(39, 39, 39)
+                        .addGap(44, 44, 44)
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jl_pregunta)
                             .addComponent(jt_pregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(35, 35, 35)
+                        .addGap(44, 44, 44)
+                        .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jl_respuesta)
+                            .addComponent(jt_respuesta, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(44, 44, 44)
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jl_password, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtf_password, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -367,7 +386,7 @@ public class ViewUsuarios extends javax.swing.JFrame {
             jpBordeTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpBordeTablaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 313, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
                 .addGap(66, 66, 66))
         );
 
@@ -467,6 +486,10 @@ public class ViewUsuarios extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jtf_tipo_usuarioKeyTyped
 
+    private void jt_respuestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_respuestaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jt_respuestaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -522,12 +545,14 @@ public class ViewUsuarios extends javax.swing.JFrame {
     public javax.swing.JLabel jl_nombre_usuario;
     public javax.swing.JLabel jl_password;
     private javax.swing.JLabel jl_pregunta;
+    private javax.swing.JLabel jl_respuesta;
     public javax.swing.JLabel jl_tipo_usuario;
     public javax.swing.JPanel jpBorde;
     public javax.swing.JPanel jpBordeTabla;
     public javax.swing.JPanel jpPieDePagina1;
     public javax.swing.JPanel jpProductosTitulo1;
     public javax.swing.JTextField jt_pregunta;
+    public javax.swing.JTextField jt_respuesta;
     public javax.swing.JTable jt_usuarios;
     public javax.swing.JTextField jtf_id_usuario;
     public javax.swing.JTextField jtf_nombre_usuario;

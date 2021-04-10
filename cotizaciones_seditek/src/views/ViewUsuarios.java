@@ -251,34 +251,29 @@ public class ViewUsuarios extends javax.swing.JFrame {
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jLayeredPane2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jb_menu, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
                 .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                        .addContainerGap(117, Short.MAX_VALUE)
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                                .addComponent(jl_password, javax.swing.GroupLayout.DEFAULT_SIZE, 104, Short.MAX_VALUE)
-                                .addGap(524, 524, 524))
-                            .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jl_pregunta)
-                                    .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                                        .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jl_id_usuario)
-                                            .addComponent(jl_tipo_usuario)
-                                            .addComponent(jl_nombre_usuario)
-                                            .addComponent(jl_respuesta))
-                                        .addGap(124, 124, 124)
-                                        .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                            .addComponent(jtf_password, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
-                                            .addComponent(jtf_id_usuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
-                                            .addComponent(jtf_nombre_usuario, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jtf_tipo_usuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
-                                            .addComponent(jt_pregunta, javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jt_respuesta))))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jl_id_usuario)
+                            .addComponent(jl_tipo_usuario)
+                            .addComponent(jl_nombre_usuario)
+                            .addComponent(jl_respuesta)
+                            .addComponent(jl_pregunta))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jtf_password, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
+                            .addComponent(jtf_id_usuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
+                            .addComponent(jtf_nombre_usuario, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtf_tipo_usuario, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 271, Short.MAX_VALUE)
+                            .addComponent(jt_pregunta, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jt_respuesta)))
                     .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                        .addComponent(jb_menu, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jl_password, javax.swing.GroupLayout.DEFAULT_SIZE, 173, Short.MAX_VALUE)
+                        .addGap(392, 392, 392)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jLayeredPane2Layout.setVerticalGroup(
@@ -287,7 +282,11 @@ public class ViewUsuarios extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
+                        .addGap(9, 9, 9)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jLayeredPane2Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jl_id_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtf_id_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -303,21 +302,21 @@ public class ViewUsuarios extends javax.swing.JFrame {
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jl_pregunta)
                             .addComponent(jt_pregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(44, 44, 44)
+                        .addGap(38, 38, 38)
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jl_respuesta)
                             .addComponent(jt_respuesta, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(22, 22, 22)
-                        .addComponent(jb_menu, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(16, 16, 16)
                         .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jl_password, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jtf_password, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jLayeredPane2Layout.createSequentialGroup()
-                        .addGap(9, 9, 9)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)))
+                            .addGroup(jLayeredPane2Layout.createSequentialGroup()
+                                .addGap(33, 33, 33)
+                                .addGroup(jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jl_password, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jtf_password, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jLayeredPane2Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jb_menu, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(54, 54, 54)))))
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -418,7 +417,7 @@ public class ViewUsuarios extends javax.swing.JFrame {
             jpBordeTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpBordeTablaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 332, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 346, Short.MAX_VALUE)
                 .addGap(66, 66, 66))
         );
 
@@ -469,7 +468,7 @@ public class ViewUsuarios extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 588, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 602, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -490,17 +489,30 @@ public class ViewUsuarios extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jtf_numero_exterior_sucursalActionPerformed
 
-    private void jb_insertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_insertarActionPerformed
+    private void jb_menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_menuActionPerformed
+        ViewMenu viewMenu=new ViewMenu();
+        new ViewMenu().setVisible(true);
+    }//GEN-LAST:event_jb_menuActionPerformed
+
+    private void jt_respuestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_respuestaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jb_insertarActionPerformed
+    }//GEN-LAST:event_jt_respuestaActionPerformed
+
+    private void jt_preguntaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jt_preguntaKeyTyped
+        char c = evt.getKeyChar();
+        if (Character.isDigit(c) == false) {
+        }else{
+            evt.consume();
+        }
+    }//GEN-LAST:event_jt_preguntaKeyTyped
 
     private void jb_nuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_nuevoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jb_nuevoActionPerformed
 
-    private void jtf_id_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_id_usuarioActionPerformed
+    private void jb_insertarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_insertarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jtf_id_usuarioActionPerformed
+    }//GEN-LAST:event_jb_insertarActionPerformed
 
     private void jtf_nombre_usuarioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtf_nombre_usuarioKeyTyped
         char c = evt.getKeyChar();
@@ -518,22 +530,9 @@ public class ViewUsuarios extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jtf_tipo_usuarioKeyTyped
 
-    private void jt_respuestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_respuestaActionPerformed
+    private void jtf_id_usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtf_id_usuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jt_respuestaActionPerformed
-
-    private void jb_menuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_menuActionPerformed
-         ViewMenu viewMenu=new ViewMenu();
-        new ViewMenu().setVisible(true);
-    }//GEN-LAST:event_jb_menuActionPerformed
-
-    private void jt_preguntaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jt_preguntaKeyTyped
-                        char c = evt.getKeyChar();
-        if (Character.isDigit(c) == false) {
-        }else{
-            evt.consume();
-        }
-    }//GEN-LAST:event_jt_preguntaKeyTyped
+    }//GEN-LAST:event_jtf_id_usuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -582,27 +581,27 @@ public class ViewUsuarios extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     public javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
-    public javax.swing.JButton jb_eliminar;
-    public javax.swing.JButton jb_insertar;
+    private javax.swing.JButton jb_eliminar;
+    private javax.swing.JButton jb_insertar;
     private javax.swing.JButton jb_menu;
-    public javax.swing.JButton jb_modificar;
-    public javax.swing.JButton jb_nuevo;
-    public javax.swing.JLabel jl_id_usuario;
-    public javax.swing.JLabel jl_nombre_usuario;
-    public javax.swing.JLabel jl_password;
+    private javax.swing.JButton jb_modificar;
+    private javax.swing.JButton jb_nuevo;
+    private javax.swing.JLabel jl_id_usuario;
+    private javax.swing.JLabel jl_nombre_usuario;
+    private javax.swing.JLabel jl_password;
     private javax.swing.JLabel jl_pregunta;
     private javax.swing.JLabel jl_respuesta;
-    public javax.swing.JLabel jl_tipo_usuario;
+    private javax.swing.JLabel jl_tipo_usuario;
     public javax.swing.JPanel jpBorde;
     public javax.swing.JPanel jpBordeTabla;
     public javax.swing.JPanel jpPieDePagina1;
     public javax.swing.JPanel jpProductosTitulo1;
-    public javax.swing.JTextField jt_pregunta;
-    public javax.swing.JTextField jt_respuesta;
+    private javax.swing.JTextField jt_pregunta;
+    private javax.swing.JTextField jt_respuesta;
     public javax.swing.JTable jt_usuarios;
-    public javax.swing.JTextField jtf_id_usuario;
-    public javax.swing.JTextField jtf_nombre_usuario;
-    public javax.swing.JTextField jtf_password;
-    public javax.swing.JTextField jtf_tipo_usuario;
+    private javax.swing.JTextField jtf_id_usuario;
+    private javax.swing.JTextField jtf_nombre_usuario;
+    private javax.swing.JTextField jtf_password;
+    private javax.swing.JTextField jtf_tipo_usuario;
     // End of variables declaration//GEN-END:variables
 }

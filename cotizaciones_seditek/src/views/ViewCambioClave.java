@@ -75,6 +75,8 @@ public class ViewCambioClave extends javax.swing.JFrame {
         jl_user.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
         jl_user.setText("Usuario");
 
+        jt_usuario.setEditable(false);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(

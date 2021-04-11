@@ -216,13 +216,17 @@ public class ViewLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_jPanelLoginPropertyChange
 
     private void jb_registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_registrarActionPerformed
-        ViewUsuarios viewUsuarios=new ViewUsuarios();
-        new ViewUsuarios().setVisible(true);
+        models.ModelUsuarios modelUsuarios = new models.ModelUsuarios();
+        views.ViewUsuarios viewUsuarios = new views.ViewUsuarios();
+        controllers.ControllerUsuarios controllerUsuarios = new controllers.ControllerUsuarios(modelUsuarios, viewUsuarios);
+        System.out.println("Usuarios");
     }//GEN-LAST:event_jb_registrarActionPerformed
 
     private void jb_newcontraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_newcontraActionPerformed
-        ViewRecuperPassword viewRecuperPassword=new ViewRecuperPassword();
-        new ViewRecuperPassword().setVisible(true);
+        models.ModelRecuperPassword modelRecuperPassword = new models.ModelRecuperPassword();
+        views.ViewRecuperPassword viewRecuperPassword = new views.ViewRecuperPassword();
+        controllers.ControllerRecuperPassword controllerRecuperPassword = new controllers.ControllerRecuperPassword(modelRecuperPassword, viewRecuperPassword);
+        System.out.println("Recuperar contraseña");
     }//GEN-LAST:event_jb_newcontraActionPerformed
 
     private void jp_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jp_passwordActionPerformed

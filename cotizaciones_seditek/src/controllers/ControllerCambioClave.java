@@ -18,7 +18,9 @@ import views.ViewCambioClave;
  *
  * @author flore
  */
+
 public class ControllerCambioClave {
+        private final String nombre_usuario; 
         public models.ModelCambioClave modelCambioClave;
         public views.ViewCambioClave viewCambioClave;
         ModelConexion CambioClaveConexion = new ModelConexion();
@@ -36,14 +38,17 @@ public class ControllerCambioClave {
     ControllerCambioClave(ModelCambioClave modelCambioClave, ViewCambioClave viewCambioClave, String nombre_usuario, String pregunta, String respuesta) {
         this.modelCambioClave = modelCambioClave;
         this.viewCambioClave = viewCambioClave;
+        this.nombre_usuario = nombre_usuario;
         initComponents();
         setActionListener();
     }
     
     
     public void initComponents() {
+        
         viewCambioClave.setVisible(true);
         modelCambioClave.conectarDB(CambioClaveConexion);
+        viewCambioClave.jt_usuario.setText(""+nombre_usuario);
         System.out.println("Solo se inicia si se abre cambiar clave");
     }
     

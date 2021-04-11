@@ -15,6 +15,7 @@ public class ViewCambioClave extends javax.swing.JFrame {
     /** Creates new form ViewCambioClave */
     public ViewCambioClave() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /** This method is called from within the constructor to
@@ -32,7 +33,9 @@ public class ViewCambioClave extends javax.swing.JFrame {
         jt_nueva_contra = new javax.swing.JTextField();
         jl_confirmar = new javax.swing.JLabel();
         jt_confirmar = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jb_aceptar = new javax.swing.JButton();
+        jl_user = new javax.swing.JLabel();
+        jt_usuario = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -50,7 +53,7 @@ public class ViewCambioClave extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(121, 121, 121)
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(127, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -66,8 +69,11 @@ public class ViewCambioClave extends javax.swing.JFrame {
         jl_confirmar.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
         jl_confirmar.setText("Confirmar contraseña");
 
-        jButton1.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
-        jButton1.setText("Aceptar");
+        jb_aceptar.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+        jb_aceptar.setText("Aceptar");
+
+        jl_user.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+        jl_user.setText("Usuario");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,19 +86,27 @@ public class ViewCambioClave extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jl_confirmar)
                         .addGap(40, 40, 40)
-                        .addComponent(jt_confirmar))
+                        .addComponent(jt_confirmar, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE))
+                    .addComponent(jb_aceptar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jl_nueva_contra)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jl_nueva_contra)
+                            .addComponent(jl_user))
                         .addGap(66, 66, 66)
-                        .addComponent(jt_nueva_contra, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(60, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jt_nueva_contra, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
+                            .addComponent(jt_usuario))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
+                .addGap(25, 25, 25)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jl_user)
+                    .addComponent(jt_usuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jl_nueva_contra)
                     .addComponent(jt_nueva_contra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -101,8 +115,8 @@ public class ViewCambioClave extends javax.swing.JFrame {
                     .addComponent(jl_confirmar)
                     .addComponent(jt_confirmar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(46, 46, 46)
-                .addComponent(jButton1)
-                .addGap(0, 61, Short.MAX_VALUE))
+                .addComponent(jb_aceptar)
+                .addGap(0, 27, Short.MAX_VALUE))
         );
 
         pack();
@@ -144,13 +158,15 @@ public class ViewCambioClave extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    public javax.swing.JButton jb_aceptar;
     private javax.swing.JLabel jl_confirmar;
     private javax.swing.JLabel jl_nueva_contra;
-    private javax.swing.JTextField jt_confirmar;
-    private javax.swing.JTextField jt_nueva_contra;
+    private javax.swing.JLabel jl_user;
+    public javax.swing.JTextField jt_confirmar;
+    public javax.swing.JTextField jt_nueva_contra;
+    public javax.swing.JTextField jt_usuario;
     // End of variables declaration//GEN-END:variables
 
 }

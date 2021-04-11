@@ -71,6 +71,11 @@ public class ViewCambioClave extends javax.swing.JFrame {
 
         jb_aceptar.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
         jb_aceptar.setText("Aceptar");
+        jb_aceptar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jb_aceptarActionPerformed(evt);
+            }
+        });
 
         jl_user.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
         jl_user.setText("Usuario");
@@ -123,6 +128,13 @@ public class ViewCambioClave extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jb_aceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_aceptarActionPerformed
+        models.ModelLogin modelLogin = new models.ModelLogin();
+        views.ViewLogin viewLogin = new views.ViewLogin();
+        controllers.ControllerLogin controllerLogin = new controllers.ControllerLogin(modelLogin, viewLogin);
+        System.out.println("Login");
+    }//GEN-LAST:event_jb_aceptarActionPerformed
 
     /**
      * @param args the command line arguments

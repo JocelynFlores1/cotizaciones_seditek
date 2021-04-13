@@ -164,7 +164,7 @@ public class ControllerMain {
         views.ViewInicio viewFondo = new views.ViewInicio();
         controllers.ControllerInicio controllerInicio = new controllers.ControllerInicio(modelInicio, viewFondo);
 
-        //viewMenu.setContentPane(controllerInicio.viewInicio);
+        viewMenu.setContentPane(controllerInicio.viewInicio);
         viewMenu.revalidate();
         viewMenu.repaint();
         System.out.println("Inicio");

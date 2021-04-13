@@ -164,7 +164,7 @@ public class ControllerMain {
         views.ViewInicio viewFondo = new views.ViewInicio();
         controllers.ControllerInicio controllerInicio = new controllers.ControllerInicio(modelInicio, viewFondo);
 
-        viewMenu.setContentPane(controllerInicio.viewInicio);
+        //viewMenu.setContentPane(controllerInicio.viewInicio);
         viewMenu.revalidate();
         viewMenu.repaint();
         System.out.println("Inicio");
@@ -176,7 +176,7 @@ public class ControllerMain {
         models.ModelUsuarios modelUsuarios = new models.ModelUsuarios();
         views.ViewUsuarios viewUsuarios = new views.ViewUsuarios();
         controllers.ControllerUsuarios controllerUsuarios = new controllers.ControllerUsuarios(modelUsuarios, viewUsuarios);
-        viewMenu.setContentPane(controllerUsuarios.viewUsuarios);
+        //viewMenu.setContentPane(controllerUsuarios.viewUsuarios);
         viewMenu.revalidate();
         viewMenu.repaint();
         System.out.println("Usuarios");
@@ -187,7 +187,7 @@ public class ControllerMain {
         models.ModelClientes model_clientes = new models.ModelClientes();
         views.ViewClientes view_clientes = new views.ViewClientes();
         controllers.ControllerClientes controller_clientes = new controllers.ControllerClientes(model_clientes, view_clientes);
-        viewMenu.setContentPane(controller_clientes.view_clientes);
+        //viewMenu.setContentPane(controller_clientes.view_clientes);
         viewMenu.revalidate();
         viewMenu.repaint();
         System.out.println("Clientes");
@@ -197,7 +197,7 @@ public class ControllerMain {
         models.ModelProveedores model_proveedores = new models.ModelProveedores();
         views.ViewProveedores view_proveedores = new views.ViewProveedores();
         controllers.ControllerProveedores controller_proveedores = new controllers.ControllerProveedores(model_proveedores, view_proveedores);
-        viewMenu.setContentPane(controller_proveedores.view_proveedores);
+        //viewMenu.setContentPane(controller_proveedores.view_proveedores);
         viewMenu.revalidate();
         viewMenu.repaint();
         System.out.println("Proveedores");
@@ -207,7 +207,7 @@ public class ControllerMain {
         models.ModelProductos model_productos = new models.ModelProductos();
         views.ViewProductos view_productos = new views.ViewProductos();
         controllers.ControllerProductos controller_productos = new controllers.ControllerProductos(model_productos, view_productos);
-        viewMenu.setContentPane(controller_productos.view_productos);
+        //viewMenu.setContentPane(controller_productos.view_productos);
         viewMenu.revalidate();
         viewMenu.repaint();
         System.out.println("Productos");
@@ -217,7 +217,7 @@ public class ControllerMain {
         models.ModelServicios model_servicios = new models.ModelServicios();
         views.ViewServicios view_servicios = new views.ViewServicios();
         controllers.ControllerServicios controller_servicios = new controllers.ControllerServicios(model_servicios, view_servicios);
-        viewMenu.setContentPane(controller_servicios.view_servicios);
+        //viewMenu.setContentPane(controller_servicios.view_servicios);
         viewMenu.revalidate();
         viewMenu.repaint();
         System.out.println("Servicios");

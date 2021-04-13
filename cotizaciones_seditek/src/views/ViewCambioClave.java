@@ -37,7 +37,7 @@ public class ViewCambioClave extends javax.swing.JFrame {
         jl_user = new javax.swing.JLabel();
         jt_usuario = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 204));
         jPanel1.setPreferredSize(new java.awt.Dimension(353, 44));

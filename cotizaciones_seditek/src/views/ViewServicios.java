@@ -87,6 +87,7 @@ public class ViewServicios extends javax.swing.JFrame {
         jLIdServicio.setForeground(new java.awt.Color(153, 153, 153));
         jLIdServicio.setText("ID Servicio");
 
+        jTIdServicio.setEditable(false);
         jTIdServicio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTIdServicioActionPerformed(evt);

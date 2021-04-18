@@ -138,16 +138,16 @@ public class ModelServicios {
      */
     public void insertarNuevoServicio(ModelConexion servicioConexion) {
         System.out.println("nuevo  3 servicio");
-        String sqlInsertarServicio = "INSERT into Servicios(id_servicio,tipo_servicio,descripcion_servicio,costo_servicio) "
-                    + "values(?,?,?,?);";
+        String sqlInsertarServicio = "INSERT into Servicios(tipo_servicio,descripcion_servicio,costo_servicio) "
+                    + "values(?,?,?);";
         try {
             ps = (PreparedStatement) servicioConexion.getConexion().prepareStatement(sqlInsertarServicio); //con este comando se podra hacer la modificacion a la tabla en la base de datos
             System.out.println(getId_servicio());
                       
-            ps.setString(1,getId_servicio());
-            ps.setString(2,getTipo_servicio());
-            ps.setString(3,getDescripcion_servicio());
-            ps.setFloat(4,getCosto_servicio());
+            //ps.setString(1,getId_servicio());
+            ps.setString(1,getTipo_servicio());
+            ps.setString(2,getDescripcion_servicio());
+            ps.setFloat(3,getCosto_servicio());
             
             ps.executeUpdate();
         } catch (SQLException ex) {

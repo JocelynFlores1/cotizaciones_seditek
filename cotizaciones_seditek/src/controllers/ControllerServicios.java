@@ -51,6 +51,7 @@ public class ControllerServicios {
         CambiarCampos();
         tablaConsulta();
         System.out.println("Solo se inicia si se abre servicios");
+      
     }
     
     
@@ -95,7 +96,7 @@ public class ControllerServicios {
         //JOptionPane.showConfirmDialog permite al usuario elegir si realizar la accion del boton solicitado o simplemente cancelarlo
         int cancelar = JOptionPane.showConfirmDialog(null, "¿Vas a guardar un nuevo servicio?", "Guardar servicio", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
         
-        if(view_servicios.jTIdServicio.getText().equals("") || view_servicios.jTTipoServicio.getText().equals("") ||
+        if( view_servicios.jTTipoServicio.getText().equals("") ||
                 view_servicios.jTDescripcionServicio.getText().equals("")|| view_servicios.jTCostoServicio.getText().equals("")){
                 
         JOptionPane.showMessageDialog(null,"Debes llenar todos los campos");
@@ -226,7 +227,7 @@ public class ControllerServicios {
         view_servicios.jTTipoServicio.setText("");
         view_servicios.jTDescripcionServicio.setText("");
         view_servicios.jTCostoServicio.setText("");
-        codigos();
+        
     }
     
     

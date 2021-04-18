@@ -36,6 +36,7 @@ public class ControllerMain {
     private ControllerProductos controller_productos;
     private ControllerServicios controller_servicios;
     private ControllerInicio controllerInicio;
+    private ControllerCotizaciones controller_cotizaciones;
     private final String nombre_usuario;
     private final String tipo_usuario;
     private final String password;
@@ -89,6 +90,7 @@ public class ControllerMain {
         viewMenu.jmServicios.addActionListener(actionListener);
         viewMenu.jmRespaldos.addActionListener(actionListener);
         viewMenu.jmCerrarSesion.addActionListener(actionListener);
+        viewMenu.jmiCotizaciones.addActionListener(actionListener); 
     }
     
     private void setMouseListener() {
@@ -143,6 +145,8 @@ public class ControllerMain {
                 
             }else if (e.getSource() == viewMenu.jmCerrarSesion){
                 jmi_cerrarSesion_actionPerformed();
+            }else if (e.getSource() == viewMenu.jmiCotizaciones){
+                jmi_cotizaciones_actionPerformed();
             }
         }
         
@@ -237,6 +241,16 @@ public class ControllerMain {
         ModelLogin modelLogin = new ModelLogin();
         ViewLogin viewLogin = new ViewLogin();
         ControllerLogin controllerLogin = new ControllerLogin(modelLogin, viewLogin);
+    }
+    
+    private void jmi_cotizaciones_actionPerformed() {
+        models.ModelCotizaciones model_cotizaciones = new models.ModelCotizaciones();
+        views.ViewCotizaciones view_cotizaciones = new views.ViewCotizaciones();
+        controllers.ControllerCotizaciones controller_cotizaciones = new controllers.ControllerCotizaciones(model_cotizaciones, view_cotizaciones, nombre_usuario);
+        //viewMenu.setContentPane(controller_proveedores.view_proveedores);
+        viewMenu.revalidate();
+        viewMenu.repaint();
+        System.out.println("Proveedores");
     }
 
     /**

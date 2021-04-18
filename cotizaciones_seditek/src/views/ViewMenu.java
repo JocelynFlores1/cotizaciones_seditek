@@ -35,6 +35,7 @@ public class ViewMenu extends javax.swing.JFrame {
         jmProveedores = new javax.swing.JMenuItem();
         jmProductos = new javax.swing.JMenuItem();
         jmServicios = new javax.swing.JMenuItem();
+        jmiCotizaciones = new javax.swing.JMenuItem();
         jmSesion = new javax.swing.JMenu();
         jmUsuarioSesion = new javax.swing.JMenuItem();
         jmCerrarSesion = new javax.swing.JMenuItem();
@@ -68,6 +69,9 @@ public class ViewMenu extends javax.swing.JFrame {
 
         jmServicios.setText("Servicios");
         jmVentanas.add(jmServicios);
+
+        jmiCotizaciones.setText("Cotizaciones");
+        jmVentanas.add(jmiCotizaciones);
 
         jMenuBar1.add(jmVentanas);
 
@@ -170,5 +174,6 @@ public class ViewMenu extends javax.swing.JFrame {
     public javax.swing.JMenuItem jmUsuarioSesion;
     public javax.swing.JMenuItem jmUsuarios;
     private javax.swing.JMenu jmVentanas;
+    public javax.swing.JMenuItem jmiCotizaciones;
     // End of variables declaration//GEN-END:variables
 }

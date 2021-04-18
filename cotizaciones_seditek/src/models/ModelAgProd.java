@@ -5,30 +5,42 @@ package models;
  *
  * @author Carina
  */
+
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import javax.swing.JOptionPane;
+import java.util.ArrayList;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumnModel;
 
-public class ModelCotizaciones {
+public class ModelAgProd {
     
-    
-    private Connection conexion;
+     private Connection conexion;
     private Statement st;
     private ResultSet rs;
     private PreparedStatement ps;
     
-    private String id_cotizacion;
-    private String numero_cotizacion;
-    private String id_usuario;
-    private String id_cliente;
-    private int telefono;
-    private String validez_oferta;
-    private String promocion_especial;
-    private String condiciones_comerciles;
-    private Float fecha_cotizacion;
+    // Metodos para mostrar los productos a seleccionar
+    private String id_producto;
+    private String codigo_producto;
+    private String nombre_producto;
+    private String marca;
+    private String modelo;
+    private String descripcion_usuario;
+    private String descripcion_cliente;
+    private String accesorios;
+    private Float precio_unitario;
+    private int stock;
+    private String id_proveedor;
     
     public Connection getConexion() {
         return conexion;
@@ -61,93 +73,6 @@ public class ModelCotizaciones {
     public void setPs(PreparedStatement ps) {
         this.ps = ps;
     }
-     
-
-
-    public String getId_cotizacion() {
-        return id_cotizacion;
-    }
-
-    public void setId_cotizacion(String id_cotizacion) {
-        this.id_cotizacion = id_cotizacion;
-    }
-
-    public String getNumero_cotizacion() {
-        return numero_cotizacion;
-    }
-
-    public void setNumero_cotizacion(String numero_cotizacion) {
-        this.numero_cotizacion = numero_cotizacion;
-    }
-
-    public String getId_usuario() {
-        return id_usuario;
-    }
-
-    public void setId_usuario(String id_usuario) {
-        this.id_usuario = id_usuario;
-    }
-
-    public String getId_cliente() {
-        return id_cliente;
-    }
-
-    public void setId_cliente(String id_cliente) {
-        this.id_cliente = id_cliente;
-    }
-
-    public int getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(int telefono) {
-        this.telefono = telefono;
-    }
-
-    public String getValidez_oferta() {
-        return validez_oferta;
-    }
-
-    public void setValidez_oferta(String validez_oferta) {
-        this.validez_oferta = validez_oferta;
-    }
-
-    public String getPromocion_especial() {
-        return promocion_especial;
-    }
-
-    public void setPromocion_especial(String promocion_especial) {
-        this.promocion_especial = promocion_especial;
-    }
-
-    public String getCondiciones_comerciles() {
-        return condiciones_comerciles;
-    }
-
-    public void setCondiciones_comerciles(String condiciones_comerciles) {
-        this.condiciones_comerciles = condiciones_comerciles;
-    }
-
-    public Float getFecha_cotizacion() {
-        return fecha_cotizacion;
-    }
-
-    public void setFecha_cotizacion(Float fecha_cotizacion) {
-        this.fecha_cotizacion = fecha_cotizacion;
-    }
-    
-    // Metodos para mostrar los productos a seleccionar
-    private String id_producto;
-    private String codigo_producto;
-    private String nombre_producto;
-    private String marca;
-    private String modelo;
-    private String descripcion_usuario;
-    private String descripcion_cliente;
-    private String accesorios;
-    private Float precio_unitario;
-    private int stock;
-    private String id_proveedor;
     
      public String getId_producto() {
         return id_producto;
@@ -257,7 +182,7 @@ public class ModelCotizaciones {
         this.id_proveedor = id_proveedor;
     }
     
-    
+
     /**
      * Método que realiza las siguietnes acciones: 
      * 1.- Conecta con la base 
@@ -266,7 +191,7 @@ public class ModelCotizaciones {
     public void conectarDB(ModelConexion productoConexion) {
         try {
             System.out.println("Conexion exitosa");
-            String consultaString = "select * from Productos";
+            String consultaString = "Select *  From Productos";
             ps = (PreparedStatement) productoConexion.getConexion().prepareStatement(consultaString);
             rs = ps.executeQuery();
 
@@ -283,17 +208,11 @@ public class ModelCotizaciones {
     public void modificarDatos() {
         try {
             System.out.println("modificar datos variables 1 productos");
-            setId_producto(rs.getString(1));
-            setCodigo_producto(rs.getString(2));
-            setNombre_producto(rs.getString(3));
-            setMarca(rs.getString(4));
-            setModelo(rs.getString(5));
-            setDescripcion_usuario(rs.getString(6));
-            setDescripcion_cliente(rs.getString(7));
-            setAccesorios(rs.getString(8));
-            setPrecio_unitario(rs.getFloat(9));
-            setStock(rs.getInt(10));
-            setId_proveedor(rs.getString(11));
+            
+            setCodigo_producto(rs.getString(0));
+            setNombre_producto(rs.getString(1));
+            setMarca(rs.getString(2));
+            setPrecio_unitario(rs.getFloat(3));
             
             
         } catch (SQLException e) {
@@ -308,8 +227,8 @@ public class ModelCotizaciones {
      */
     public void consultajTableProducto(ModelConexion productoConexion) {
         try {
-            System.out.println("tabla 6 productos");
-            String consultaString = "select * from Productos";
+            System.out.println("tabla productos");
+            String consultaString = "Select codigo_producto, nombre_producto, marca, precio_unitario, stock  from Productos";
             ps = (PreparedStatement) productoConexion.getConexion().prepareStatement(consultaString);
             rs = ps.executeQuery();
         } catch (SQLException e) {
@@ -317,8 +236,5 @@ public class ModelCotizaciones {
         }
     }
     
-        
-        
-        
-
 }
+

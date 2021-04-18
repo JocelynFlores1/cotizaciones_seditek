@@ -175,6 +175,8 @@ public class ViewProductos extends javax.swing.JFrame {
         jLIdProducto.setForeground(new java.awt.Color(153, 153, 153));
         jLIdProducto.setText("ID Producto");
 
+        jTIdProducto.setEditable(false);
+
         jLCodigoProducto.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         jLCodigoProducto.setForeground(new java.awt.Color(153, 153, 153));
         jLCodigoProducto.setText("Codigo");

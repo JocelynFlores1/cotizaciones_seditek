@@ -224,23 +224,23 @@ public class ModelProductos {
      */
     public void insertarNuevoProducto(ModelConexion productoConexion) {
         System.out.println("nuevo  3 productos");
-        String sqlInsertarProducto = "INSERT into Productos(id_producto,codigo_producto,nombre_producto,marca,modelo,"
+        String sqlInsertarProducto = "INSERT into Productos(codigo_producto,nombre_producto,marca,modelo,"
                     + "descripcion_usuario,descripcion_cliente,accesorios,precio_unitario,stock,id_proveedor) "
-                    + "values(?,?,?,?,?,?,?,?,?,?,?);";
+                    + "values(?,?,?,?,?,?,?,?,?,?);";
         try {
             ps = (PreparedStatement) productoConexion.getConexion().prepareStatement(sqlInsertarProducto); //con este comando se podra hacer la modificacion a la tabla en la base de datos
             System.out.println(getId_producto());
-            ps.setString(1, getId_producto());
-            ps.setString(2, getCodigo_producto());
-            ps.setString(3, getNombre_producto());
-            ps.setString(4, getMarca());
-            ps.setString(5, getModelo());
-            ps.setString(6, getDescripcion_usuario());
-            ps.setString(7, getDescripcion_cliente());
-            ps.setString(8, getAccesorios());
-            ps.setFloat(9, getPrecio_unitario());
-            ps.setInt(10, getStock());
-            ps.setString(11, getId_proveedor());
+            //ps.setString(1, getId_producto());
+            ps.setString(1, getCodigo_producto());
+            ps.setString(2, getNombre_producto());
+            ps.setString(3, getMarca());
+            ps.setString(4, getModelo());
+            ps.setString(5, getDescripcion_usuario());
+            ps.setString(6, getDescripcion_cliente());
+            ps.setString(7, getAccesorios());
+            ps.setFloat(8, getPrecio_unitario());
+            ps.setInt(9, getStock());
+            ps.setString(10, getId_proveedor());
             
             ps.executeUpdate();
         } catch (SQLException ex) {

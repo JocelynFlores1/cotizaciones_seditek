@@ -65,7 +65,7 @@ public class ViewUsuarios extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jt_usuarios = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLayeredPane2.setPreferredSize(new java.awt.Dimension(1200, 600));
 

@@ -16,7 +16,6 @@ public class ViewUsuarios extends javax.swing.JFrame {
      */
     public ViewUsuarios() {
         initComponents();
-        this.setLocationRelativeTo(null);
     }
 
     ViewUsuarios(ViewLogin aThis, boolean b) {
@@ -61,11 +60,12 @@ public class ViewUsuarios extends javax.swing.JFrame {
         jpPieDePagina1 = new javax.swing.JPanel();
         jpProductosTitulo1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
+        jt_buscar = new javax.swing.JTextField();
         jpBordeTabla = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jt_usuarios = new javax.swing.JTable();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLayeredPane2.setPreferredSize(new java.awt.Dimension(1200, 600));
 
@@ -96,6 +96,7 @@ public class ViewUsuarios extends javax.swing.JFrame {
         jl_id_usuario.setForeground(new java.awt.Color(153, 153, 153));
         jl_id_usuario.setText("ID usuario");
 
+        jtf_id_usuario.setEditable(false);
         jtf_id_usuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtf_id_usuarioActionPerformed(evt);
@@ -348,24 +349,41 @@ public class ViewUsuarios extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Registros de usuarios");
 
+        jt_buscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jt_buscarActionPerformed(evt);
+            }
+        });
+        jt_buscar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                jt_buscarKeyReleased(evt);
+            }
+        });
+
         javax.swing.GroupLayout jpProductosTitulo1Layout = new javax.swing.GroupLayout(jpProductosTitulo1);
         jpProductosTitulo1.setLayout(jpProductosTitulo1Layout);
         jpProductosTitulo1Layout.setHorizontalGroup(
             jpProductosTitulo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpProductosTitulo1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(71, 71, 71)
+                .addComponent(jt_buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(188, 188, 188)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 243, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(394, Short.MAX_VALUE))
         );
         jpProductosTitulo1Layout.setVerticalGroup(
             jpProductosTitulo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpProductosTitulo1Layout.createSequentialGroup()
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 43, Short.MAX_VALUE)
+                .addGroup(jpProductosTitulo1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                    .addGroup(jpProductosTitulo1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jt_buscar)))
                 .addContainerGap())
         );
 
         jpBordeTabla.setBackground(new java.awt.Color(0, 153, 204));
-        jpBordeTabla.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(255, 255, 255))); // NOI18N
+        jpBordeTabla.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12), new java.awt.Color(255, 255, 255))); // NOI18N
 
         jt_usuarios.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -409,10 +427,7 @@ public class ViewUsuarios extends javax.swing.JFrame {
         jpBordeTabla.setLayout(jpBordeTablaLayout);
         jpBordeTablaLayout.setHorizontalGroup(
             jpBordeTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jpBordeTablaLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1168, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1180, Short.MAX_VALUE)
         );
         jpBordeTablaLayout.setVerticalGroup(
             jpBordeTablaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -429,8 +444,8 @@ public class ViewUsuarios extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpBordeLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jpBordeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jpPieDePagina1, javax.swing.GroupLayout.DEFAULT_SIZE, 1192, Short.MAX_VALUE)
-                    .addComponent(jpProductosTitulo1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1192, Short.MAX_VALUE)
+                    .addComponent(jpPieDePagina1, javax.swing.GroupLayout.DEFAULT_SIZE, 1182, Short.MAX_VALUE)
+                    .addComponent(jpProductosTitulo1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1182, Short.MAX_VALUE)
                     .addComponent(jpBordeTabla, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -535,6 +550,14 @@ public class ViewUsuarios extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jb_insertarActionPerformed
 
+    private void jt_buscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_buscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jt_buscarActionPerformed
+
+    private void jt_buscarKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jt_buscarKeyReleased
+
+    }//GEN-LAST:event_jt_buscarKeyReleased
+
     /**
      * @param args the command line arguments
      */
@@ -597,6 +620,7 @@ public class ViewUsuarios extends javax.swing.JFrame {
     public javax.swing.JPanel jpBordeTabla;
     public javax.swing.JPanel jpPieDePagina1;
     public javax.swing.JPanel jpProductosTitulo1;
+    public javax.swing.JTextField jt_buscar;
     public javax.swing.JTextField jt_pregunta;
     public javax.swing.JTextField jt_respuesta;
     public javax.swing.JTable jt_usuarios;

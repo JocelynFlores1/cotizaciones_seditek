@@ -177,6 +177,8 @@ public class ViewProveedores extends javax.swing.JFrame {
         jLIdProveedor.setForeground(new java.awt.Color(153, 153, 153));
         jLIdProveedor.setText("ID Proveedor");
 
+        jTIdProveedor.setEditable(false);
+
         jLNombreProveedor.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         jLNombreProveedor.setForeground(new java.awt.Color(153, 153, 153));
         jLNombreProveedor.setText("Nombre");

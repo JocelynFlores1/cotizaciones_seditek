@@ -232,25 +232,25 @@ public class ModelProveedores {
      */
     public void insertarNuevoProveedor(ModelConexion proveedorConexion) {
         System.out.println("nuevo  3 proveedor");
-        String sqlInsertarProveedor = "INSERT into Proveedor(id_proveedor,nombre_proveedor,telefono_proveedor,telefono_contacto,"
+        String sqlInsertarProveedor = "INSERT into Proveedor(nombre_proveedor,telefono_proveedor,telefono_contacto,"
                     + "email_proveedor,email_contacto,calle_proveedor,colonia_proveedor,municipio_proveedor,"
                     + "empresa_proveedor,rfc_proveedor,cp_proveedor) "
-                    + "values(?,?,?,?,?,?,?,?,?,?,?,?);";
+                    + "values(?,?,?,?,?,?,?,?,?,?,?);";
         try {
             ps = (PreparedStatement) proveedorConexion.getConexion().prepareStatement(sqlInsertarProveedor); //con este comando se podra hacer la modificacion a la tabla en la base de datos
             System.out.println(getId_proveedor());
-            ps.setString(1, getId_proveedor());
-            ps.setString(2, getNombre_proveedor());
-            ps.setString(3, getTelefono_proveedor());
-            ps.setString(4, getTelefono_contacto());
-            ps.setString(5, getEmail_proveedor());
-            ps.setString(6, getEmail_contacto());
-            ps.setString(7, getCalle_proveedor());
-            ps.setString(8, getColonia_proveedor());
-            ps.setString(9, getMunicipio_proveedor());
-            ps.setString(10, getEmpresa_proveedor());
-            ps.setString(11, getRfc_proveedor());
-            ps.setInt(12, getCp_proveedor());
+            //ps.setString(1, getId_proveedor());
+            ps.setString(1, getNombre_proveedor());
+            ps.setString(2, getTelefono_proveedor());
+            ps.setString(3, getTelefono_contacto());
+            ps.setString(4, getEmail_proveedor());
+            ps.setString(5, getEmail_contacto());
+            ps.setString(6, getCalle_proveedor());
+            ps.setString(7, getColonia_proveedor());
+            ps.setString(8, getMunicipio_proveedor());
+            ps.setString(9, getEmpresa_proveedor());
+            ps.setString(10, getRfc_proveedor());
+            ps.setInt(11, getCp_proveedor());
             
             ps.executeUpdate();
         } catch (SQLException ex) {

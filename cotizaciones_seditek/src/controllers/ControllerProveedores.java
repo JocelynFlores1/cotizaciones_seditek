@@ -103,7 +103,7 @@ public class ControllerProveedores {
         //JOptionPane.showConfirmDialog permite al usuario elegir si realizar la accion del boton solicitado o simplemente cancelarlo
         int cancelar = JOptionPane.showConfirmDialog(null, "¿Vas a guardar un nuevo proveedor?", "Guardar proveedor", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
         
-        if(view_proveedores.jTIdProveedor.getText().equals("") || view_proveedores.jTNombreProveedor.getText().equals("") ||
+        if( view_proveedores.jTNombreProveedor.getText().equals("") ||
                 view_proveedores.jTTelefonoProveedor.getText().equals("") || view_proveedores.jTTelefonoContacto.getText().equals("")||
                 view_proveedores.jTEmailProveedor.getText().equals("") || view_proveedores.jTEmailContacto.getText().equals("") ||
                 view_proveedores.jTCalleProveedor.getText().equals("") || view_proveedores.jTColoniaProveedor.getText().equals("") ||
@@ -115,7 +115,7 @@ public class ControllerProveedores {
         
         if (cancelar == 0) {
         
-            //System.out.print(model_proveedores);
+            System.out.print(model_proveedores);
             model_proveedores.setId_proveedor(view_proveedores.jTIdProveedor.getText());
             model_proveedores.setNombre_proveedor(view_proveedores.jTNombreProveedor.getText());
 

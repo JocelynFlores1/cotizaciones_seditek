@@ -5,19 +5,21 @@
  */
 package views;
 
+
 /**
  *
  * @author flore
  */
 public class ViewRecuperPassword extends javax.swing.JFrame {
-
-    /**
-     * Creates new form ViewRecuperPassword
-     */
+  
     public ViewRecuperPassword() {
         initComponents();
+        this.setLocationRelativeTo(null);
         
     }
+    
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -30,17 +32,15 @@ public class ViewRecuperPassword extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jl_respuesta = new javax.swing.JLabel();
-        jt_respuesta = new javax.swing.JTextField();
-        btAceptar = new javax.swing.JButton();
         jl_recuperuser = new javax.swing.JLabel();
-        jt_nuevacontrasena = new javax.swing.JTextField();
+        jt_user = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jl_tituloCont = new javax.swing.JLabel();
         jl_pregunta = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jt_pregunta = new javax.swing.JTextField();
         jb_confirmar = new javax.swing.JButton();
-        jb_confirmarR = new javax.swing.JButton();
+        jp_respuesta = new javax.swing.JPasswordField();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -53,7 +53,7 @@ public class ViewRecuperPassword extends javax.swing.JFrame {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
@@ -64,20 +64,12 @@ public class ViewRecuperPassword extends javax.swing.JFrame {
         jl_respuesta.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
         jl_respuesta.setText("Respuesta");
 
-        btAceptar.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
-        btAceptar.setText("Aceptar");
-        btAceptar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btAceptarActionPerformed(evt);
-            }
-        });
-
         jl_recuperuser.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
         jl_recuperuser.setText("Usuario");
 
-        jt_nuevacontrasena.addActionListener(new java.awt.event.ActionListener() {
+        jt_user.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jt_nuevacontrasenaActionPerformed(evt);
+                jt_userActionPerformed(evt);
             }
         });
 
@@ -107,12 +99,11 @@ public class ViewRecuperPassword extends javax.swing.JFrame {
         jl_pregunta.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
         jl_pregunta.setText("Pregunta de seguridad");
 
+        jb_confirmar.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
         jb_confirmar.setText("Confirmar");
-
-        jb_confirmarR.setText("Confirmar");
-        jb_confirmarR.addActionListener(new java.awt.event.ActionListener() {
+        jb_confirmar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jb_confirmarRActionPerformed(evt);
+                jb_confirmarActionPerformed(evt);
             }
         });
 
@@ -121,64 +112,56 @@ public class ViewRecuperPassword extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(86, 86, 86)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jl_recuperuser)
-                        .addGap(118, 118, 118)
-                        .addComponent(jt_nuevacontrasena))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jl_respuesta)
-                        .addGap(101, 101, 101)
-                        .addComponent(jt_respuesta))
-                    .addComponent(btAceptar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jl_pregunta)
-                        .addGap(12, 12, 12)
-                        .addComponent(jt_pregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 174, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(96, 96, 96)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jb_confirmar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jl_recuperuser)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(0, 0, Short.MAX_VALUE)
+                                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(jl_pregunta)
+                                            .addGap(33, 33, 33)))
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jl_respuesta)
+                                .addGap(128, 128, 128)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jt_pregunta)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(38, 38, 38)
-                                .addComponent(jb_confirmar)))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(jb_confirmarR)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jt_user, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jp_respuesta, javax.swing.GroupLayout.Alignment.LEADING))))
+                .addGap(42, 42, 42))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(jl_recuperuser)
-                        .addGap(30, 30, 30))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jt_nuevacontrasena, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jb_confirmar))
-                        .addGap(18, 18, 18)))
+                .addGap(45, 45, 45)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jt_user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jl_recuperuser))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jl_pregunta)
                     .addComponent(jLabel1)
                     .addComponent(jt_pregunta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jl_respuesta)
-                    .addComponent(jt_respuesta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jb_confirmarR))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addComponent(btAceptar)
-                .addGap(51, 51, 51))
+                    .addComponent(jp_respuesta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jb_confirmar)
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
         pack();
@@ -188,17 +171,13 @@ public class ViewRecuperPassword extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_formPropertyChange
 
-    private void jt_nuevacontrasenaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_nuevacontrasenaActionPerformed
+    private void jt_userActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jt_userActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jt_nuevacontrasenaActionPerformed
+    }//GEN-LAST:event_jt_userActionPerformed
 
-    private void btAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAceptarActionPerformed
+    private void jb_confirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_confirmarActionPerformed
 
-    }//GEN-LAST:event_btAceptarActionPerformed
-
-    private void jb_confirmarRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jb_confirmarRActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jb_confirmarRActionPerformed
+    }//GEN-LAST:event_jb_confirmarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -236,18 +215,16 @@ public class ViewRecuperPassword extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btAceptar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JButton jb_confirmar;
-    private javax.swing.JButton jb_confirmarR;
+    public javax.swing.JButton jb_confirmar;
     private javax.swing.JLabel jl_pregunta;
     private javax.swing.JLabel jl_recuperuser;
     private javax.swing.JLabel jl_respuesta;
     private javax.swing.JLabel jl_tituloCont;
-    private javax.swing.JTextField jt_nuevacontrasena;
-    private javax.swing.JTextField jt_pregunta;
-    private javax.swing.JTextField jt_respuesta;
+    public javax.swing.JPasswordField jp_respuesta;
+    public javax.swing.JTextField jt_pregunta;
+    public javax.swing.JTextField jt_user;
     // End of variables declaration//GEN-END:variables
 }

@@ -30,7 +30,7 @@ public class ModelRespaldos {
             String nombreDocumento = "Backup_CotizacionSeditek_" + formatoHora.format(fechaActual) + "__"+ formatoFecha.format(fechaActual) + ".sql";
             System.out.println(nombreDocumento);
 
-            Process p = Runtime.getRuntime().exec("jdbc:mysql://z5zm8hebixwywy9d.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/zs24at5q2gx9egvgt");
+            Process p = Runtime.getRuntime().exec("C:\\xampp\\mysql\\bin\\mysqldump --host=jdbc:mysql://z5zm8hebixwywy9d.cbetxkdyhwsb.us-east-1.rds.amazonaws.com/zs24at5q2gx9egvg -P3306 -uum09y46w14qyg6w2 -pmqio1vovph8f7gir -B zs24at5q2gx9egvg");
             //C:\\xampp\\mysql\\bin\\mysqldump ->(Ruta donde se encuentra mysqldump dependiendo de la ruta de instalacion) 
             InputStream is = p.getInputStream();//Pedimos la entrada
             try (FileOutputStream fos = new FileOutputStream("src/bd/"+ nombreDocumento) //creamos el archivo para le respaldo

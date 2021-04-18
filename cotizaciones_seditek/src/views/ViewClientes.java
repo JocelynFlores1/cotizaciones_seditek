@@ -179,6 +179,8 @@ public class ViewClientes extends javax.swing.JFrame {
         jLIdCliente.setForeground(new java.awt.Color(153, 153, 153));
         jLIdCliente.setText("ID Cliente");
 
+        jTIdCliente.setEditable(false);
+
         jLNombreCliente.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         jLNombreCliente.setForeground(new java.awt.Color(153, 153, 153));
         jLNombreCliente.setText("Nombre");

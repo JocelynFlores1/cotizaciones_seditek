@@ -96,7 +96,7 @@ public class ControllerProductos {
         //JOptionPane.showConfirmDialog permite al usuario elegir si realizar la accion del boton solicitado o simplemente cancelarlo
         int cancelar = JOptionPane.showConfirmDialog(null, "¿Vas a guardar un nuevo producto?", "Guardar producto", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
         
-        if(view_productos.jTIdProducto.getText().equals("") || view_productos.jTCodigoProducto.getText().equals("") ||
+        if(view_productos.jTCodigoProducto.getText().equals("") ||
                 view_productos.jTNombreProducto.getText().equals("") || view_productos.jTMarcaProducto.getText().equals("")||
                 view_productos.jTModeloProducto.getText().equals("") || view_productos.jTDescripcionUsuarioProducto.getText().equals("") ||
                 view_productos.jTDescripcionClienteProducto.getText().equals("") || view_productos.jTAccesoriosProducto.getText().equals("") ||
@@ -275,7 +275,7 @@ public class ControllerProductos {
         view_productos.jTPrecioProducto.setText("");
         view_productos.jTStockProducto.setText("");
         view_productos.jTProveedorProducto.setText("");
-        codigos();
+       
         
     }
     

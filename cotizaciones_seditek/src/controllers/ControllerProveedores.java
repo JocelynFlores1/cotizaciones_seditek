@@ -285,7 +285,7 @@ public class ControllerProveedores {
         view_proveedores.jTEmpresaProveedor.setText("");
         view_proveedores.jTRfcProveedor.setText("");
         
-        codigos();
+ 
     }
 
 

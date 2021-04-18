@@ -252,28 +252,28 @@ public class ModelClientes {
     
     public void insertarNuevoCliente(ModelConexion clienteConexion) {
         System.out.println("nuevo  3 Clientes");
-        String sqlInsertarCliente = "INSERT into Clientes(id_cliente,nombre_cliente,apellido_paterno,apellido_materno,"
+        String sqlInsertarCliente = "INSERT into Clientes(nombre_cliente,apellido_paterno,apellido_materno,"
                 + "telefono_cliente,telefono_empresa,email_cliente,rfc_cliente,calle_cliente,colonia_cliente,municipio_cliente,"
                 + "empresa_cliente,cp_cliente) "
-                    + "values(?,?,?,?,?,?,?,?,?,?,?,?,?);";
+                    + "values(?,?,?,?,?,?,?,?,?,?,?,?);";
         try {
             ps = (PreparedStatement) clienteConexion.getConexion().prepareStatement(sqlInsertarCliente); //con este comando se podra hacer la modificacion a la tabla en la base de datos
             System.out.println(getId_cliente());
             
-            ps.setString(1, getId_cliente());
+            //ps.setString(1, getId_cliente());
             
-            ps.setString(2, getNombre_cliente());
-            ps.setString(3, getApellido_paterno());
-            ps.setString(4, getApellido_materno());
-            ps.setString(5, getTelefono_cliente());
-            ps.setString(6, getTelefono_empresa());
-            ps.setString(7, getEmail_cliente());
-            ps.setString(8, getRfc_cliente());
-            ps.setString(9, getCalle_cliente());
-            ps.setString(10, getColonia_cliente());
-            ps.setString(11, getMunicipio_cliente());
-            ps.setString(12,getEmpresa_cliente());
-            ps.setInt(13,getCp_cliente());
+            ps.setString(1, getNombre_cliente());
+            ps.setString(2, getApellido_paterno());
+            ps.setString(3, getApellido_materno());
+            ps.setString(4, getTelefono_cliente());
+            ps.setString(5, getTelefono_empresa());
+            ps.setString(6, getEmail_cliente());
+            ps.setString(7, getRfc_cliente());
+            ps.setString(8, getCalle_cliente());
+            ps.setString(9, getColonia_cliente());
+            ps.setString(10, getMunicipio_cliente());
+            ps.setString(11,getEmpresa_cliente());
+            ps.setInt(12,getCp_cliente());
             
             ps.executeUpdate();
         } catch (SQLException ex) {

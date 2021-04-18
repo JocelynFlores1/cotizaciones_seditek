@@ -105,7 +105,7 @@ public class ControllerClientes {
         //JOptionPane.showConfirmDialog permite al usuario elegir si realizar la accion del boton solicitado o simplemente cancelarlo
         int cancelar = JOptionPane.showConfirmDialog(null, "¿Vas a guardar un nuevo cliente?", "Guardar cliente", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
         
-        if(view_clientes.jTIdCliente.getText().equals("") || view_clientes.jTNombreCliente.getText().equals("") ||
+        if(view_clientes.jTNombreCliente.getText().equals("") ||
                 view_clientes.jTApellidoPaterno.getText().equals("") || view_clientes.jTApellidoMaterno.getText().equals("")||
                 view_clientes.jTTelefonoCliente.getText().equals("") || view_clientes.jTTelefonoEmpresa.getText().equals("") ||
                 view_clientes.jTEmailCliente.getText().equals("") || view_clientes.jTRfcCliente.getText().equals("") ||
@@ -298,7 +298,7 @@ public class ControllerClientes {
         view_clientes.jTMunicipioCliente.setText("");
         view_clientes.jTEmpresaCliente.setText("");
         view_clientes.jTCpCliente.setText("");
-        codigos();
+        
         
     }
     

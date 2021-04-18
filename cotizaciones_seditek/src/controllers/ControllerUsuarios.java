@@ -10,6 +10,9 @@ import models.ModelGenerarCodigos;
 import views.ViewUsuarios;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
@@ -106,7 +109,6 @@ public class ControllerUsuarios {
         //JOptionPane.showConfirmDialog permite al usuario elegir si realizar la accion del boton solicitado o simplemente cancelarlo
         int cancelar = JOptionPane.showConfirmDialog(null, "¿Vas a guardar un nuevo usuario?", "Guardar usuario", JOptionPane.OK_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE);
         if (cancelar == 0) {
-            modelUsuarios.setId_usuario(viewUsuarios.jtf_id_usuario.getText());
             modelUsuarios.setNombre_usuario(viewUsuarios.jtf_nombre_usuario.getText());
             modelUsuarios.setTipo_usuario(viewUsuarios.jtf_tipo_usuario.getText());
             modelUsuarios.setPregunta(viewUsuarios.jt_pregunta.getText());
@@ -133,7 +135,6 @@ public class ControllerUsuarios {
             modelUsuarios.setPregunta(viewUsuarios.jt_pregunta.getText());
             modelUsuarios.setRespuesta(viewUsuarios.jt_respuesta.getText());
             modelUsuarios.setPassword(viewUsuarios.jtf_password.getText());
-            modelUsuarios.setId_usuario(viewUsuarios.jtf_id_usuario.getText());
 
             modelUsuarios.modificarDatosUsuario(usuarioConexion);
             JOptionPane.showMessageDialog(null, "Datos del usuario modificados correctamente");
@@ -212,6 +213,7 @@ public class ControllerUsuarios {
             JOptionPane.showMessageDialog(null, "Error:\nSelecciona un registro");
         }
     }
+
 
     public void jmi_nuevoU_actionPerformed() {
         viewUsuarios.jtf_id_usuario.setText("");
